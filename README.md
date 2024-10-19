@@ -1,1 +1,1 @@
-# [cynicusrex.com](https://www.cynicusrex.com)
+# [arscyni.cc](https://www.arscyni.cc)
