@@ -108,6 +108,10 @@ figure {
 /*———————————————————————————————————————————————————————————————*/
 /* Index */
 
+#index-page nav a {
+ text-decoration: none;
+}
+
 #cr-sub-title, nav {
   text-align: center;
 }
