@@ -24,20 +24,20 @@
 <body>
   <div class="readability">
     <h1>How to migrate multiple static websites from GitHub pages to <a href="https://codeberg.org">Codeberg</a></h1>
-    <p class="sub-title">The official documentation can be found on <a href="https://codeberg.page">https://codeberg.page</a>, but I think it is confusing and incomplete if you want multiple pages and are using a custom domain name.</p>
+    <p class="sub-title">The official documentation can be found on <a href="https://codeberg.page">https://codeberg.page</a>, but I think it is confusing and incomplete if one wants multiple pages with custom domain name.</p>
 
     <hr>
 
-    <h2>Getting your repository on Codeberg</h2>
-    <p>So, on the official documentation they say one has to create a repository named “pages” for the static website, but then what if one has multiple websites? It's also plain annoying to have such a name for a repository. Anyway, the following steps allow you to have multiple static pages on Codeberg without having to name them “pages”, ugh.</p>
+    <h2>Getting the repository on Codeberg</h2>
+    <p>The official documentation instructs to create a repository named “pages” for the static website, but what if one has multiple websites? It's also plain annoying to have such a name for a repository. Anyway, the following steps allows one to have multiple static pages on Codeberg without having to name them “pages”, ugh.</p>
 
     <ol>
-      <li>Create an account on Codeberg: <a href="https://codeberg.org">https://codeberg.org/user/sing_up</a> <del>*</del>. Then via the top right button click “+ New Repository”. Choose whatever repository name, and as “Default Branch” replace main with <em>pages</em>. Click “Create Repository”.</li>
-      <li>Go to the directory on your local machine of which you want the content into your newly created Codeberg repository. For me that was “/home/…/quitfacebook.org/public/”</li>
+      <li>Create an account on Codeberg: <a href="https://codeberg.org/#:~:text=Register">https://codeberg.org</a>. Then via the top right button click “+ New Repository”. Choose whatever repository name, and as “Default Branch” replace main with <em>pages</em>. Click “Create Repository”.</li>
+      <li>Navigate one's computer to the directory  of which the content needs to end up in the newly created Codeberg repository. For me that was “/home/…/quitfacebook.org/public/”</li>
     </ol>
 
     <h3>Option 1: keep git history</h3>
-    <p>This will save the nice graph that shows all the contributions you made, and all the file versioning history of course.</p>
+    <p>This will preserve the nice graph that shows all the contributions made, and all the file versioning history of course.</p>
 
     <pre>
       <code>git remote rename origin old-origin-github</code>
@@ -49,9 +49,9 @@
 
     <h3>Option 2: remove git history</h3>
     <ol>
-      <li>Assuming you still have the hidden .git folder, rename it to .git_BAK or whatever, or delete it.</li>
-      <li>Open the terminal in that directory and run: <code>git init</code> It will probably show you the following message: “hint: Using 'master' as the name for the initial branch. This default branch name […] The just-created branch can be renamed via this command: git branch -m &lt;name&gt;”</li>
-      <li>Run: <code>git branch -m pages</code> You see, the repository needn't be named pages, but the branch does. Which is great because now we can have multiple pages with distinct names. The official documentation makes it seem as if one is limited to one page.</li>
+      <li>Assuming one still has the hidden .git folder, rename it to .git_BAK or whatever, or delete it.</li>
+      <li>Open the terminal in that directory and run: <code>git init</code> <br> It will probably show the following message: “hint: Using 'master' as the name for the initial branch. This default branch name […] The just-created branch can be renamed via this command: git branch -m &lt;name&gt;”</li>
+      <li>Run: <code>git branch -m pages</code> <br> You see, the repository needn't be named pages, but the branch does. That's great because now one can have multiple pages with distinct names. The official documentation makes it seem as if one is limited to one page.</li>
       <li>Run: <br>
         <code>git add .</code><br>
         <code>git commit -m "first commit"</code><br>
@@ -60,18 +60,18 @@
       </li>
     </ol>
 
-    <p class="footnote">– – – – –</p>
-    <p class="footnote">* <a href="https://matrix.to/#/!wkyjxWeAOBpKMvHbno:matrix.org/$geAD9QFJhURrQ57ov4GvOPh3wuTmZLC28MB5uTv6mY8?via=freeyourgadget.org&via=matrix.org&via=tchncs.de">This typo was intentional, apparently</a>.</p>
+    <!-- <p class="footnote">– – – – –</p>
+    <p class="footnote">* <a href="https://matrix.to/#/!wkyjxWeAOBpKMvHbno:matrix.org/$geAD9QFJhURrQ57ov4GvOPh3wuTmZLC28MB5uTv6mY8?via=freeyourgadget.org&via=matrix.org&via=tchncs.de">This typo was intentional, apparently</a>.</p> -->
 
     <h2>Domain configurations*</h2>
-    <p>Assuming you have a custom domain name, do the following. If you don't, then the official documentation probably suffices.</p>
+    <p>Assuming one has a custom domain name, do the following. If one doesn't, then the official documentation probably suffices.</p>
 
     <ol>
-      <li>Add the file “.domains” to your local repository with the following content, obviously adjusted to your own domain name, and push it to Codeberg: <br>
+      <li>Add the file “.domains” with the following content to one's local repository and push it to Codeberg, obviously adjusted with one's own domain name: <br>
         <code>quitfacebook.org</code><br>
         <code>www.quitfacebook.org</code><br>
         <code>pages.quitfacebook.cynicusrex.codeberg.page</code></li>
-      <li>Go to your registrar website, and configure the “Advanced DNS” “host records” as follows: <br>
+      <li>Open one's registrar website, and configure the “Advanced DNS” “host records” as follows: <br>
         <code>Type: A Record, Host: @, Value: 217.197.91.145, TTL: Automatic</code><br>
         <code>Type: AAAA Record, Host: @, Value: 2001:67c:1401:20f0::1, TTL: Automatic</code><br>
         <code>Type: CNAME Record, Host: www, Value: quitfacebook.cynicusrex.codeberg.page., TTL: Automatic</code><br>
@@ -79,10 +79,13 @@
       </li>
     </ol>
 
-    <p>All is done. Now you might have to wait for a couple of hours until the domain configurations get updated. Also, don't forget to unpublish your page on GitHub unless you've changed your domain name as well—read on in the latter case.</p>
+    <p>All is done. It might take a couple of hours until the domain configurations get updated. Also, don't forget to unpublish your page on GitHub <em>unless</em> you've changed your domain name as well—read on in the latter case.</p>
 
-    <h2>Redirecting a https domain name</h2>
-    <p>When changing domain names of a website formerly hosted on GitHub, then merely redirecting on one's registrar website will <em>not</em> redirect http<strong>s</strong> URLs because <a href="https://www.namecheap.com/support/knowledgebase/article.aspx/385/2237/how-to-set-up-a-url-redirect-for-a-domain/#:~:text=redirecting%20with%20a%20secure%20connection">GitHub pages does not support a .htaccess file nor the SSL plugin</a>. Instead leave unchanged the settings on one's registrar and GitHub, and add a <a href="https://www.w3docs.com/snippets/html/how-to-redirect-a-web-page-in-html.html">meta refresh tag</a> on every page one wants redirected&nbsp;<span class="dagger">†</span>.</p>
+    <p class="footnote">– – – – –</p>
+    <p class="footnote">* Credits to <a href="https://matrix.to/#/!wkyjxWeAOBpKMvHbno:matrix.org/$FTJc4s9wUiTM_xsb9ZsqEG-mkAyISdAwSyEyZB4O1Xw?via=freeyourgadget.org&via=matrix.org&via=tchncs.de">Jan Wildeboer</a>.</p>
+
+    <h2>Redirecting a GitHub https URL</h2>
+    <p>When changing domain names of a website formerly hosted on GitHub, then merely redirecting on one's registrar website will <em>not</em> redirect http<strong>s</strong> URLs because <a href="https://www.namecheap.com/support/knowledgebase/article.aspx/385/2237/how-to-set-up-a-url-redirect-for-a-domain/#:~:text=redirecting%20with%20a%20secure%20connection">GitHub pages does not support a .htaccess file nor the SSL plugin</a>. Instead leave unchanged the settings on one's registrar and GitHub, and add a <a href="https://www.w3docs.com/snippets/html/how-to-redirect-a-web-page-in-html.html">meta refresh tag</a> on every page one wants redirected*.</p>
     
     <ul>
       <li>To redirect <cite>https://www.cynicusrex.com</cite> to <cite>https://www.arscyni.cc</cite>, then add to a page: <code>&lt;meta http-equiv="refresh" content="0;URL=https://www.arscyni.cc"&gt;</code></li>
@@ -90,6 +93,9 @@
     </ul>
 
     <p>All done. Enjoy.</p>
+
+    <p class="footnote">– – – – –</p>
+    <p class="footnote">* Credits to <a href="https://matrix.to/#/%23codeberg.org%3Amatrix.org/%249SeoZoKXc0yVXzPhS-k1SpGpCpnH_2jO4XIWF1DZAi0?via=freeyourgadget.org&via=matrix.org&via=tchncs.de">div72</a>.</p>
     
     <p id="author">—Angelino Desmet; 15 April 2023.</p>
     <details id="edit-list">
@@ -99,10 +105,6 @@
         <li>2024/10/20: adds https redirect instructions.</li>
       </ul>
     </details>
-
-    <p class="footnote">– – – – –</p>
-    <p class="footnote">* Credits to <a href="https://matrix.to/#/!wkyjxWeAOBpKMvHbno:matrix.org/$FTJc4s9wUiTM_xsb9ZsqEG-mkAyISdAwSyEyZB4O1Xw?via=freeyourgadget.org&via=matrix.org&via=tchncs.de">Jan Wildeboer</a>.</p>
-    <p class="footnote">† Credits to <a href="https://matrix.to/#/%23codeberg.org%3Amatrix.org/%249SeoZoKXc0yVXzPhS-k1SpGpCpnH_2jO4XIWF1DZAi0?via=freeyourgadget.org&via=matrix.org&via=tchncs.de">div72</a>.</p>
 
     <p class="end-symbol">Ψ</p>
 
