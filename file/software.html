@@ -21,7 +21,7 @@
     <h1>Mostly excellent <a href="./take-my-money.html#:~:text=definitions%20of%20free%20software">“free”</a> software</h1>
     <p class="sub-title readability">A near-exhaustive list of software <em>I</em> use, not an exhaustive list of <em>the</em> best software. There could very well exist superior alternatives. Feel free to point them out.</p>
 
-    <p class="sub-title">Latest update: 25 October 2024.</p>
+    <p class="sub-title">Latest update: 2024, October 26.</p>
 
     <p class="fleuron">❦</p>
 
@@ -142,7 +142,7 @@
       <h2>Smartphone</h2>
       <p><a href="https://gitlab.com/AuroraOSS/AuroraStore"><strong>Aurora Store</strong></a> app catalogue: </p>
         <ul>
-          <li>Browser: <a href="https://gitlab.com/divested-mobile/mull-fenix">Mull</a> + <a href="https://ublockorigin.com" title="by Raymond Hill">uBlock Origin</a> + <a href="https://decentraleyes.org">Decentraleyes</a></li>
+          <li>Browser: <a href="https://www.mozilla.org">Firefox</a> + <a href="https://ublockorigin.com" title="by Raymond Hill">uBlock Origin</a> + <a href="https://decentraleyes.org">Decentraleyes</a></li>
           <!-- <li>Camera: <a href="https://opencamera.org.uk">Open Camera</a></li> -->
           <li>Calculator: <a href="https://play.google.com/store/apps/details?id=com.bens.apps.ChampCalc.free">Champ Scientific Calculator</a>
           <li>Calendar: <a href="https://play.google.com/store/apps/details?id=com.appgenix.bizcal">Business Calendar 2 Planner</a></li>
@@ -247,6 +247,7 @@
       <li><a href="#remap">Input Remapper</a></li>
       <li><a href="#tmux">Tmux</a></li>
       <li><a href="#search">Web search</a></li>
+      <li><a href="#minimise">Launch minimised</a></li>
       <li><a href="#misc">Miscellaneous commands</a></li>
       <li><a href="#adb">Uninstall Android system app with ADB</a></li>
       <li><a href="#windoze">Windoze nonsense</a></li>
@@ -525,7 +526,7 @@ done</pre></code>
       <code>{"version":"2.0.126","settings":{"blur":0,"brightness":100,"contrast":100,"grayscale":0,"huerotate":0,"invert":0,"saturate":100,"sepia":0,"applyvideofilters":false,"backgroundcolor":"#000000","backgroundopacity":100,"blackbars":false,"blockautoplay":true,"blockhfrformats":true,"blockwebmformats":false,"boostvolume":false,"cinemamode":false,"cinemamodewideplayer":false,"controlbar":{"active":true,"autohide":false,"centered":true,"position":"absolute"},"controls":["loop","volume-booster","size","pop-up-player","speed","screenshot","options"],"controlsvisible":false,"controlspeed":true,"controlspeedmousebutton":false,"controlvolume":false,"controlvolumemousebutton":true,"convertshorts":false,"customcolors":{"--dimmer-text":"#cccccc","--hover-background":"#232323","--main-background":"#111111","--main-color":"#00adee","--main-text":"#eff0f1","--second-background":"#181818","--shadow":"#000000"},"customcssrules":"","customscript":"","customtheme":false,"darktheme":true,"date":1687771133142,"defaultvolume":true,"disableautoplay":true,"executescript":false,"expanddescription":false,"filter":"none","hidecardsendscreens":false,"hidechat":false,"hidecomments":false,"hiderelated":false,"hideshorts":true,"ignoreplaylists":true,"ignorepopupplayer":false,"localecode":"en_GB","localedir":"ltr","message":false,"miniplayer":true,"miniplayerposition":"_top-left","miniplayersize":"_320x180","newestcomments":false,"overridespeeds":true,"pauseforegroundtab":true,"pausevideos":true,"popuplayersize":"960x540","qualityembeds":"medium","qualityembedsfullscreen":"hd1080","qualityplaylists":"large","qualityplaylistsfullscreen":"hd1080","qualityvideos":"large","qualityvideosfullscreen":"hd1080","reload":false,"reversemousewheeldirection":false,"selectquality":true,"selectqualityfullscreenoff":true,"selectqualityfullscreenon":true,"speed":1,"speedvariation":0.25,"stopvideos":true,"theatermode":true,"theme":"youtube-deep-dark","themevariant":"youtube-deep-dark-kde.css","update":1717776894743,"volume":75,"volumemultiplier":3,"volumevariation":5,"wideplayer":false,"wideplayerviewport":true}}</code>
     </details>
     
-    <h3>Reddit Enhancement Suite</h3>
+    <h3 id="res">Reddit Enhancement Suite</h3>
     <p>☑ “Hide All Child Comments”.</p>
 
     <h3 id="remmina">Remmina</h3>
@@ -935,7 +936,10 @@ xdg-open "https://amazon.nl/s?k=$*"</pre></code>
 
   <p>To update bash execute: <code>. ~/.bashrc</code></p>
   <p>Now, within a terminal simply execute <code>am foo bar</code>, and it will open all websites searching for “foo bar”.</p>
- 
+
+  <h2 id="minimise">Launch minimised</h2>
+  <p>Even though some software supports launching minimised or to tray after, it does not always work depending on the <abbr title="operating system">OS</abbr>/installer/<abbr title="desktop environment">DE</abbr>, etc. For instance building <cite>Notesnook</cite> or <cite>Beeper</cite> with Arch's <cite>yay</cite> uses <a href="https://en.wikipedia.org/wiki/Electron_(software_framework)">Electron</a> to run these programs, which handles differently compared to starting them from an <a href="https://en.wikipedia.org/wiki/AppImage">AppImage</a>. Not even <cite>KDE Plasma</cite>'s “Window Rules” works to force these Electron apps to start minimised. The solution is to run <cite>Notesnook</cite>/<cite>Beeper</cite> from the AppImage available on their website. For <cite>Beeper</cite> one has to additionally add <code>--hidden</code> as a startup argument.</p>
+
   <h2 id="misc">Miscellaneous commands</h2>
   <ul>
     <li><a href="https://averagelinuxuser.com/clean-arch-linux/">Commands to clean Arch Linux</a>; respectively removes cache and orphaned packages: <code>sudo pacman -Sc && rm -rf ~/.cache/* && sudo pacman -Rns $(pacman -Qtdq)</code></li>
