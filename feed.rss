@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 
 <channel>
-  <title>Ars Cynic</title>
+  <title>arsCynic</title>
   <link>https://www.arscyni.cc</link>
   <description>My musings on nothing and everything, frequently influenced by Cynicism, which I interpret as the pursuit of modernity in proportion to nature.</description>
   <language>en-gb</language>
   <image>
-    <title>Ars Cynic</title>
+    <title>arsCynic</title>
     <url>https://www.arscyni.cc/img/favicon.png</url>
     <link>https://www.arscyni.cc</link>
     </image>
