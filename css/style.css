@@ -112,8 +112,13 @@ figure {
  text-decoration: none;
 }
 
-#cr-sub-title, nav {
+nav {
   text-align: center;
+}
+
+#index-arscynica {
+  text-align: center;
+  font-weight: bold;
 }
 
 #index-together, #index-invites {
