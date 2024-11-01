@@ -21,7 +21,7 @@
     <h1>Mostly excellent <a href="./take_my_money.html#:~:text=definitions%20of%20free%20software">“free”</a> software</h1>
     <p class="sub-title readability">A near-exhaustive list of software <em>I</em> use, not an exhaustive list of <em>the</em> best software. There could very well exist superior alternatives. Feel free to point them out.</p>
 
-    <p class="sub-title">Latest update: 2024-10-30, 20:58:46 CET.</p>
+    <p class="sub-title">Latest update: 2024-11-01, 13:03:47 CET.</p>
 
     <p class="fleuron">❦</p>
 
@@ -91,7 +91,7 @@
           ↳&#xFE0E; <strong>Ad blocking</strong>/privacy: <a href="https://ublockorigin.com" title="by Raymond Hill">uBlock Origin</a>, <a href="https://decentraleyes.org">Decentraleyes</a>, <a href="https://github.com/Cookie-AutoDelete/Cookie-AutoDelete">Cookie AutoDelete</a>, <a href="https://github.com/cavi-au/Consent-O-Matic">Consent-O-Matic</a>, <a href="https://sponsor.ajay.app">SponsorBlock</a><br>
           ↳&#xFE0E; Convenience: <a href="https://www.mrfdev.com/enhancer-for-youtube">Enhancer for YouTube</a>, <a href="https://readaloud.app">Read Aloud</a> (Voice: <a href="https://github.com/rhasspy/piper">Piper</a> jenny_dioco[medium]),
           <a href="https://github.com/artemave/translate_onhover">TransOver</a>, <a href="https://github.com/web-scrobbler/web-scrobbler/">Web Scrobbler</a>, <a href="https://github.com/Robbendebiene/Gesturefy">Gesturefy</a>, <a href="https://addons.mozilla.org/en-GB/firefox/addon/yass-we">Yet Another Smooth Scrolling WE</a></li>
-        <li><strong>Ad blocking</strong>: <a href="https://github.com/koonix/sblock">sblock</a>, <a href="https://github.com/hectorm/hblock">hBlock</a></li>
+        <li><strong>Ad blocking</strong>: <a href="https://github.com/hectorm/hblock">hBlock</a>, (<a href="https://github.com/koonix/sblock">sblock</a>)</li>
         <li>Calculator: <a href="https://www.symbolab.com">Symbolab</a>, <a href="https://www.wolframalpha.com">WolframAlpha</a>, <a href="https://www.geogebra.org/calculator">GeoGebra</a>, <a href="https://www.desmos.com">Desmos</a></li>
         <li>Chat: <br>
           ↳&#xFE0E; Telegram/WhatsApp/Discord/et cetera: <a href="https://www.beeper.com">Beeper</a></li>
@@ -204,9 +204,9 @@
     <p>I have certain set of software I install on every new machine. Here follows a list I copy-paste so I don't have to install everything individually each time.</p>
 
     <h3>Default:</h3>
-    <code><pre>pacman -Syu --needed xscreensaver geany gnome-disk-utility yakuake btop hunspell hunspell-nl hunspell-en_GB hunspell-fr smplayer okular fwupd tmux zsh rsync grsync libreoffice-fresh calibre npm transmission-qt kdeconnect gparted redshift nheko qalculate-qt ncdu</pre></code>
+    <code><pre>pacman -Syu --needed xscreensaver geany gnome-disk-utility yakuake btop hunspell hunspell-nl hunspell-en_GB hunspell-fr smplayer okular fwupd tmux zsh rsync grsync libreoffice-fresh calibre npm transmission-qt kdeconnect gparted redshift nheko qalculate-qt ncdu hblock</pre></code>
 
-    <code><pre>yay autokey-gtk sblock-git<!--  hblock --> input-remapper-git vscodium-bin simplescreenrecorder-bin lyx rustdesk-bin rate-mirrors zen-browser-bin crow-translate</pre></code> <!-- if qalculate doesn't install, add -S -->
+    <code><pre>yay autokey-gtk input-remapper-git vscodium-bin simplescreenrecorder-bin lyx rustdesk-bin rate-mirrors zen-browser-bin crow-translate</pre></code>
     
     <code><pre>npm install -g live-server</pre></code>
 
@@ -216,7 +216,9 @@
     <code><pre>boinc opencl-nvidia python-requests</pre></code>
     
     <h3>Optional/legacy:</h3>
-    <code><pre>pacman -Syu --needed vivaldi vivaldi-ffmpeg-codecs element-desktop shotcut rssguard discord bluez bluez-utils<!--  texstudio sagemath sagemath-doc --> xsane seahorse noto-fonts-emoji playerctl xfce4-systemload-plugin xfce4-sensors-plugin gst-plugins-good geany-plugins android-tools catfish ffmpeg ffmpegthumbs ffmpegthumbnailer gufw bash-completion thunar gvfs gvfs-mtp tumbler thunar-media-tags-plugin thunar-volman xdotool qt5-imageformats xournalpp make automake base-devel texlive-basic texlive-latex texlive-latexextra remmina libvncserver x11vnc inotify-tools dnsutils baobab peek</pre></code> <!-- thunderbird birdtray clementine torbrowser-launcher audio-recorder-->
+    <code><pre>pacman -Syu --needed vivaldi vivaldi-ffmpeg-codecs element-desktop shotcut rssguard discord bluez bluez-utils texstudio sagemath sagemath-doc xsane seahorse noto-fonts-emoji playerctl xfce4-systemload-plugin xfce4-sensors-plugin gst-plugins-good geany-plugins android-tools catfish ffmpeg ffmpegthumbs ffmpegthumbnailer gufw bash-completion thunar gvfs gvfs-mtp tumbler thunar-media-tags-plugin thunar-volman xdotool qt5-imageformats xournalpp make automake base-devel texlive-basic texlive-latex texlive-latexextra remmina libvncserver x11vnc inotify-tools dnsutils baobab peek thunderbird birdtray clementine torbrowser-launcher audio-recorder</pre></code>
+
+    <code><pre>yay sblock-git</pre></code>
 
       <!-- <li><a href="https://github.com/wxMaxima-developers/docker-wxmaxima/releases">wxMaxima</a>: sudo chmod +x filename, double click to execute.</li> -->
       
@@ -323,7 +325,6 @@ sblock</pre>
     </code>
 
     <p>To whitelist a domain, add arscyni.cc and www.arscyni.cc to <code>/etc/sblock/allow.list</code> and run <code>sblock</code> again.</p>
-
 
     <h3 id="vscodium">VSCodium</h3>
     <p>To change the minimap colors, etc. [source <a href="https://stackoverflow.com/a/60657698/13963944">1</a>, <a href="https://stackoverflow.com/a/43605752/13963944">2</a>, <a href="https://stackoverflow.com/a/46946515/13963944">3</a>, <a href="https://stackoverflow.com/a/29961309/13963944">4</a>],  go to File → Preferences → Settings → in the search box, type: <code>workbench.colorCustomizations</code> → click "Edit in settings.json"</p>
