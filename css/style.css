@@ -1,6 +1,7 @@
 /* Variables */
 :root {
   --bg-color: antiquewhite;
+  --bg-color-dark: black;
   --border-color: rgba(0, 0, 0, 0.25);
   --b-col-back-light: rgba(255, 255, 255, 0.384);
   --b-col-primary:grey;
@@ -12,6 +13,11 @@
 
 * {
   font-family: "Liberation Serif", serif, Georgia, "Times New Roman", Times;
+}
+
+.dark_mode {
+  background-color: black;
+  color: white;
 }
 
 h1 {
