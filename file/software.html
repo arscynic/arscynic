@@ -306,10 +306,10 @@ fi</pre></code>
 	  
     <h3 id="ubo">uBlock Origin</h3>
     <ul>
-      <li>☑ “Enable cloud storage support”. And don't forget to import from cloud storage the “Filter lists” and “My rules”. Subsequently export to cloud storage all future additions</li>
-      <li>☑ “Block media elements larger than 1337 KB”</li>
-      <li>☑ “Block remote fonts”</li>
-      <li>☑ “I am an advanced user”</li>
+      <li>☑ "Enable cloud storage support". And don't forget to import from cloud storage the "Filter lists"” and "My rules". Subsequently export to cloud storage all future additions</li>
+      <li>☑ "Block media elements larger than 1337 KB"</li>
+      <li>☑ "Block remote fonts"</li>
+      <li>☑ "I am an advanced user"</li>
     </ul>
 
     <p>Globally block 3rd-party scripts and 3rd-party frames.</p>
@@ -326,7 +326,7 @@ sblock</pre>
 
 
     <h3 id="vscodium">VSCodium</h3>
-    <p>To change the minimap colors, etc. [source <a href="https://stackoverflow.com/a/60657698/13963944">1</a>, <a href="https://stackoverflow.com/a/43605752/13963944">2</a>, <a href="https://stackoverflow.com/a/46946515/13963944">3</a>, <a href="https://stackoverflow.com/a/29961309/13963944">4</a>],  go to File → Preferences → Settings → in the search box, type: <code>workbench.colorCustomizations</code> → click “Edit in settings.json”</p>
+    <p>To change the minimap colors, etc. [source <a href="https://stackoverflow.com/a/60657698/13963944">1</a>, <a href="https://stackoverflow.com/a/43605752/13963944">2</a>, <a href="https://stackoverflow.com/a/46946515/13963944">3</a>, <a href="https://stackoverflow.com/a/29961309/13963944">4</a>],  go to File → Preferences → Settings → in the search box, type: <code>workbench.colorCustomizations</code> → click "Edit in settings.json"</p>
     <code><pre>{
     "editor.tabSize": 2,
     "editor.wordWrap": "on",
@@ -356,7 +356,7 @@ sblock</pre>
       <li>To select multiple instances of the <em>same character combination</em>, select the combination (word, sentence, etc.) and press: <code>control + shift + L</code></li>
       <li>Select multiple instances of the <em>same isolated word</em>: place the cursor on the word and press: <code>control + shift + L</code></li>
       <li><a href="https://stackoverflow.com/a/59221721/13963944">Rename the opening/closing tag pairs in HTML</a>: place the cursor on the tag and press <i>F2</i>.</li>
-      <li><a href="https://stackoverflow.com/a/62537701/13963944">Wrap selected text with tags</a>: <code>control + shift + P</code> and select “Emmet: Wrap with Abbreviation”.</li>
+      <li><a href="https://stackoverflow.com/a/62537701/13963944">Wrap selected text with tags</a>: <code>control + shift + P</code> and select "Emmet: Wrap with Abbreviation".</li>
       <li><a href="https://code.visualstudio.com/docs/editor/codebasics#_multiple-selections-multicursor">Multiple selections (multi-cursor)</a>: <code>alt + click</code> and/or add more with: <code>shift + alt + up/down</code></li>
       <li>Select word at cursor or the next occurrence of the current selection: <code>control + D</code></li>
       <li>Comment out a selection: <code>control + shift + A</code></li>
@@ -367,36 +367,36 @@ sblock</pre>
     <ol>
       <li><code>sudo pacman -S inotify-tools
       </code></li>
-      <li>Create a shell script e.g., “auto_execute.sh” containing the code below:<br>
+      <li>Create a shell script e.g., "auto_execute.sh" containing the code below:<br>
         <code><pre>#!/bin/bash
 while inotifywait -e modify,move_self -qq your_python_script.py; do
   python3 your_python_script.py
 done</pre></code>
-        Make sure the shell script is executable by right clicking it → “Properties” → “Permissions” → “Program: ☑ Allow this file to run as a program”, or by running the following command: <code>chmod +x auto_execute.sh</code></li>
+        Make sure the shell script is executable by right clicking it → "Properties" → "Permissions" → "Program: ☑ Allow this file to run as a program", or by running the following command: <code>chmod +x auto_execute.sh</code></li>
       <li>Open the terminal in <cite>VSCodium</cite> and run <code>auto_execute.sh</code></li>
     </ol>
 
-    <p>Now, whenever you save “your_python_script.py”, it will instantly throw the output in the <cite>VSCodium</cite> terminal, or whatever terminal you executed the shell script in. Source: <cite>ChatGPT</cite>.</p>
+    <p>Now, whenever you save "your_python_script.py", it will instantly throw the output in the <cite>VSCodium</cite> terminal, or whatever terminal you executed the shell script in. Source: <cite>ChatGPT</cite>.</p>
 
     <h3 id="lyx">LyX</h3>
     <p>To build <cite>LyX</cite> one needs packages <code>make automake autoconf base-devel</code>, otherwise it throws the following error: </p>
 
     <blockquote>
-      <p>“configure: error: cannot compile a simple Qt executable. Check you have the right $QTDIR”</p>
+      <p>"configure: error: cannot compile a simple Qt executable. Check you have the right $QTDIR"</p>
     </blockquote>
 
     <h3 id="kde">KDE</h3>
 
     <h4>Custom KRunner/Plasma browser search query</h4>
-    <p>To configure <cite>Plasma search</cite> to open a browser with a query when entering “xyz example.com”, e.g., “viv example.com” that opens example.com in <cite>Vivaldi</cite> browser:</p>
+    <p>To configure <cite>Plasma search</cite> to open a browser with a query when entering "xyz example.com", e.g., "viv example.com" that opens example.com in <cite>Vivaldi</cite> browser:</p>
 
     <blockquote>
       <p>“<a href="https://kb.iu.edu/d/abbe">create a symlink</a> named "viv" in /usr/bin/ to the actual vivaldi binary” —<a href="https://matrix.to/#/!gYaaEyvNWxTzXssOmq:kde.org/$i-L0XYlJ_ElEdHPD7oKNGysslTil3w01IDM2Y6JCJTc?via=matrix.org&via=im.kde.org&via=kde.org">Jan R.</a>.</p>
     </blockquote>
 
-    <p>Either there likely already is a symlink named “vivaldi” within <code>/usr/bin/</code>, of which you can make another symlink with a more convenient shorter name: <code>sudo ln -s vivaldi viv</code></p>
+    <p>Either there likely already is a symlink named "vivaldi" within <code>/usr/bin/</code>, of which you can make another symlink with a more convenient shorter name: <code>sudo ln -s vivaldi viv</code></p>
 
-    <p>Or go to the directory containing the vivaldi binary, in my case “/opt/vivaldi/”, and in that directory run the command: <code>sudo ln -s vivaldi /usr/bin/viv</code></p>
+    <p>Or go to the directory containing the vivaldi binary, in my case "/opt/vivaldi/", and in that directory run the command: <code>sudo ln -s vivaldi /usr/bin/viv</code></p>
 
     <h4>Web Search Keywords backup</h4>
     <p>To back up all your custom websites added to the <cite>Web Search Keywords</cite> <cite>KRunner</cite> plugin, navigate to <code>~/.local/share/kf6/searchproviders/</code> and back up the containing files.</p>
@@ -405,13 +405,13 @@ done</pre></code>
     <p>The upgrade from <cite>KDE Plasma 5</cite> to 6 enables <cite>Wayland</cite> by default despite using <cite>X11</cite> before, and it breaks tons of stuff, e.g., <cite>Vivaldi</cite> browser became unusable, <cite>XScreenSaver</cite> does not work, et cetera. To revert to <cite>X11</cite> open <abbr title="The Simple Desktop Display Manager"><cite>SDDM</cite></abbr> → Behaviour… → Automatically log in…with session <code>Plasma (X11)</code>.</p>
 
     <h4>How to reauthorise a Gmail account in KMail</h4>
-    <p>Open <cite>kdewallet</cite> with <cite>kdewalletmanager</cite> and delete “akonadi_imap_resource_…” in “Contents” > “imap” > “Passwords”.</p>
+    <p>Open <cite>kdewallet</cite> with <cite>kdewalletmanager</cite> and delete "akonadi_imap_resource_…" in "Contents" > "imap" > "Passwords".</p>
 
     <h4>How to make a unified folder in KMail.</h4>
-    <p>Go to “Settings” > “Plugins” > “Akonadi Agents”, and click the slider icon 🎚️ next to “Unified Mailbox Agent”.</p>
+    <p>Go to "Settings" > "Plugins" > "Akonadi Agents", and click the slider icon 🎚️ next to "Unified Mailbox Agent".</p>
 
     <!-- <h3 id="vivaldi">Vivaldi</h3>
-    <p>To remove <cite>Vivaldi</cite>'s header / title bar, first enable “☑ Allow CSS modifications” at <a href="vivaldi://experiments/">vivaldi://experiments/</a>, then open <cite>Vivaldi</cite>'s settings → Appearance → CUSTOM UI MODIFICATIONS → select the folder with a <i>.css</i> file containing: <code> #header {
+    <p>To remove <cite>Vivaldi</cite>'s header / title bar, first enable "☑ Allow CSS modifications" at <a href="vivaldi://experiments/">vivaldi://experiments/</a>, then open <cite>Vivaldi</cite>'s settings → Appearance → CUSTOM UI MODIFICATIONS → select the folder with a <i>.css</i> file containing: <code> #header {
       display: none;
       }</code></p> -->
 
@@ -419,10 +419,10 @@ done</pre></code>
     <h4>Enable userChrome.css customisation</h4>
     <ul>
       <li><cite>Zen Browser</cite>: type <code>about:config</code> in the URL entry field → set <code>toolkit.legacyUserProfileCustomizations.stylesheets</code> to <code>true</code></li>
-      <li><cite>LibreWolf</cite>: settings → LibreWolf → “☑ Allow userChrome.css customization”</li>
+      <li><cite>LibreWolf</cite>: settings → LibreWolf → "☑ Allow userChrome.css customization"</li>
     </ul>
     <ol>
-      <li>Create a <i>userChrome.css</i> file in the browser's <a href="https://support.mozilla.org/en-US/kb/profiles-where-firefox-stores-user-data#w_how-do-i-find-my-profile">profile directory</a>, in a folder named “chrome”, e.g., <code>~/.librewolf/rqp0p3up.default-default/chrome/</code></li>
+      <li>Create a <i>userChrome.css</i> file in the browser's <a href="https://support.mozilla.org/en-US/kb/profiles-where-firefox-stores-user-data#w_how-do-i-find-my-profile">profile directory</a>, in a folder named "chrome", e.g., <code>~/.librewolf/rqp0p3up.default-default/chrome/</code></li>
       <li>Add your preferred CSS tweaks in this file.</li>
     </ol>
 
@@ -516,9 +516,9 @@ done</pre></code>
     <h4>KeePassXC in LibreWolf</h4>
     <p>To <a href="https://github.com/keepassxreboot/keepassxc/issues/6907">enable <cite>KeePassXC</cite> browser integration in <cite>LibreWolf</cite></a>:</p>
     <ol>
-      <li>In <cite>KeePassXC</cite> go to “Tools” → “Settings” → “Browser Integration” → “Advanced” → Enable “☑ Use a custom browser configuration location:”</li>
-      <li>“Config Location:” <code>~/.librewolf/native-messaging-hosts</code></li>
-      <li>Open <cite>LibreWolf</cite>, assuming the extension <cite><a href="https://addons.mozilla.org/en-US/firefox/addon/keepassxc-browser">KeePassXC-Browser</a></cite> is already installed, and open the extension's settings → “Connected Databases” → “🔗 Connect”</li>
+      <li>In <cite>KeePassXC</cite> go to "Tools" → "Settings" → "Browser Integration" → "Advanced" → Enable "☑ Use a custom browser configuration location:"</li>
+      <li>"Config Location:" <code>~/.librewolf/native-messaging-hosts</code></li>
+      <li>Open <cite>LibreWolf</cite>, assuming the extension <cite><a href="https://addons.mozilla.org/en-US/firefox/addon/keepassxc-browser">KeePassXC-Browser</a></cite> is already installed, and open the extension's settings → "Connected Databases" → "🔗 Connect"</li>
     </ol>
 
     <h3 id="yt">Enhancer for YouTube</h3>
@@ -528,7 +528,7 @@ done</pre></code>
     </details>
     
     <h3 id="res">Reddit Enhancement Suite</h3>
-    <p>☑ “Hide All Child Comments”.</p>
+    <p>☑ "Hide All Child Comments".</p>
 
     <h3 id="remmina">Remmina</h3>
     <p>On the remote computer (server) to connect to:</p>
@@ -541,7 +541,7 @@ done</pre></code>
     <p>On the local computer:</p>
     <ol>
       <li>Install packages: <code>remmina libvncserver</code></li>
-      <li>In Remmina “Add a new connection profile” by clicking “+” in the top left corner. Type a name. Select protocol “Remmina VNC Plugin”. Enter the server: ipaddress:5900. Click “Save and Connect”.</li>
+      <li>In Remmina "Add a new connection profile" by clicking "+" in the top left corner. Type a name. Select protocol "Remmina VNC Plugin". Enter the server: ipaddress:5900. Click "Save and Connect".</li>
     </ol>
 
     <p>The desktop environment of the remote computer should now be visible. Don't forget to set a password in <a href="https://wiki.archlinux.org/title/x11vnc#Setting_a_password">x11vnc</a> when leaving the connection open indefinitely.</p>
@@ -554,9 +554,9 @@ done</pre></code>
     <p>If this log spam is present, create a “drop-in file” for boinc-client.service:</p>
     <code>mkdir /etc/systemd/system/boinc-client.service.d/ && sudo echo -e '[Service]\nLogFilterPatterns=~no authorization protocol specified' > /etc/systemd/system/boinc-client.service.d/wayland-syslog-spam.conf</code>
 
-    <p>To <a href="https://wiki.archlinux.org/title/BOINC#Using_BOINC">use BOINC via the GUI</a>, click the previous link. When creating the <i>gui_rpc_auth.cfg</i> file and launching <cite>boincmgr</cite> via commandline it will probably work, but when launching <cite>BOINC Manager</cite> via an application launcher I recall it throwing an “gui_rpc_auth.cfg exists but can't be read. Check the File permissions.” error message. <a href="https://boinc.berkeley.edu/forum_thread.php?id=14013&postid=101192">Changing the file's permissions fixed this</a>: <code>chmod 640 ~/gui_rpc_auth.cfg</code>.</p>
+    <p>To <a href="https://wiki.archlinux.org/title/BOINC#Using_BOINC">use BOINC via the GUI</a>, click the previous link. When creating the <i>gui_rpc_auth.cfg</i> file and launching <cite>boincmgr</cite> via commandline it will probably work, but when launching <cite>BOINC Manager</cite> via an application launcher I recall it throwing an "gui_rpc_auth.cfg exists but can't be read. Check the File permissions." error message. <a href="https://boinc.berkeley.edu/forum_thread.php?id=14013&postid=101192">Changing the file's permissions fixed this</a>: <code>chmod 640 ~/gui_rpc_auth.cfg</code>.</p>
 
-    <p>To make sure the <a href="https://wiki.archlinux.org/title/BOINC#Using_BOINC:~:text=autostart%20that%20on%20Xorg%20startup">mouse input suspends the tasks</a> too—after startup/boot/login—and not only keyboard inputs: install “xorg-xhost” and run <code>echo 'xhost si:localuser:boinc' > ~/.xprofile</code>. Or just run <code>xhost si:localuser:boinc</code> in a terminal to not make it persistent.</p>
+    <p>To make sure the <a href="https://wiki.archlinux.org/title/BOINC#Using_BOINC:~:text=autostart%20that%20on%20Xorg%20startup">mouse input suspends the tasks</a> too—after startup/boot/login—and not only keyboard inputs: install "xorg-xhost" and run <code>echo 'xhost si:localuser:boinc' > ~/.xprofile</code>. Or just run <code>xhost si:localuser:boinc</code> in a terminal to not make it persistent.</p>
 
     <h3 id="gpuowl">GpuOwl</h3>
     <p>It's possible to run <a href="https://www.mersenne.org">GIMPS</a> on the <abbr title="central processing unit">CPU</abbr> (<cite>mprime</cite>) and <abbr title="graphics processing unit">GPU</abbr> (<cite>GpuOwl</cite>) simultaneously. [<a href="https://www.mersenneforum.org/showthread.php?p=652812#post652812:~:text=multiple%20GIMPS%20apps%20on%20the%20same%20machine%20simultaneously">Thanks to kriesel for the tip</a>.]</p>
@@ -882,7 +882,7 @@ authWarningSlack:   20
     </details>
 
     <!-- <h3>LanguageTool</h3>
-    <p>☐ “Enable rephrasing”.</p> -->
+    <p>☐ "Enable rephrasing".</p> -->
 
     <h3 id="remap">Input Remapper</h3>
 
@@ -894,7 +894,7 @@ authWarningSlack:   20
 
     <details>
       <summary>Click to see my EVGA X15 / <cite>Input Remapper</cite> configuration.</summary>
-      <p>Functions after “|” apply when the mouse's shift button is pressed as well.</p>
+      <p>Functions after "|" apply when the mouse's shift button is pressed as well.</p>
 <pre>left mouse extra top: copy (F13 = XF86Tools) | cut (F15 = XF86Launch6)
 left mouse extra bottom: paste (F14 = XF86Launch5) | unformatted paste (F16 = XF86Launch7)
 scroll button: default | shift + middle mouse click (F17 = XF86Launch8)
@@ -938,10 +938,10 @@ xdg-open "https://amazon.com.be/s?k=$*"
 xdg-open "https://amazon.nl/s?k=$*"</pre></code>
 
   <p>To update bash execute: <code>. ~/.bashrc</code></p>
-  <p>Now, within a terminal simply execute <code>am foo bar</code>, and it will open all websites searching for “foo bar”.</p>
+  <p>Now, within a terminal simply execute <code>am foo bar</code>, and it will open all websites searching for "foo bar".</p>
 
   <h2 id="minimise">Launch minimised</h2>
-  <p>Even though some software supports launching minimised or to tray after, it does not always work depending on the <abbr title="operating system">OS</abbr>/installer/<abbr title="desktop environment">DE</abbr>, etc. For instance building <cite>Notesnook</cite> or <cite>Beeper</cite> with Arch's <cite>yay</cite> uses <a href="https://en.wikipedia.org/wiki/Electron_(software_framework)">Electron</a> to run these programs, which handles differently compared to starting them from an <a href="https://en.wikipedia.org/wiki/AppImage">AppImage</a>. Not even <cite>KDE Plasma</cite>'s “Window Rules” works to force these Electron apps to start minimised. The solution is to run <cite>Notesnook</cite>/<cite>Beeper</cite> from the AppImage available on their website. For <cite>Beeper</cite> one has to additionally add <code>--hidden</code> as a startup argument.</p>
+  <p>Even though some software supports launching minimised or to tray after, it does not always work depending on the <abbr title="operating system">OS</abbr>/installer/<abbr title="desktop environment">DE</abbr>, etc. For instance building <cite>Notesnook</cite> or <cite>Beeper</cite> with Arch's <cite>yay</cite> uses <a href="https://en.wikipedia.org/wiki/Electron_(software_framework)">Electron</a> to run these programs, which handles differently compared to starting them from an <a href="https://en.wikipedia.org/wiki/AppImage">AppImage</a>. Not even <cite>KDE Plasma</cite>'s "Window Rules" works to force these Electron apps to start minimised. The solution is to run <cite>Notesnook</cite>/<cite>Beeper</cite> from the AppImage available on their website. For <cite>Beeper</cite> one has to additionally add <code>--hidden</code> as a startup argument.</p>
 
   <h2 id="misc">Miscellaneous commands</h2>
   <ul>
@@ -951,7 +951,7 @@ xdg-open "https://amazon.nl/s?k=$*"</pre></code>
     <li><a href="https://unix.stackexchange.com/a/732020/378857">Command to toggle keyboard backlight</a>: <code>xset q | grep -q 'Scroll Lock: off' && xset led named 'Scroll Lock' || xset -led named 'Scroll Lock'
     </code></li>
     <li><a href="https://www.phys.uconn.edu/~rozman/Courses/P2200_15F/downloads/github-caching_password_in_git.pdf">Command to cache the <i>git</i> password</a>, for one hour: <code>git config --global credential.helper 'cache --timeout=3600'</code></li>
-    <li><a href="https://wiki.archlinux.org/title/Xdg-utils#xdg-settings">Command to change the default browser</a> for <a href="https://github.com/telegramdesktop/tdesktop/issues/262#issuecomment-721790595"><cite>Telegram</cite></a>, <cite>Betterbird</cite>, etc. Even when choosing <cite>Vivaldi</cite> browser as the default in “Settings → Default Applications” (xfce4-mime-settings), for some reasons some programs (<cite>Telegram</cite>) still use <cite>Firefox</cite>/<cite>Chromium</cite>: <code>xdg-mime default vivaldi-stable.desktop x-scheme-handler/https x-scheme-handler/http</code></li>
+    <li><a href="https://wiki.archlinux.org/title/Xdg-utils#xdg-settings">Command to change the default browser</a> for <a href="https://github.com/telegramdesktop/tdesktop/issues/262#issuecomment-721790595"><cite>Telegram</cite></a>, <cite>Betterbird</cite>, etc. Even when choosing <cite>Vivaldi</cite> browser as the default in "Settings" → "Default Applications" (xfce4-mime-settings), for some reasons some programs (<cite>Telegram</cite>) still use <cite>Firefox</cite>/<cite>Chromium</cite>: <code>xdg-mime default vivaldi-stable.desktop x-scheme-handler/https x-scheme-handler/http</code></li>
     <li>Control media players: <code>playerctl play-pause/next/previous</code></li>
     <li>Control volume: <code>amixer set Master n%+/n%-</code></li>
     <li>Launch a terminal session including a command: <code>konsole -e btop</code></li>
@@ -962,9 +962,9 @@ xdg-open "https://amazon.nl/s?k=$*"</pre></code>
   </ul>
 
   <h2 id="adb">Uninstall an <cite>Android</cite> system app with <abbr title="Android debug bridge"><cite>ADB</cite></abbr></h2>
-  <p>How to uninstall a normally uninstallable <cite>Android</cite> system app, e.g. “Link to Windows”.</p>
+  <p>How to uninstall a normally uninstallable <cite>Android</cite> system app, e.g. "Link to Windows".</p>
   <ol>
-    <li><cite>Android</cite> settings → Developer options → enable “USB debugging”.</li>
+    <li><cite>Android</cite> settings → Developer options → enable "USB debugging".</li>
     <li>Install <cite>ADB</cite>, arch: <code>android-tools</code></li>
     <li>Verify connection to phone: <code>adb devices</code></li>
     <li>Enable a shell: <code>adb shell</code></li>
@@ -978,14 +978,14 @@ xdg-open "https://amazon.nl/s?k=$*"</pre></code>
   <h3>Dual-boot and sharing a drive between <cite>Linux</cite> and <cite>Windows</cite></h3>
   <p>To share a drive between <cite>Linux</cite> and <cite>Windows</cite> (11?) on a <a href="https://wiki.archlinux.org/title/Dual_boot_with_Windows#Fast_Startup_and_hibernation">dual-boot setup and ensure the drives' files don't get deleted</a>, disable <cite>Windows</cite>' enabled by default fast startup <em>and</em> hibernation: </p>
   <ol>
-    <li>Control Panel → Hardware and Sound → Power Options → “Choose what the power button does” → “Change settings that are currently unavailable” → <span class="important"><strong>disable</strong> “Turn on fast startup (recommended)”</span></li>
+    <li>Control Panel → Hardware and Sound → Power Options → "Choose what the power button does" → "Change settings that are currently unavailable" → <span class="important"><strong>disable</strong> "Turn on fast startup (recommended)"</span></li>
     <li>In cmd.exe: <code>powercfg /H off</code></li>
   </ol>
 
   <h3>Bypass <cite>Windows 11</cite> <cite>Microsoft</cite> account prompt</h3>
-  <p>Unplug the Ethernet cable and disable Wi-Fi. When prompted to enter an email address press <code>Shift + F10</code>, and in cmd.exe type <code><abbr title="out of box experience">oobe</abbr>\BypassNRO</code> and press enter to reboot. Then click “I don't have internet” → “Continue with limited setup”. When asked to enter your name type “Screw Microsoft”. Unethical bastards.</p>
+  <p>Unplug the Ethernet cable and disable Wi-Fi. When prompted to enter an email address press <code>Shift + F10</code>, and in cmd.exe type <code><abbr title="out of box experience">oobe</abbr>\BypassNRO</code> and press enter to reboot. Then click "I don't have internet" → "Continue with limited setup". When asked to enter your name type "Screw Microsoft". Unethical bastards.</p>
 
-  <p>If <code>Shift + F10</code> does not launch anything except for a split-second loading icon, then just use <code>no@thankyou.com</code> as the email address and enter any arbitrary password; “Screw Microsoft” remains an appropriate choice.</p>
+  <p>If <code>Shift + F10</code> does not launch anything except for a split-second loading icon, then just use <code>no@thankyou.com</code> as the email address and enter any arbitrary password; "Screw Microsoft" remains an appropriate choice.</p>
 
   <p>Source: <a href="https://www.ghacks.net/2023/01/26/how-to-bypass-the-microsoft-account-requirement-during-windows-setup/">How to bypass the Microsoft Account requirement during Windows setup</a></p>
 
@@ -997,9 +997,9 @@ xdg-open "https://amazon.nl/s?k=$*"</pre></code>
     <ol>
       <li>Launch the registry editor <code>regedit</code></li>
       <li>Navigate to <code>HKEY_CURRENT_USER\SOFTWARE\Policies\Microsoft\Windows</code></li>
-      <li>Create a new key called <code>Explorer</code> by right clicking “Windows” → “New” → “Key”</li>
-      <li>Create a DWORD value called <code>DisableSearchBoxSuggestions</code> by right clicking “Explorer” → “New” → “DWORD (32 bit) Value”</li>
-      <li>Assign the <em>hexadecimal</em> value of <code>1</code> to this newly created DWORD and click “OK”</li>
+      <li>Create a new key called <code>Explorer</code> by right clicking "Windows" → "New" → "Key"</li>
+      <li>Create a DWORD value called <code>DisableSearchBoxSuggestions</code> by right clicking "Explorer" → "New" → "DWORD (32 bit) Value"</li>
+      <li>Assign the <em>hexadecimal</em> value of <code>1</code> to this newly created DWORD and click "OK"</li>
     </ol>
   </blockquote>
 
@@ -1007,10 +1007,10 @@ xdg-open "https://amazon.nl/s?k=$*"</pre></code>
 
   <h4>Disable Windows Copilot</h4>
   <ol>
-    <li>Launch “Edit group policy” by typing gpedit in the search box.</li>
+    <li>Launch "Edit group policy" by typing gpedit in the search box.</li>
     <li>Browse to: User Configuration → Administrative templates → Windows Components → Windows Copilot
     </li>
-    <li>Enable “Turn off Windows Copilot” and click “Apply” → “OK”</li>
+    <li>Enable "Turn off Windows Copilot" and click "Apply" → "OK"</li>
   </ol>
 
   <p>Source: <a href="https://www.tomsguide.com/computing/software/how-disable-copilot-in-windows-11">How to disable Copilot in Windows 11</a></p>
