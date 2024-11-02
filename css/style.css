@@ -1,7 +1,7 @@
 /* Variables */
 :root {
+  --fg-color: black;
   --bg-color: antiquewhite;
-  --nav-index-color: black;
   --nav-border-color: rgba(0, 0, 0, 0.19);
   --nav-a-color: dimgrey;
   --nav-a-color-hover: black;
@@ -87,9 +87,14 @@ body {
 code, code pre {
   font-family: monospace;
   font-size: medium;
-  margin: 0.5rem 0 0.5rem 0;
   background-color: var(--code-color_bg);
   word-break: break-all;
+  border-radius: .25rem;
+}
+
+code pre {
+  margin: 0.25rem 0 0.25rem 0rem;
+  padding: 0 .25rem 0 .25rem;
 }
 
 code:hover {
@@ -140,7 +145,7 @@ figure {
 }
 
 #toggle-dark_mode {
-  cursor: crosshair;
+  cursor: pointer;
   /* color: var(--url-color); */ /* This only affects the ☯ on index.html because the selectors below are more specific and thus take precedence. */
 }
 
@@ -154,16 +159,16 @@ figure {
 }
 
 .dark_mode {
-  color: antiquewhite;
+  --fg-color: antiquewhite;
+  color: var(--fg-color);
   --bg-color: #191919;
-  --nav-index-color: antiquewhite;
   --nav-border-color: grey;
   --nav-a-color: grey;
-  --nav-a-color-hover: antiquewhite;
+  --nav-a-color-hover: var(--fg-color);
   --for_linux-color: rgb(37, 37, 37);
   --for_linux-color_bg: rgba(255, 255, 255, 0.027);
   --for_linux-heart: darkgrey;
-  --code-color_bg: #313131;
+  --code-color_bg: darkslategrey;
   --url-color: steelblue;
   --url-color_visited: cadetblue;
 }
@@ -173,7 +178,7 @@ figure {
 
  #nav-top a {
  text-decoration: none;
- color: var(--nav-index-color);
+ color: var(--fg-color);
  opacity: .52;
 }
 
@@ -266,8 +271,7 @@ nav {
   font-size: xx-small;
   font-style: italic;
   font-family: monospace;
-  text-decoration: none;
-  color: black;
+  padding-top: .25rem;
 }
 
 #bio-intro {
@@ -329,7 +333,7 @@ nav {
   text-align: center;
   font-size: 0.625rem;
   text-decoration: none;
-  color: black;
+  color: var(--fg-color);
   display: inline-block;
 }
 
@@ -739,7 +743,8 @@ Credits to Michael Coker https://stackoverflow.com/a/42497946/13963944 */
 }
 
 .source a {
-  text-decoration: none
+  text-decoration: none;
+  cursor: help;
 }
 
 .dagger {
