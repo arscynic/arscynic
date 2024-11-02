@@ -171,13 +171,13 @@ figure {
 /*———————————————————————————————————————————————————————————————*/
 /* Index */
 
-#index-page nav a {
+ #nav-top a {
  text-decoration: none;
  color: var(--nav-index-color);
  opacity: .52;
 }
 
-#index-page nav a:hover {
+ #nav-top a:hover {
   text-decoration: underline;
   opacity: 1;
  }
