@@ -162,6 +162,7 @@ figure {
   --fg-color: antiquewhite;
   color: var(--fg-color);
   --bg-color: #191919;
+  --b-col-back-light: black;
   --nav-border-color: grey;
   --nav-a-color: grey;
   --nav-a-color-hover: var(--fg-color);
@@ -643,7 +644,7 @@ figure summary, figure details pre, #edit-list summary {
 #edit-list summary {
   text-decoration: underline;
   cursor: pointer;
-  color: darkslategrey;
+  opacity: .51;
   margin-top: 0;
 }
 
@@ -762,6 +763,7 @@ li ul li {
 /* Mastodon comment CSS below is all copy-pasted from Veronica Berglyd Olsen: https://berglyd.net/blog/2023/03/mastodon-comments/, but slightly tweaked by me */
 
 #mastodon-comments-list button {
+  color: var(--fg-color);
   background-color: var(--b-col-back-light);
   border: 0.063rem solid var(--b-col-primary);
   border-radius: 0.5rem;
