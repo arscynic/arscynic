@@ -1,6 +1,7 @@
 /* Variables */
 :root {
   --bg-color: antiquewhite;
+  --nav-index-color: black;
   --nav-border-color: rgba(0, 0, 0, 0.19);
   --nav-a-color: dimgrey;
   --nav-a-color-hover: black;
@@ -8,6 +9,8 @@
   --for_linux-heart: silver;
   --for_linux-color_bg: rgba(0, 0, 0, 0.029);
   --code-color_bg: cornsilk;
+  --url-color: #0000EE;
+  --url-color_visited: #551A8B;
   --b-col-back-light: rgba(255, 255, 255, 0.384);
   --b-col-primary:grey;
   --b-col-back-semi-light: transparent;
@@ -18,6 +21,14 @@
 
 * {
   font-family: "Liberation Serif", serif, Georgia, "Times New Roman", Times;
+}
+
+a {
+  color: var(--url-color);
+}
+
+a:visited {
+  color: var(--url-color_visited);
 }
 
 h1 {
@@ -129,8 +140,8 @@ figure {
 }
 
 #toggle-dark_mode {
-  cursor: pointer;
-  color: #0000EE; /* This only affects the ☯ on index.html because the selectors below are more specific and thus take precedence. */
+  cursor: crosshair;
+  /* color: var(--url-color); */ /* This only affects the ☯ on index.html because the selectors below are more specific and thus take precedence. */
 }
 
 #bottom-nav a {
@@ -145,6 +156,7 @@ figure {
 .dark_mode {
   color: antiquewhite;
   --bg-color: #191919;
+  --nav-index-color: antiquewhite;
   --nav-border-color: grey;
   --nav-a-color: grey;
   --nav-a-color-hover: antiquewhite;
@@ -152,6 +164,8 @@ figure {
   --for_linux-color_bg: rgba(255, 255, 255, 0.027);
   --for_linux-heart: darkgrey;
   --code-color_bg: #313131;
+  --url-color: steelblue;
+  --url-color_visited: rebeccapurple;
 }
 
 /*———————————————————————————————————————————————————————————————*/
@@ -159,7 +173,14 @@ figure {
 
 #index-page nav a {
  text-decoration: none;
+ color: var(--nav-index-color);
+ opacity: .52;
 }
+
+#index-page nav a:hover {
+  text-decoration: underline;
+  opacity: 1;
+ }
 
 nav {
   text-align: center;
