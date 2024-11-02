@@ -23,6 +23,12 @@
   font-family: "Liberation Serif", serif, Georgia, "Times New Roman", Times;
 }
 
+body {
+  color: var(--fg-color);
+  background-color: var(--bg-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
 a {
   color: var(--url-color);
 }
@@ -159,9 +165,9 @@ figure {
 }
 
 .dark_mode {
-  --fg-color: antiquewhite;
-  color: var(--fg-color);
-  --bg-color: #191919;
+  /* --fg-color: antiquewhite; */
+  /* color: var(--fg-color); */
+  /* --bg-color: #191919; */
   --b-col-back-light: black;
   --nav-border-color: grey;
   --nav-a-color: grey;
