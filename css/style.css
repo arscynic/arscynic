@@ -32,10 +32,12 @@ body {
 
 a {
   color: var(--url-color);
+  transition: color .1s;
 }
 
 a:visited {
   color: var(--url-color_visited);
+  transition: color .1s;
 }
 
 h1 {
@@ -216,6 +218,7 @@ nav {
   background-color: var(--for_linux-color_bg);
   padding: 0rem 0.188rem 0rem 0.188rem;
   text-decoration: none;
+  transition: var(--transition_time), background-color var(--transition_time);
 }
 
 #heart {
