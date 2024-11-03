@@ -30,14 +30,14 @@ body {
   background-color: var(--bg-color);
 }
 
-a {
+a, a del, a cite {
   color: var(--url-color);
-  transition: color .1s;
+  transition: color 0s;
 }
 
-a:visited {
+a:visited, a:visited del, a:visited cite {
   color: var(--url-color_visited);
-  transition: color .1s;
+  transition: color 0s;
 }
 
 h1 {
