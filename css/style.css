@@ -2,7 +2,7 @@
 :root {
   --fg-color: black;
   --bg-color: antiquewhite;
-  --nav-border-color: rgba(0, 0, 0, 0.19);
+  --nav-border-color: grey;
   --nav-a-color: dimgrey;
   --nav-a-color-hover: black;
   --for_linux-color: papayawhip;
@@ -11,6 +11,7 @@
   --code-color_bg: cornsilk;
   --url-color: #0000EE;
   --url-color_visited: #551A8B;
+  --transition_time: .29s;
   --b-col-back-light: rgba(255, 255, 255, 0.384);
   --b-col-primary:grey;
   --b-col-back-semi-light: transparent;
@@ -21,6 +22,7 @@
 
 * {
   font-family: "Liberation Serif", serif, Georgia, "Times New Roman", Times;
+  transition: color var(--transition_time), background-color var(--transition_time);
 }
 
 body {
@@ -144,6 +146,7 @@ figure {
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
   border: 0.06rem solid var(--nav-border-color);
+  /* border-color: red; */
   border-bottom: 0;
   background-color: var(--bg-color);
   box-shadow: 0 0 0.25rem 0 rgba(0, 0, 0, 0.075);
@@ -165,7 +168,7 @@ figure {
 
 .dark_mode_colors {
   --b-col-back-light: black;
-  --nav-border-color: grey;
+  --nav-border-color: rgb(101, 101, 101);
   --nav-a-color: grey;
   --nav-a-color-hover: var(--fg-color);
   --for_linux-color: rgb(37, 37, 37);
