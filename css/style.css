@@ -11,7 +11,6 @@
   --code-color_bg: cornsilk;
   --url-color: #0000EE;
   --url-color_visited: #551A8B;
-  --transition_time: .29s;
   --b-col-back-light: rgba(255, 255, 255, 0.384);
   --b-col-primary:grey;
   --b-col-back-semi-light: transparent;
@@ -22,7 +21,6 @@
 
 * {
   font-family: "Liberation Serif", serif, Georgia, "Times New Roman", Times;
-  transition: color var(--transition_time), background-color var(--transition_time);
 }
 
 body {
@@ -30,14 +28,12 @@ body {
   background-color: var(--bg-color);
 }
 
-a, a del, a cite {
+a {
   color: var(--url-color);
-  transition: color 0s;
 }
 
-a:visited, a:visited del, a:visited cite {
+a:visited {
   color: var(--url-color_visited);
-  transition: color 0s;
 }
 
 h1 {
@@ -218,7 +214,6 @@ nav {
   background-color: var(--for_linux-color_bg);
   padding: 0rem 0.188rem 0rem 0.188rem;
   text-decoration: none;
-  transition: var(--transition_time), background-color var(--transition_time);
 }
 
 #heart {
