@@ -164,10 +164,7 @@ figure {
   color: var(--nav-a-color-hover);
 }
 
-.dark_mode {
-  /* --fg-color: antiquewhite; */
-  /* color: var(--fg-color); */
-  /* --bg-color: #191919; */
+.dark_mode_colors {
   --b-col-back-light: black;
   --nav-border-color: grey;
   --nav-a-color: grey;

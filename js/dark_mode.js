@@ -1,44 +1,37 @@
+const LIGHT_COLOR = 'antiquewhite';
 const DARK_BG_COLOR = '#191919';
-const COLOR_AWHITE = 'antiquewhite'
-// Immediately set the CSS variables based on the dark mode preference
-if (localStorage.getItem("dark_mode") === "enabled") {
-  document.documentElement.style.setProperty('--bg-color', DARK_BG_COLOR);
-  document.documentElement.style.setProperty('--fg-color', COLOR_AWHITE);
+const DARK_FONT_COLOR = 'black';
+
+// Immediately apply dark background if the CSS class .dark_mode_colors is enabled.
+if (localStorage.getItem("dark_mode_colors") === "enabled") {
+  enable_dark_mode();
 }
 
-// Check localStorage on page load and apply the preferred mode
+// Adds the CSS class .dark_mode_colors after DOM is loaded
 document.addEventListener("DOMContentLoaded", function() {
-  if (localStorage.getItem("dark_mode") === "enabled") {
-    document.body.classList.add("dark_mode");
+  if (localStorage.getItem("dark_mode_colors") === "enabled") {
+    document.body.classList.add("dark_mode_colors");
   }
 });
 
 function toggle_dark_mode() {
-  var element = document.body;
-  element.classList.toggle("dark_mode");
-  const root = document.documentElement;
-  const isDarkMode = localStorage.getItem("dark_mode") === "enabled";
+  const status_dark_mode = document.body.classList.toggle("dark_mode_colors");
+  localStorage.setItem("dark_mode_colors", status_dark_mode ? "enabled" : "disabled");
 
-    // Save the current mode in localStorage
-    if (element.classList.contains("dark_mode")) {
-      localStorage.setItem("dark_mode", "enabled");
-    } else {
-      localStorage.setItem("dark_mode", "disabled");
-    }
-
-  if (isDarkMode) {
-    // Switch to light mode
-    root.style.setProperty('--bg-color', COLOR_AWHITE);
-    root.style.setProperty('--fg-color', 'black');
-    localStorage.setItem("dark_mode", "disabled");
+  if (status_dark_mode) {
+    enable_dark_mode();
   } else {
-    // Switch to dark mode
-    root.style.setProperty('--bg-color', DARK_BG_COLOR);
-    root.style.setProperty('--fg-color', COLOR_AWHITE);
-    localStorage.setItem("dark_mode", "enabled");
+    disable_dark_mode();
   }
 }
 
-/* Sources: 
-Dark mode: https://www.w3schools.com/howto/howto_js_toggle_dark_mode.asp
-Persistency: ChatGPT */
+// Helper functions to set CSS variables for dark and light mode
+function enable_dark_mode() {
+  document.documentElement.style.setProperty('--bg-color', DARK_BG_COLOR);
+  document.documentElement.style.setProperty('--fg-color', LIGHT_COLOR);
+}
+
+function disable_dark_mode() {
+  document.documentElement.style.setProperty('--bg-color', LIGHT_COLOR);
+  document.documentElement.style.setProperty('--fg-color', DARK_FONT_COLOR);
+}
