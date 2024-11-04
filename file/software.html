@@ -37,7 +37,7 @@
         </li>
         <li>Backup: <a href="https://rsync.samba.org">rsync</a>, <a href="https://www.opbyte.it/grsync/">Grsync</a></li>
         <li>Calculator: <a href="https://qalculate.github.io/downloads.html">Qalculate!</a><!-- , <a href="https://www.geogebra.org">GeoGebra</a>, <a href="https://www.wolframalpha.com">WolframAlpha</a>, <a href="https://www.symbolab.com">Symbolab</a>, (<a href="https://github.com/wxMaxima-developers/docker-wxmaxima/releases">wxMaxima</a>) --></li>
-        <li>Code editor: <a href="https://zed.dev/">Zed</a>, (<a href="https://vscodium.com">VSCodium</a>)</li>
+        <li>Code editor: <a href="https://zed.dev/">Zed</a></li>
         <li>Disk usage analyser: <a href="https://dev.yorhel.nl/ncdu">Ncdu</a>, (<a href="https://wiki.gnome.org/Apps/DiskUsageAnalyzer">baobab</a>)</li>
         <li>E-books: <a href="https://calibre-ebook.com">Calibre</a></li>
         <li>Eye health: <a href="http://jonls.dk/redshift/">Redshift</a></li>
@@ -330,8 +330,9 @@ sblock</pre>
 
     <p>To whitelist a domain, add arscyni.cc and www.arscyni.cc to <code>/etc/sblock/allow.list</code> and run <code>sblock</code> again.</p>
 
-    <h3 id="code">Code editors</h3>
+    <h3 id="code">Code editor</h3>
     <h4>Zed</h4>
+    <p>Extensions: HTML, Emmet, ltex, SCSS</p>
     <p>Config:</p>
     <code><pre>{
   "features": {
@@ -345,7 +346,16 @@ sblock</pre>
     "dark": "One Dark"
   },
   "soft_wrap": "editor_width",
-  "tab_size": 2
+  "tab_size": 2,
+  "lsp": {
+    "ltex": {
+      "settings": {
+        "ltex": {
+          "language": "en-GB"
+        }
+      }
+    }
+  }
 }</pre></code>
 
     <h4>VSCodium</h4>
