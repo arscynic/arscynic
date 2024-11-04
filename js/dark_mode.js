@@ -2,7 +2,7 @@ const COLOR_LIGHT = 'antiquewhite';
 const COLOR_DARK_BG = '#191919';
 const COLOR_DARK_FONT = 'black';
 
-// Immediately apply dark background if the CSS class .dark_mode_colors is enabled.
+// Immediately and only applies the dark mode background and font if the CSS class .dark_mode_colors was already enabled.
 if (localStorage.getItem("dark_mode_colors") === "enabled") {
   enable_dark_mode();
 }
