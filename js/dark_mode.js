@@ -1,6 +1,6 @@
-const LIGHT_COLOR = 'antiquewhite';
-const DARK_BG_COLOR = '#191919';
-const DARK_FONT_COLOR = 'black';
+const COLOR_LIGHT = 'antiquewhite';
+const COLOR_DARK_BG = '#191919';
+const COLOR_DARK_FONT = 'black';
 
 // Immediately apply dark background if the CSS class .dark_mode_colors is enabled.
 if (localStorage.getItem("dark_mode_colors") === "enabled") {
@@ -27,11 +27,11 @@ function toggle_dark_mode() {
 
 // Helper functions to set CSS variables for dark and light mode
 function enable_dark_mode() {
-  document.documentElement.style.setProperty('--bg-color', DARK_BG_COLOR);
-  document.documentElement.style.setProperty('--fg-color', LIGHT_COLOR);
+  document.documentElement.style.setProperty('--bg-color', COLOR_DARK_BG);
+  document.documentElement.style.setProperty('--fg-color', COLOR_LIGHT);
 }
 
 function disable_dark_mode() {
-  document.documentElement.style.setProperty('--bg-color', LIGHT_COLOR);
-  document.documentElement.style.setProperty('--fg-color', DARK_FONT_COLOR);
+  document.documentElement.style.setProperty('--bg-color', COLOR_LIGHT);
+  document.documentElement.style.setProperty('--fg-color', COLOR_DARK_FONT);
 }
