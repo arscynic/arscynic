@@ -374,6 +374,13 @@ sblock</pre>
     }
   }
 ]</pre></code>
+    
+    <p>By default <cite>Zed</cite> uses the <cite>VSCode</cite>/<cite>VSCodium</cite> keymappings, and it supports <cite>Emmet</cite>. However, for some reason, <a href="https://github.com/zed-industries/zed/issues/15588">"Emmet: wrap with abbreviation" is not supported yet</a>, which I frequently use to wrap HTML tags around words with. In the meantime one can use <cite>AutoKey</cite> by assigning the following script to a hotkey:</p>
+    <code><pre>text_selected = clipboard.get_selection()
+text_input = dialog.input_dialog(title="Wrap with a tag.", message="E.g., type <strong>cite</strong> to get &lt;cite&gt;.", default="")
+keyboard.send_key("<delete>")
+clipboard.fill_clipboard(f"<{text_input[1]}>{text_selected}</{text_input[1]}>")
+keyboard.send_keys("<ctrl>+v")</pre></code>
 
     <h4>VSCodium</h4>
     <p>To change the minimap colors, etc. [source <a href="https://stackoverflow.com/a/60657698/13963944">1</a>, <a href="https://stackoverflow.com/a/43605752/13963944">2</a>, <a href="https://stackoverflow.com/a/46946515/13963944">3</a>, <a href="https://stackoverflow.com/a/29961309/13963944">4</a>],  go to File → Preferences → Settings → in the search box, type: <code>workbench.colorCustomizations</code> → click "Edit in settings.json"</p>
