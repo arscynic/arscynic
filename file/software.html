@@ -22,7 +22,7 @@
     <h1>Mostly excellent <a href="./take_my_money.html#:~:text=definitions%20of%20free%20software">“free”</a> software</h1>
     <p class="sub-title readability">A near-exhaustive list of software <em>I</em> use, not an exhaustive list of <em>the</em> best software. There could very well exist superior alternatives. Feel free to point them out.</p>
 
-    <p class="sub-title">Latest update: 2024-11-04, 21:19:47 CET.</p>
+    <p class="sub-title">Latest update: 2024-11-05, 11:48:51 CET.</p>
 
     <p class="fleuron">❦</p>
 
@@ -333,7 +333,7 @@ sblock</pre>
     <h3 id="code">Code editor</h3>
     <h4>Zed</h4>
     <p>Extensions: HTML, Emmet, LTeX, SCSS</p>
-    <p>Config:</p>
+    <p>~/.config/zed/settings.json:</p>
     <code><pre>{
   "features": {
     "inline_completion_provider": "none"
@@ -357,6 +357,23 @@ sblock</pre>
     }
   }
 }</pre></code>
+    <p>~/.config/zed/keymap.json:</p>
+    <code><pre>[
+  {
+    "context": "Workspace",
+    "bindings": {
+      // "shift shift": "file_finder::Toggle"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      // "j k": ["workspace::SendKeystrokes", "escape"]
+      "ctrl-s": "workspace::SaveWithoutFormat",
+      "ctrl-k": "editor::Format"
+    }
+  }
+]</pre></code>
 
     <h4>VSCodium</h4>
     <p>To change the minimap colors, etc. [source <a href="https://stackoverflow.com/a/60657698/13963944">1</a>, <a href="https://stackoverflow.com/a/43605752/13963944">2</a>, <a href="https://stackoverflow.com/a/46946515/13963944">3</a>, <a href="https://stackoverflow.com/a/29961309/13963944">4</a>],  go to File → Preferences → Settings → in the search box, type: <code>workbench.colorCustomizations</code> → click "Edit in settings.json"</p>
