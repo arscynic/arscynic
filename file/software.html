@@ -22,7 +22,7 @@
     <h1>Mostly excellent <a href="./take_my_money.html#:~:text=definitions%20of%20free%20software">“free”</a> software</h1>
     <p class="sub-title readability">A near-exhaustive list of software <em>I</em> use, not an exhaustive list of <em>the</em> best software. There could very well exist superior alternatives. Feel free to point them out.</p>
 
-    <p class="sub-title">Latest update: 2024-11-13, 09:01:19 CET.</p>
+    <p class="sub-title">Latest update: 2024-11-13, 10:57:24 CET.</p>
 
     <p class="fleuron">❦</p>
 
@@ -252,7 +252,7 @@
     <details>
       <summary>Click to see the optional/legacy packages.</summary>
 
-      <code><pre>pacman -Syu --needed vivaldi vivaldi-ffmpeg-codecs element-desktop shotcut rssguard discord bluez bluez-utils texstudio sagemath sagemath-doc xsane seahorse noto-fonts-emoji playerctl xfce4-systemload-plugin xfce4-sensors-plugin gst-plugins-good geany-plugins android-tools catfish ffmpeg ffmpegthumbs ffmpegthumbnailer gufw bash-completion thunar gvfs gvfs-mtp tumbler thunar-media-tags-plugin thunar-volman xdotool qt5-imageformats xournalpp make automake base-devel texlive-basic texlive-latex texlive-latexextra remmina libvncserver x11vnc inotify-tools dnsutils baobab peek thunderbird birdtray clementine torbrowser-launcher audio-recorder zsh vscodium-bin libreoffice-fresh</pre></code>
+      <code><pre>pacman -Syu --needed vivaldi vivaldi-ffmpeg-codecs element-desktop shotcut rssguard discord bluez bluez-utils texstudio sagemath sagemath-doc xsane seahorse noto-fonts-emoji playerctl xfce4-systemload-plugin xfce4-sensors-plugin gst-plugins-good geany-plugins android-tools catfish ffmpeg ffmpegthumbs ffmpegthumbnailer gufw bash-completion thunar gvfs gvfs-mtp tumbler thunar-media-tags-plugin thunar-volman xdotool qt5-imageformats xournalpp make automake base-devel texlive-latex texlive-latexextra remmina libvncserver x11vnc inotify-tools dnsutils baobab peek thunderbird birdtray clementine torbrowser-launcher audio-recorder zsh vscodium-bin libreoffice-fresh</pre></code>
       <code><pre>yay sblock-git</pre></code>
     </details>
 
@@ -447,10 +447,28 @@ done</pre></code>
     <p>Now, whenever you save "your_python_script.py", it will instantly throw the output in the <cite>VSCodium</cite> terminal, or whatever terminal you executed the shell script in. Source: <cite>ChatGPT</cite>.</p>
 
     <h3 id="lyx">LyX</h3>
-    <p>To build <cite>LyX</cite> one needs packages <code>make automake autoconf base-devel</code>, otherwise it throws the following error: </p>
+    <p>To build <cite>LyX</cite> one needs packages <code>make automake autoconf</code>, otherwise it throws the following error: </p>
 
     <blockquote>
-      <p>"configure: error: cannot compile a simple Qt executable. Check you have the right $QTDIR"</p>
+      <p>configure: error: cannot compile a simple Qt executable. Check you have the right $QTDIR</p>
+    </blockquote>
+    
+    <p>Respectively install <code>texlive-latex texlive-latexextra</code> to avoid/fix the error messages below, of which the latter appears only on some documents when using <cite>pdflatex</cite>.</p>
+    
+    <blockquote>
+      <pre>The selected document class
+Article (Standard Class)
+  requires external files that are not available.
+  The document class can still be used, but the
+  document cannot be compiled until the following
+  prerequisites are installed:
+article.cls
+  See section 3.1.2.2 (Class Availability) of the
+  User's Guide for more information.</pre>
+    </blockquote>
+    
+    <blockquote>
+      <p>LaTeX Error: File `setspace.sty' not found.</p>
     </blockquote>
 
     <h3 id="kde">KDE</h3>
