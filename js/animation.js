@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (counter == 0) {
           countNr = 1;
         }
-      }, 25);
+      }, 23);
     }
     
     // usage:
