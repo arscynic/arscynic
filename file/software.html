@@ -22,7 +22,7 @@
     <h1>Mostly excellent <a href="./take_my_money.html#:~:text=definitions%20of%20free%20software">“free”</a> software</h1>
     <p class="sub-title readability">A near-exhaustive list of software <em>I</em> use, not an exhaustive list of <em>the</em> best software. There could very well exist superior alternatives. Feel free to point them out.</p>
 
-    <p class="sub-title">Latest update: 2025-02-05, 11:12:58 CET.</p>
+    <p class="sub-title">Latest update: 2025-02-06, 23:00:52 CET.</p>
 
     <p class="fleuron">❦</p>
 
@@ -35,7 +35,7 @@
         <li>To configure: <br>
         <ol>
           <li><a href="#wallpaper">Wallpaper</a></li>
-          <li><a href="#shell">Shell</a> (Bash, Zsh)</li>
+          <li><a href="#shell">Shell</a></li>
           <li><a href="#ubo">uBlock Origin</a></li>
           <li><a href="#hosts">Hosts file</a></li>
           <li><a href="#code">Code editors</a></li>
@@ -68,9 +68,9 @@
           <!-- ↳︎ Desktop environment: <a href="https://xfce.org">Xfce</a><br>
           ↳︎ Windows 95 theme: <a href="https://github.com/grassmunk/Chicago95">Chicago95</a> (install script: <a href="https://github.com/dominichayesferen/Chicagofier">Chicagofier</a>) -->
         </li>
-        <li>Backup: <a href="https://rsync.samba.org">rsync</a>, <a href="https://www.opbyte.it/grsync/">Grsync</a></li>
+        <li>Backup: <a href="https://www.opbyte.it/grsync/">Grsync</a></li>
         <li>Calculator: <a href="https://qalculate.github.io/downloads.html">Qalculate!</a><!-- , <a href="https://www.geogebra.org">GeoGebra</a>, <a href="https://www.wolframalpha.com">WolframAlpha</a>, <a href="https://www.symbolab.com">Symbolab</a>, (<a href="https://github.com/wxMaxima-developers/docker-wxmaxima/releases">wxMaxima</a>) --></li>
-        <li>Code editor: <a href="https://zed.dev/">Zed</a></li>
+        <li>Code editor: <a href="https://vscodium.com/">VSCodium</a></li>
         <li>Disk usage analyser: <a href="https://dev.yorhel.nl/ncdu">Ncdu</a>, (<a href="https://wiki.gnome.org/Apps/DiskUsageAnalyzer">baobab</a>)</li>
         <li>E-books: <a href="https://calibre-ebook.com">Calibre</a></li>
         <li>Eye health: <a href="http://jonls.dk/redshift/">Redshift</a></li>
@@ -92,7 +92,7 @@
         <li>Text: <a href="https://www.lyx.org/">LyX</a> [LaTeX], <a href="https://docs.xfce.org/apps/mousepad/start">Mousepad</a></li>
         <li>Translate: <a href="https://github.com/crow-translate/crow-translate">Crow Translate</a></li>
         <!-- <li>Document converter: <a href="https://pandoc.org">Pandoc</a></li> -->
-        <li>Video editing: <a href="https://kdenlive.org/">Kdenlive</a>, (<a href="https://www.shotcut.org">shotcut</a>, <a href="https://natrongithub.github.io/">Natron</a>, <a href="https://jliljebl.github.io/flowblade/index.html" title="Flowblade video editor">Flowblade</a>) <br>
+        <li>Video editing: <a href="https://www.shotcut.org">shotcut</a>, (<a href="https://kdenlive.org/">Kdenlive</a>, <a href="https://natrongithub.github.io/">Natron</a>, <a href="https://jliljebl.github.io/flowblade/index.html" title="Flowblade video editor">Flowblade</a>) <br>
           ↳ Lossless video cutting: <a href="https://github.com/mifi/lossless-cut" title="Simple and ultra fast cross platform tool for lossless trimming/cutting of video and audio files.">LosslessCut</a></li>
       </ul>
       <details>
@@ -237,13 +237,13 @@
     <p>I have certain set of software I install on every new machine. Here follows a list I copy-paste so I don't have to install everything individually each time.</p>
 
     <h3>Default:</h3>
-    <code><pre>pacman -Syu --needed btop tilda xscreensaver redshift rsync grsync hblock gnome-disk-utility gparted hunspell hunspell-nl hunspell-en_GB hunspell-fr qalculate-qt smplayer okular fwupd tmux libreoffice-still libreoffice-still-en-gb libreoffice-still-nl libreoffice-still-fr calibre npm transmission-qt kdeconnect nheko ncdu zed mousepad xfce4-taskmanager megasync</pre></code>
+    <code><pre>pacman -Syu --needed btop tilda xscreensaver redshift grsync hblock gnome-disk-utility gparted hunspell hunspell-nl hunspell-en_GB hunspell-fr qalculate-qt smplayer okular fwupd libreoffice-still libreoffice-still-en-gb libreoffice-still-nl libreoffice-still-fr calibre npm transmission-qt mousepad keepassxc</pre></code>
 
-    <code><pre>yay autokey-qt input-remapper-git simplescreenrecorder-bin lyx rustdesk-bin rate-mirrors zen-browser-bin crow-translate</pre></code>
+    <code><pre>yay autokey-qt input-remapper-git simplescreenrecorder-bin lyx rustdesk-bin</pre></code>
 
     <code><pre>npm install -g live-server</pre></code>
 
-    <p>Direct download: <a href="https://notesnook.com/">Notesnook</a>, <a href="https://github.com/th-ch/youtube-music">YT Music</a> <sup>🚫 ads</sup></p>
+    <p>Direct download: <a href="https://notesnook.com/">Notesnook</a>, <a href="https://github.com/th-ch/youtube-music">YT Music</a> <sup>🚫 ads</sup>, <a href="https://mega.io/desktop#download">MEGA</a>, <a href="https://zen-browser.app/download/">Zen browser</a></p>
 
     <h3>Number crunching</h3>
     <code><pre>boinc opencl-nvidia python-requests</pre></code>
@@ -252,8 +252,8 @@
     <details>
       <summary>Click to see the optional/legacy packages.</summary>
 
-      <code><pre>pacman -Syu --needed vivaldi vivaldi-ffmpeg-codecs element-desktop shotcut rssguard discord bluez bluez-utils texstudio sagemath sagemath-doc xsane seahorse noto-fonts-emoji playerctl xfce4-systemload-plugin xfce4-sensors-plugin gst-plugins-good geany-plugins android-tools catfish ffmpeg ffmpegthumbs ffmpegthumbnailer gufw bash-completion thunar gvfs gvfs-mtp tumbler thunar-media-tags-plugin thunar-volman xdotool qt5-imageformats xournalpp make automake base-devel texlive-latex texlive-latexextra remmina libvncserver x11vnc inotify-tools dnsutils baobab peek thunderbird birdtray clementine torbrowser-launcher audio-recorder zsh vscodium-bin libreoffice-fresh</pre></code>
-      <code><pre>yay sblock-git</pre></code>
+      <code><pre>pacman -Syu --needed vivaldi vivaldi-ffmpeg-codecs element-desktop shotcut rssguard discord bluez bluez-utils texstudio sagemath sagemath-doc xsane seahorse noto-fonts-emoji playerctl xfce4-systemload-plugin xfce4-sensors-plugin gst-plugins-good geany-plugins android-tools catfish ffmpeg ffmpegthumbs ffmpegthumbnailer gufw bash-completion thunar gvfs gvfs-mtp tumbler thunar-media-tags-plugin thunar-volman xdotool qt5-imageformats xournalpp make automake base-devel texlive-latex texlive-latexextra remmina libvncserver x11vnc inotify-tools dnsutils baobab peek thunderbird birdtray clementine torbrowser-launcher audio-recorder zsh vscodium-bin libreoffice-fresh nheko ncdu xfce4-taskmanager kdeconnect tmux rsync</pre></code>
+      <code><pre>yay sblock-git rate-mirrors zen-browser-bin crow-translate</pre></code>
     </details>
 
       <!-- <li><a href="https://github.com/wxMaxima-developers/docker-wxmaxima/releases">wxMaxima</a>: sudo chmod +x filename, double click to execute.</li> -->
@@ -268,8 +268,8 @@
     <h2>To configure</h2>
     
     <h3 id="wallpaper">Wallpaper</h3>
-    <img src="/file/media/168849-forest clearing.jpeg" alt="Forest Clearing">
-    <p><a href="https://store.kde.org/p/1069554">Forest Clearing</a> by Ironclad.</p>
+    <img src="/file/media/el_capitan.jpg" alt="El Capitan">
+    <p><a href="https://wallpapercave.com/wp/wp1932398.jpg">El Capitan</a> by unknown.</p>
 
     <!-- <p>Made by <a href="https://store.kde.org/p/2135526">RIINII</a> or likely by their use of a <a href="https://en.wikipedia.org/wiki/Text-to-image_model">text-to-image model</a>.</p>
 
@@ -288,23 +288,28 @@ alias gitp="git push -u origin main"
 sleep 1; xset dpms force off</pre></code>
 
     <h4>Zsh</h4>
-    <p>To install <cite>Linux</cite> <a href="https://github.com/Chrysostomus/manjaro-zsh-config">Manjaro's zsh config</a>: <code>yay manjaro-zsh-config</code>, copy-paste the text below into the <i>.zshrc</i> file in the home directory, within the terminal settings change <code>/bin/bash</code> to <code>/bin/zsh</code>, close and re-open the terminal.</p>
-    <code><pre># Use powerline
-USE_POWERLINE="true"
-# Has weird character width
-# Example:
-#    is not a diamond
-HAS_WIDECHARS="false"
-# Source manjaro-zsh-configuration
-if [[ -e /usr/share/zsh/manjaro-zsh-config ]]; then
-  source /usr/share/zsh/manjaro-zsh-config
-fi
-# Use manjaro zsh prompt
-if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
-  source /usr/share/zsh/manjaro-zsh-prompt
-fi</pre></code>
+    <p>Not using <cite>Zsh</cite> anymore. Simply because the config below stopped working and I guess the added benefits weren't that great to justify troubleshooting for me.</p>
+    <details>
+      <summary>Click to see Zsh config.</summary>
+      <p>To install <cite>Linux</cite> <a href="https://github.com/Chrysostomus/manjaro-zsh-config">Manjaro's zsh config</a>: <code>yay manjaro-zsh-config</code>, copy-paste the text below into the <i>.zshrc</i> file in the home directory, within the terminal settings change <code>/bin/bash</code> to <code>/bin/zsh</code>, close and re-open the terminal.</p>
+      <code><pre># Use powerline
+  USE_POWERLINE="true"
+  # Has weird character width
+  # Example:
+  #    is not a diamond
+  HAS_WIDECHARS="false"
+  # Source manjaro-zsh-configuration
+  if [[ -e /usr/share/zsh/manjaro-zsh-config ]]; then
+    source /usr/share/zsh/manjaro-zsh-config
+  fi
+  # Use manjaro zsh prompt
+  if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
+    source /usr/share/zsh/manjaro-zsh-prompt
+  fi</pre></code>
+  
+  <p>If the font renders incorrectly after a <cite>KDE Plasma 6</cite> upgrade, then use the following font in your <cite>Konsole</cite> profile: <code>NotoSansM Nerd Font Mono</code></p>
+    </details>
 
-<p>If the font renders incorrectly after a <cite>KDE Plasma 6</cite> upgrade, then use the following font in your <cite>Konsole</cite> profile: <code>NotoSansM Nerd Font Mono</code></p>
 
 <!--     <h3>gvim</h3>
 
@@ -338,57 +343,7 @@ sblock</pre>
     <p>To whitelist a domain, add arscyni.cc and www.arscyni.cc to <code>/etc/sblock/allow.list</code> and run <code>sblock</code> again.</p>
 
     <h3 id="code">Code editor</h3>
-    <h4>Zed</h4>
-    <p>Extensions: HTML, Emmet, LTeX, SCSS</p>
-    <p>~/.config/zed/settings.json:</p>
-    <code><pre>{
-  "features": {
-    "inline_completion_provider": "none"
-  },
-  "ui_font_size": 16,
-  "buffer_font_size": 16,
-  "theme": {
-    "mode": "system",
-    "light": "Atelier Cave Dark",
-    "dark": "One Dark"
-  },
-  "soft_wrap": "editor_width",
-  "tab_size": 2,
-  "lsp": {
-    "ltex": {
-      "settings": {
-        "ltex": {
-          "language": "en-GB"
-        }
-      }
-    }
-  }
-}</pre></code>
-    <p>~/.config/zed/keymap.json:</p>
-    <code><pre>[
-  {
-    "context": "Workspace",
-    "bindings": {
-      // "shift shift": "file_finder::Toggle"
-    }
-  },
-  {
-    "context": "Editor",
-    "bindings": {
-      // "j k": ["workspace::SendKeystrokes", "escape"]
-      "ctrl-s": "workspace::SaveWithoutFormat",
-      "ctrl-k": "editor::Format"
-    }
-  }
-]</pre></code>
     
-    <p>By default <cite>Zed</cite> uses the <cite>VSCode</cite>/<cite>VSCodium</cite> keymappings, and it supports <cite>Emmet</cite>. However, for some reason, <a href="https://github.com/zed-industries/zed/issues/15588">"Emmet: wrap with abbreviation" is not supported yet</a>, which I frequently use to wrap HTML tags around words with. In the meantime one can use <cite>AutoKey</cite> by assigning the following script to a hotkey:</p>
-    <code><pre>text_selected = clipboard.get_selection()
-text_input = dialog.input_dialog(title="Wrap with a tag.", message="E.g., type <strong>cite</strong> to get &lt;cite&gt;.", default="")
-keyboard.send_key("<delete>")
-clipboard.fill_clipboard(f"<{text_input[1]}>{text_selected}</{text_input[1]}>")
-keyboard.send_keys("<ctrl>+v")</pre></code>
-
     <h4>VSCodium</h4>
     <p>To change the minimap colors, etc. [source <a href="https://stackoverflow.com/a/60657698/13963944">1</a>, <a href="https://stackoverflow.com/a/43605752/13963944">2</a>, <a href="https://stackoverflow.com/a/46946515/13963944">3</a>, <a href="https://stackoverflow.com/a/29961309/13963944">4</a>],  go to File → Preferences → Settings → in the search box, type: <code>workbench.colorCustomizations</code> → click "Edit in settings.json"</p>
 
@@ -444,7 +399,60 @@ done</pre></code>
       <li>Open the terminal in <cite>VSCodium</cite> and run <code>auto_execute.sh</code></li>
     </ol>
 
-    <p>Now, whenever you save "your_python_script.py", it will instantly throw the output in the <cite>VSCodium</cite> terminal, or whatever terminal you executed the shell script in. Source: <cite>ChatGPT</cite>.</p>
+    <p>Now, whenever you save "your_python_script.py", it will instantly throw the output in the <cite>VSCodium</cite> terminal, or whatever terminal you executed the shell script in. Source: <cite>ChatGPT</cite>.</p><h4>Zed</h4>
+    <p>Not using <cite>Zed</cite> anymore due to too many bugs.</p>
+    <details>
+      <summary>Click to see Zed config.</summary>
+      <p>Extensions: HTML, Emmet, LTeX, SCSS</p>
+      <p>~/.config/zed/settings.json:</p>
+      <code><pre>{
+    "features": {
+      "inline_completion_provider": "none"
+    },
+    "ui_font_size": 16,
+    "buffer_font_size": 16,
+    "theme": {
+      "mode": "system",
+      "light": "Atelier Cave Dark",
+      "dark": "One Dark"
+    },
+    "soft_wrap": "editor_width",
+    "tab_size": 2,
+    "lsp": {
+      "ltex": {
+        "settings": {
+          "ltex": {
+            "language": "en-GB"
+          }
+        }
+      }
+    }
+  }</pre></code>
+      <p>~/.config/zed/keymap.json:</p>
+      <code><pre>[
+    {
+      "context": "Workspace",
+      "bindings": {
+        // "shift shift": "file_finder::Toggle"
+      }
+    },
+    {
+      "context": "Editor",
+      "bindings": {
+        // "j k": ["workspace::SendKeystrokes", "escape"]
+        "ctrl-s": "workspace::SaveWithoutFormat",
+        "ctrl-k": "editor::Format"
+      }
+    }
+  ]</pre></code>
+      
+      <p>By default <cite>Zed</cite> uses the <cite>VSCode</cite>/<cite>VSCodium</cite> keymappings, and it supports <cite>Emmet</cite>. However, for some reason, <a href="https://github.com/zed-industries/zed/issues/15588">"Emmet: wrap with abbreviation" is not supported yet</a>, which I frequently use to wrap HTML tags around words with. In the meantime one can use <cite>AutoKey</cite> by assigning the following script to a hotkey:</p>
+      <code><pre>text_selected = clipboard.get_selection()
+  text_input = dialog.input_dialog(title="Wrap with a tag.", message="E.g., type <strong>cite</strong> to get &lt;cite&gt;.", default="")
+  keyboard.send_key("<delete>")
+  clipboard.fill_clipboard(f"<{text_input[1]}>{text_selected}</{text_input[1]}>")
+  keyboard.send_keys("<ctrl>+v")</pre></code>
+    </details>
 
     <h3 id="lyx">LyX</h3>
     <p>To build <cite>LyX</cite> one needs packages <code>make automake autoconf</code>, otherwise it throws the following error: </p>
@@ -473,28 +481,32 @@ article.cls
 
     <h3 id="kde">KDE</h3>
 
-    <h4>Custom KRunner/Plasma browser search query</h4>
-    <p>To configure <cite>Plasma search</cite> to open a browser with a query when entering "xyz example.com", e.g., "viv example.com" that opens example.com in <cite>Vivaldi</cite> browser:</p>
+    <p>Returned to <cite>Xfce</cite> because KDE gave me too many bugs.</p>
 
-    <blockquote>
-      <p>“<a href="https://kb.iu.edu/d/abbe">create a symlink</a> named "viv" in /usr/bin/ to the actual vivaldi binary” —<a href="https://matrix.to/#/!gYaaEyvNWxTzXssOmq:kde.org/$i-L0XYlJ_ElEdHPD7oKNGysslTil3w01IDM2Y6JCJTc?via=matrix.org&via=im.kde.org&via=kde.org">Jan R.</a>.</p>
-    </blockquote>
-
-    <p>Either there likely already is a symlink named "vivaldi" within <code>/usr/bin/</code>, of which you can make another symlink with a more convenient shorter name: <code>sudo ln -s vivaldi viv</code></p>
-
-    <p>Or go to the directory containing the vivaldi binary, in my case "/opt/vivaldi/", and in that directory run the command: <code>sudo ln -s vivaldi /usr/bin/viv</code></p>
-
-    <h4>Web Search Keywords backup</h4>
-    <p>To back up all your custom websites added to the <cite>Web Search Keywords</cite> <cite>KRunner</cite> plugin, navigate to <code>~/.local/share/kf6/searchproviders/</code> and back up the containing files.</p>
-
-    <h4>Revert to X11 from Wayland</h4>
-    <p>The upgrade from <cite>KDE Plasma 5</cite> to 6 enables <cite>Wayland</cite> by default despite using <cite>X11</cite> before, and it breaks tons of stuff, e.g., <cite>Vivaldi</cite> browser became unusable, <cite>XScreenSaver</cite> does not work, et cetera. To revert to <cite>X11</cite> open <abbr title="The Simple Desktop Display Manager"><cite>SDDM</cite></abbr> → Behaviour… → Automatically log in…with session <code>Plasma (X11)</code>.</p>
-
-    <h4>How to reauthorise a Gmail account in KMail</h4>
-    <p>Open <cite>kdewallet</cite> with <cite>kdewalletmanager</cite> and delete "akonadi_imap_resource_…" in "Contents" > "imap" > "Passwords".</p>
-
-    <h4>How to make a unified folder in KMail.</h4>
-    <p>Go to "Settings" > "Plugins" > "Akonadi Agents", and click the slider icon 🎚️ next to "Unified Mailbox Agent".</p>
+    <details>
+      <summary>Click to see KDE configs.</summary><h4>Custom KRunner/Plasma browser search query</h4>
+      <p>To configure <cite>Plasma search</cite> to open a browser with a query when entering "xyz example.com", e.g., "viv example.com" that opens example.com in <cite>Vivaldi</cite> browser:</p>
+  
+      <blockquote>
+        <p>“<a href="https://kb.iu.edu/d/abbe">create a symlink</a> named "viv" in /usr/bin/ to the actual vivaldi binary” —<a href="https://matrix.to/#/!gYaaEyvNWxTzXssOmq:kde.org/$i-L0XYlJ_ElEdHPD7oKNGysslTil3w01IDM2Y6JCJTc?via=matrix.org&via=im.kde.org&via=kde.org">Jan R.</a>.</p>
+      </blockquote>
+  
+      <p>Either there likely already is a symlink named "vivaldi" within <code>/usr/bin/</code>, of which you can make another symlink with a more convenient shorter name: <code>sudo ln -s vivaldi viv</code></p>
+  
+      <p>Or go to the directory containing the vivaldi binary, in my case "/opt/vivaldi/", and in that directory run the command: <code>sudo ln -s vivaldi /usr/bin/viv</code></p>
+  
+      <h4>Web Search Keywords backup</h4>
+      <p>To back up all your custom websites added to the <cite>Web Search Keywords</cite> <cite>KRunner</cite> plugin, navigate to <code>~/.local/share/kf6/searchproviders/</code> and back up the containing files.</p>
+  
+      <h4>Revert to X11 from Wayland</h4>
+      <p>The upgrade from <cite>KDE Plasma 5</cite> to 6 enables <cite>Wayland</cite> by default despite using <cite>X11</cite> before, and it breaks tons of stuff, e.g., <cite>Vivaldi</cite> browser became unusable, <cite>XScreenSaver</cite> does not work, et cetera. To revert to <cite>X11</cite> open <abbr title="The Simple Desktop Display Manager"><cite>SDDM</cite></abbr> → Behaviour… → Automatically log in…with session <code>Plasma (X11)</code>.</p>
+  
+      <h4>How to reauthorise a Gmail account in KMail</h4>
+      <p>Open <cite>kdewallet</cite> with <cite>kdewalletmanager</cite> and delete "akonadi_imap_resource_…" in "Contents" > "imap" > "Passwords".</p>
+  
+      <h4>How to make a unified folder in KMail.</h4>
+      <p>Go to "Settings" > "Plugins" > "Akonadi Agents", and click the slider icon 🎚️ next to "Unified Mailbox Agent".</p>
+    </details>
 
     <!-- <h3 id="vivaldi">Vivaldi</h3>
     <p>To remove <cite>Vivaldi</cite>'s header / title bar, first enable "☑ Allow CSS modifications" at <a href="vivaldi://experiments/">vivaldi://experiments/</a>, then open <cite>Vivaldi</cite>'s settings → Appearance → CUSTOM UI MODIFICATIONS → select the folder with a <i>.css</i> file containing: <code> #header {
