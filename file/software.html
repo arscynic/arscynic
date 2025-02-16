@@ -33,15 +33,15 @@
         <li><a href="#software">Software list</a></li>
         <li><a href="#install">Installation checklist</a></li>
         <li>To configure: <br>
-        <ol>
-          <li><a href="#wallpaper">Wallpaper</a></li>
+          <ol>
+            <li><a href="#wallpaper">Wallpaper</a></li>
+            <li><a href="#desktop-environment">Desktop environment</a></li>
           <li><a href="#shell">Shell</a></li>
           <li><a href="#ubo">uBlock Origin</a></li>
           <li><a href="#hosts">Hosts file</a></li>
           <li><a href="#code">Code editors</a></li>
           <li><a href="#lyx">LyX</a></li>
-          <li><a href="#desktop-environment">DE</a></li>
-          <li><a href="#browser">Zen Browser / LibreWolf</a></li>
+          <li><a href="#browser">Browser</a></li>
           <li><a href="#yt">Enhancer for YouTube</a></li>
           <li><a href="#res">Reddit Enhancement Suite</a></li>
           <li><a href="#remmina">Remmina</a></li>
@@ -273,6 +273,57 @@
 
     <img src="./media/pencil-landscape25-1536×896.png" alt="Digital pencil art of mountain landscape"> -->
 
+    <h3 id="desktop-environment">Desktop environment</h3>
+
+    <p>Returned to <cite>Xfce</cite> because KDE gave me too many bugs.</p>
+
+    <h4>Xfce</h4>
+
+    <h5>Whisker Menu</h5>
+    <p>For some reason not all distributions have a shortcut to Whisker Menu, which is remarkably annoying. To add it: "Keyboard" → "Application Shortcuts" → "xfce4-popup-whiskermenu".</p>
+
+    <h5>xfce4-screensaver</h5>
+    
+    <p>"<a href="https://docs.xfce.org/apps/xfce4-screensaver/faq#where_are_all_the_screensavers">Where are all the screensavers?</a>" <cite>XScreenSaver</cite> is used by <code>xfce4-screensaver</code>, but doesn't add all of <cite>XScreenSaver</cite>'s screensavers by default. Annoying. To add one of its screensavers, place the file <code>xfce-glmatrix.desktop</code> containing the lines below in <code>/usr/share/applications/screensavers/</code>. All <cite>XScreenSaver</cite>'s screensavers and their options can be found in <code>/usr/share/xscreensaver/config/</code>.</p>
+
+    <pre><code>[Desktop Entry]
+Type=Application
+Name=glmatrix
+Exec=/usr/lib/xscreensaver/glmatrix -root --no-rotate
+TryExec=/usr/lib/xscreensaver/glmatrix
+Categories=Screensaver;</code></pre>
+
+    <h4>KDE Plasma</h4>
+
+    <details>
+      <summary>Click to see KDE configs.</summary>
+      <h4>Custom KRunner/Plasma browser search query</h4>
+      <p>To configure <cite>Plasma search</cite> to open a browser with a query when entering "xyz example.com", e.g., "viv example.com" that opens example.com in <cite>Vivaldi</cite> browser:</p>
+  
+      <blockquote>
+        <p>“<a href="https://kb.iu.edu/d/abbe">create a symlink</a> named "viv" in /usr/bin/ to the actual vivaldi binary” —<a href="https://matrix.to/#/!gYaaEyvNWxTzXssOmq:kde.org/$i-L0XYlJ_ElEdHPD7oKNGysslTil3w01IDM2Y6JCJTc?via=matrix.org&via=im.kde.org&via=kde.org">Jan R.</a>.</p>
+      </blockquote>
+  
+      <p>Either there likely already is a symlink named "vivaldi" within <code>/usr/bin/</code>, of which you can make another symlink with a more convenient shorter name: <code>sudo ln -s vivaldi viv</code></p>
+  
+      <p>Or go to the directory containing the vivaldi binary, in my case "/opt/vivaldi/", and in that directory run the command: <code>sudo ln -s vivaldi /usr/bin/viv</code></p>
+  
+      <h4>Web Search Keywords backup</h4>
+      <p>To back up all your custom websites added to the <cite>Web Search Keywords</cite> <cite>KRunner</cite> plugin, navigate to <code>~/.local/share/kf6/searchproviders/</code> and back up the containing files.</p>
+  
+      <h4>Revert to X11 from Wayland</h4>
+      <p>The upgrade from <cite>KDE Plasma 5</cite> to 6 enables <cite>Wayland</cite> by default despite using <cite>X11</cite> before, and it breaks tons of stuff, e.g., <cite>Vivaldi</cite> browser became unusable, <cite>XScreenSaver</cite> does not work, et cetera. To revert to <cite>X11</cite> open <abbr title="The Simple Desktop Display Manager"><cite>SDDM</cite></abbr> → Behaviour… → Automatically log in…with session <code>Plasma (X11)</code>.</p>
+  
+      <h4>How to reauthorise a Gmail account in KMail</h4>
+      <p>Open <cite>kdewallet</cite> with <cite>kdewalletmanager</cite> and delete "akonadi_imap_resource_…" in "Contents" > "imap" > "Passwords".</p>
+  
+      <h4>How to make a unified folder in KMail.</h4>
+      <p>Go to "Settings" > "Plugins" > "Akonadi Agents", and click the slider icon 🎚️ next to "Unified Mailbox Agent".</p>
+
+      <h4>XScreenSaver in KDE Plasma</h4>
+      <a href="https://man.archlinux.org/man/xscreensaver.1#INSTALLING_XSCREENSAVER_ON_KDE">Enable XScreenSaver in KDE Plasma</a>.
+    </details>
+
     <h3 id="shell">Shell</h3>
     <h4>Bash/Zsh aliases</h4>
     <code><pre>alias xyz="xdg-open path/to/file.ods"
@@ -476,47 +527,12 @@ article.cls
     <blockquote>
       <p>LaTeX Error: File `setspace.sty' not found.</p>
     </blockquote>
-
-    <h3 id="desktop-environment">Desktop environment</h3>
-
-    <p>Returned to <cite>Xfce</cite> because KDE gave me too many bugs.</p>
-
-    <h4>Xfce</h4>
-    <p>For some reason not all distributions have a shortcut to Whisker Menu, which is remarkably annoying. To add it: "Keyboard" → "Application Shortcuts" → "xfce4-popup-whiskermenu".</p>
-
-    <h4>KDE</h4>
-
-    <details>
-      <summary>Click to see KDE configs.</summary><h4>Custom KRunner/Plasma browser search query</h4>
-      <p>To configure <cite>Plasma search</cite> to open a browser with a query when entering "xyz example.com", e.g., "viv example.com" that opens example.com in <cite>Vivaldi</cite> browser:</p>
-  
-      <blockquote>
-        <p>“<a href="https://kb.iu.edu/d/abbe">create a symlink</a> named "viv" in /usr/bin/ to the actual vivaldi binary” —<a href="https://matrix.to/#/!gYaaEyvNWxTzXssOmq:kde.org/$i-L0XYlJ_ElEdHPD7oKNGysslTil3w01IDM2Y6JCJTc?via=matrix.org&via=im.kde.org&via=kde.org">Jan R.</a>.</p>
-      </blockquote>
-  
-      <p>Either there likely already is a symlink named "vivaldi" within <code>/usr/bin/</code>, of which you can make another symlink with a more convenient shorter name: <code>sudo ln -s vivaldi viv</code></p>
-  
-      <p>Or go to the directory containing the vivaldi binary, in my case "/opt/vivaldi/", and in that directory run the command: <code>sudo ln -s vivaldi /usr/bin/viv</code></p>
-  
-      <h4>Web Search Keywords backup</h4>
-      <p>To back up all your custom websites added to the <cite>Web Search Keywords</cite> <cite>KRunner</cite> plugin, navigate to <code>~/.local/share/kf6/searchproviders/</code> and back up the containing files.</p>
-  
-      <h4>Revert to X11 from Wayland</h4>
-      <p>The upgrade from <cite>KDE Plasma 5</cite> to 6 enables <cite>Wayland</cite> by default despite using <cite>X11</cite> before, and it breaks tons of stuff, e.g., <cite>Vivaldi</cite> browser became unusable, <cite>XScreenSaver</cite> does not work, et cetera. To revert to <cite>X11</cite> open <abbr title="The Simple Desktop Display Manager"><cite>SDDM</cite></abbr> → Behaviour… → Automatically log in…with session <code>Plasma (X11)</code>.</p>
-  
-      <h4>How to reauthorise a Gmail account in KMail</h4>
-      <p>Open <cite>kdewallet</cite> with <cite>kdewalletmanager</cite> and delete "akonadi_imap_resource_…" in "Contents" > "imap" > "Passwords".</p>
-  
-      <h4>How to make a unified folder in KMail.</h4>
-      <p>Go to "Settings" > "Plugins" > "Akonadi Agents", and click the slider icon 🎚️ next to "Unified Mailbox Agent".</p>
-    </details>
-
     <!-- <h3 id="vivaldi">Vivaldi</h3>
     <p>To remove <cite>Vivaldi</cite>'s header / title bar, first enable "☑ Allow CSS modifications" at <a href="vivaldi://experiments/">vivaldi://experiments/</a>, then open <cite>Vivaldi</cite>'s settings → Appearance → CUSTOM UI MODIFICATIONS → select the folder with a <i>.css</i> file containing: <code> #header {
       display: none;
       }</code></p> -->
 
-    <h3 id="librewolf">Zen Browser / LibreWolf</h3>
+    <h3 id="browser">Zen Browser / LibreWolf</h3>
     <p>I use <cite>LibreWolf</cite> on older machines, or where stability is required. <cite>Zen</cite> browser for everything else.</p>
     
     <h4>Enable userChrome.css customisation</h4>
@@ -674,7 +690,6 @@ article.cls
     <code>~/gpuowl/build-release/gpuowl</code>
 
     <h3 id="xscreensaver">XScreenSaver</h3>
-    <p><a href="https://man.archlinux.org/man/xscreensaver.1#INSTALLING_XSCREENSAVER_ON_KDE">Enable XScreenSaver in KDE Plasma</a>.</p>
 
     <h4>Commands</h4>
     <ul>
