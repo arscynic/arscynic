@@ -1073,7 +1073,7 @@ xdg-open "https://amazon.nl/s?k=$*"</pre></code>
 
   <h2 id="misc">Miscellaneous commands</h2>
   <ul>
-    <li><a href="https://averagelinuxuser.com/clean-arch-linux/">Commands to clean Arch Linux</a>; respectively removes cache and orphaned packages: <code>sudo pacman -Sc && rm -rf ~/.cache/* && sudo pacman -Rns $(pacman -Qtdq)</code></li>
+    <li><a href="https://averagelinuxuser.com/clean-arch-linux/">Commands to clean Arch Linux</a>. Removes cache and orphaned packages: <code>sudo pacman -Sc && rm -rf ~/.cache/* && sudo pacman -Rns $(pacman -Qtdq)</code>, and for yay: <code>yay -Sc</code> </li>
     <li><a href="https://wiki.archlinux.org/title/Display_Power_Management_Signaling#Modify_DPMS_and_screensaver_settings_with_a_command">Command to manually turn off display/monitor/screen</a>. This is useful for certains laptops, or if your monitor only has one button to control everything; if that button breaks due to turning your monitor on and off frequently… <code>sleep 1; xset dpms force off</code></li>
     <li><a href="https://unix.stackexchange.com/a/48245">Command to monitor read/write operation of a USB drive</a>: <code>watch -d grep -e Dirty: -e Writeback: /proc/meminfo</code></li>
     <li><a href="https://unix.stackexchange.com/a/732020/378857">Command to toggle keyboard backlight</a>: <code>xset q | grep -q 'Scroll Lock: off' && xset led named 'Scroll Lock' || xset -led named 'Scroll Lock'
