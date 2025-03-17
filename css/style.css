@@ -115,7 +115,7 @@
 
 * {
   /* font-family: 'Liberation Serif', 'Atkinson Hyperlegible', serif; */
-  font-family: 'Atkinson Hyperlegible';
+  font-family: 'Atkinson Hyperlegible', 'Liberation Serif', serif;
 }
 
 body {
