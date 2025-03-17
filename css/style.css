@@ -27,7 +27,7 @@
       url('../fonts/LiberationSerif-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
-  font-display: swap;
+  font-display: optional;
 }
 
 @font-face {
@@ -38,7 +38,7 @@
       url('../fonts/LiberationSerif-BoldItalic.ttf') format('truetype');
   font-weight: bold;
   font-style: italic;
-  font-display: swap;
+  font-display: optional;
 }
 
 @font-face {
@@ -49,7 +49,7 @@
       url('../fonts/LiberationSerif-Bold.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
-  font-display: swap;
+  font-display: optional;
 }
 
 @font-face {
@@ -60,7 +60,7 @@
       url('../fonts/LiberationSerif-Italic.ttf') format('truetype');
   font-weight: normal;
   font-style: italic;
-  font-display: swap;
+  font-display: optional;
 }
 
 /* Atkinson Hyperlegible */
@@ -73,7 +73,7 @@
       url('/fonts/AtkinsonHyperlegibleNext-ExtraLight.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
-  font-display: swap;
+  font-display: optional;
 }
 
 @font-face {
@@ -84,7 +84,7 @@
       url('/fonts/AtkinsonHyperlegibleNext-BoldItalic.ttf') format('truetype');
   font-weight: bold;
   font-style: italic;
-  font-display: swap;
+  font-display: optional;
 }
 
 @font-face {
@@ -95,7 +95,7 @@
       url('/fonts/AtkinsonHyperlegibleNext-Bold.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
-  font-display: swap;
+  font-display: optional;
 }
 
 @font-face {
@@ -106,7 +106,7 @@
       url('/fonts/AtkinsonHyperlegibleNext-ExtraLightItalic.ttf') format('truetype');
   font-weight: normal;
   font-style: italic;
-  font-display: swap;
+  font-display: optional;
 }
 
 
