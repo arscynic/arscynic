@@ -16,11 +16,97 @@
   --b-col-back-semi-light: transparent;
 }
 
+/* Fonts */
+/* Liberation Serif */
+
+@font-face {
+  font-family: 'Liberation Serif';
+  src: url('/fonts/LiberationSerif-Regular.woff2') format('woff2'),
+      url('/fonts/LiberationSerif-Regular.woff') format('woff'),
+      url('/fonts/LiberationSerif-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Liberation Serif';
+  src: url('/fonts/LiberationSerif-BoldItalic.woff2') format('woff2'),
+      url('/fonts/LiberationSerif-BoldItalic.woff') format('woff'),
+      url('/fonts/LiberationSerif-BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Liberation Serif';
+  src: url('/fonts/LiberationSerif-Bold.woff2') format('woff2'),
+      url('/fonts/LiberationSerif-Bold.woff') format('woff'),
+      url('/fonts/LiberationSerif-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Liberation Serif';
+  src: url('/fonts/LiberationSerif-Italic.woff2') format('woff2'),
+      url('/fonts/LiberationSerif-Italic.woff') format('woff'),
+      url('/fonts/LiberationSerif-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Atkinson Hyperlegible */
+
+@font-face {
+  font-family: 'Atkinson Hyperlegible';
+  src: url('/fonts/AtkinsonHyperlegibleNext-ExtraLight.woff2') format('woff2'),
+      url('/fonts/AtkinsonHyperlegibleNext-ExtraLight.woff') format('woff'),
+      url('/fonts/AtkinsonHyperlegibleNext-ExtraLight.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: 'Atkinson Hyperlegible';
+  src: url('/fonts/AtkinsonHyperlegibleNext-BoldItalic.woff2') format('woff2'),
+      url('/fonts/AtkinsonHyperlegibleNext-BoldItalic.woff') format('woff'),
+      url('/fonts/AtkinsonHyperlegibleNext-BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: 'Atkinson Hyperlegible';
+  src: url('/fonts/AtkinsonHyperlegibleNext-Bold.woff2') format('woff2'),
+      url('/fonts/AtkinsonHyperlegibleNext-Bold.woff') format('woff'),
+      url('/fonts/AtkinsonHyperlegibleNext-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: 'Atkinson Hyperlegible';
+  src: url('/fonts/AtkinsonHyperlegibleNext-ExtraLightItalic.woff2') format('woff2'),
+      url('/fonts/AtkinsonHyperlegibleNext-ExtraLightItalic.woff') format('woff'),
+      url('/fonts/AtkinsonHyperlegibleNext-ExtraLightItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+  font-display: fallback;
+}
+
+
 /*———————————————————————————————————————————————————————————————*/
 /* Global */
 
 * {
-  font-family: "Liberation Serif", serif, Georgia, "Times New Roman", Times;
+  font-family: "Liberation Serif", serif, "Atkinson Hyperlegible";
 }
 
 body {
