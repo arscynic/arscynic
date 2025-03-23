@@ -22,7 +22,7 @@
     <h1>Mostly excellent <a href="./take_my_money.html#:~:text=definitions%20of%20free%20software">“free”</a> software</h1>
     <p class="sub-title readability">A near-exhaustive list of software <em>I</em> use, not an exhaustive list of <em>the</em> best software. There could very well exist superior alternatives. Feel free to point them out.</p>
 
-    <p class="sub-title">Latest update: 2025-03-10, 20:06:59 CET.</p>
+    <p class="sub-title">Latest update: 2025-03-23, 08:58:43 CET.</p>
 
     <p class="fleuron">❦</p>
 
@@ -234,7 +234,7 @@
     <p>I have certain set of software I install on every new machine. Here follows a list I copy-paste so I don't have to install everything individually each time.</p>
 
     <h3>Default:</h3>
-    <code><pre>pacman -Syu --needed btop tilda xscreensaver redshift grsync hblock gnome-disk-utility gparted hunspell hunspell-nl hunspell-en_GB hunspell-fr qalculate-qt smplayer okular fwupd libreoffice-still libreoffice-still-en-gb libreoffice-still-nl libreoffice-still-fr calibre npm transmission-qt xed keepassxc</pre></code>
+    <code><pre>pacman -Syu --needed btop tilda xscreensaver redshift grsync hblock gnome-disk-utility gparted hunspell hunspell-nl hunspell-en_GB hunspell-fr qalculate-qt smplayer okular fwupd libreoffice-still libreoffice-still-en-gb libreoffice-still-nl libreoffice-still-fr calibre npm transmission-qt xed keepassxc playerctl</pre></code>
 
     <code><pre>yay autokey-qt input-remapper-git librewolf-bin zen-browser-bin youtube-music-bin simplescreenrecorder-bin lyx rustdesk-bin notesnook-bin brightness betterbird-bin vscodium-bin</pre></code>
 
@@ -1080,7 +1080,7 @@ xdg-open "https://amazon.nl/s?k=$*"</pre></code>
     </code></li>
     <li><a href="https://www.phys.uconn.edu/~rozman/Courses/P2200_15F/downloads/github-caching_password_in_git.pdf">Command to cache the <i>git</i> password</a>, for one hour: <code>git config --global credential.helper 'cache --timeout=3600'</code></li>
     <li><a href="https://wiki.archlinux.org/title/Xdg-utils#xdg-settings">Command to change the default browser</a> for <a href="https://github.com/telegramdesktop/tdesktop/issues/262#issuecomment-721790595"><cite>Telegram</cite></a>, <cite>Betterbird</cite>, etc. Even when choosing <cite>Vivaldi</cite> browser as the default in "Settings" → "Default Applications" (xfce4-mime-settings), for some reasons some programs (<cite>Telegram</cite>) still use <cite>Firefox</cite>/<cite>Chromium</cite>: <code>xdg-mime default vivaldi-stable.desktop x-scheme-handler/https x-scheme-handler/http</code></li>
-    <li>Control media players: <code>playerctl play-pause/next/previous</code></li>
+    <li>Control media players: <code>playerctl play-pause</code> (next, previous), or <code>xdotool key XF86AudioPlay</code></li>
     <li>Control volume: <code>amixer set Master n%+/n%-</code></li>
     <li>Launch a terminal session including a command: <code>konsole -e btop</code></li>
     <li><a href="https://askubuntu.com/a/20416">Find and replace text within a file using a command</a>: <code>sed -i 's/original/new/g' file.txt</code></li>
