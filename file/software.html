@@ -234,9 +234,9 @@
     <p>I have certain set of software I install on every new machine. Here follows a list I copy-paste so I don't have to install everything individually each time.</p>
 
     <h3>Default:</h3>
-    <code><pre>pacman -Syu --needed btop tilda xscreensaver redshift grsync hblock gnome-disk-utility gparted hunspell hunspell-nl hunspell-en_GB hunspell-fr qalculate-qt smplayer okular fwupd libreoffice-still libreoffice-still-en-gb libreoffice-still-nl libreoffice-still-fr calibre npm transmission-qt xed keepassxc playerctl</pre></code>
+    <code><pre>pacman -Syu --needed btop tilda xscreensaver redshift grsync hblock gnome-disk-utility gparted hunspell hunspell-nl hunspell-en_GB hunspell-fr qalculate-qt smplayer okular fwupd libreoffice-still libreoffice-still-en-gb libreoffice-still-nl libreoffice-still-fr calibre npm transmission-qt xed keepassxc playerctl brightnessctl</pre></code>
 
-    <code><pre>yay autokey-qt input-remapper-git librewolf-bin zen-browser-bin youtube-music-bin simplescreenrecorder-bin lyx rustdesk-bin notesnook-bin brightness betterbird-bin vscodium-bin</pre></code>
+    <code><pre>yay autokey-qt input-remapper-git librewolf-bin zen-browser-bin youtube-music-bin simplescreenrecorder-bin lyx rustdesk-bin notesnook-bin betterbird-bin vscodium-bin</pre></code>
 
     <code><pre>npm install -g live-server</pre></code>
 
@@ -1087,6 +1087,7 @@ xdg-open "https://amazon.nl/s?k=$*"</pre></code>
     <li>To update <cite>EndeavourOS</cite>' download mirrors if <cite>reflector-simple</cite> fails to connect to the mirror URLs: <code>rate-mirrors --protocol https arch | sudo tee /etc/pacman.d/mirrorlist</code></li>
     <li>Command to backup a folder and only copy files that are updated in the source directory and ignore identical files already at the destination: <code>rsync <a href="https://download.samba.org/pub/rsync/rsync.1">-auhP</a> source destination</code></li>
     <li>Automatically open transmission-qt when clicking magnet links: add <code>x-scheme-handler/magnet=transmission-qt.desktop</code> to <code>~/.config/mimeapps.list</code></li>
+    <li>Lowest default brightness without the screen going black: <code>brightnessctl s 1</code></li>
   </ul>
 
   <h2 id="adb">Uninstall an <cite>Android</cite> system app with <abbr title="Android debug bridge"><cite>ADB</cite></abbr></h2>
