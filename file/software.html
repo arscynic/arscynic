@@ -22,7 +22,7 @@
     <h1>Mostly excellent <a href="./take_my_money.html#:~:text=definitions%20of%20free%20software">“free”</a> software</h1>
     <p class="sub-title readability">A near-exhaustive list of software <em>I</em> use, not an exhaustive list of <em>the</em> best software. There could very well exist superior alternatives. Feel free to point them out.</p>
 
-    <p class="sub-title">Latest update: 2025-03-28, 21:18:23 CET.</p>
+    <p class="sub-title">Latest update: 2025-03-29, 19:16:52 CET.</p>
 
     <p class="fleuron">❦</p>
 
@@ -52,6 +52,7 @@
           <li><a href="#tmux">Tmux</a></li>
           <li><a href="#search">Web search</a></li>
           <li><a href="#minimise">Launch minimised</a></li>
+          <li><a href="#llm">LLM</a></li>
           <li><a href="#misc">Miscellaneous commands</a></li>
           <li><a href="#adb">Uninstall Android system app with ADB</a></li>
           <li><a href="#windoze">Windoze nonsense</a></li>
@@ -1070,6 +1071,24 @@ xdg-open "https://amazon.nl/s?k=$*"</pre></code>
 
   <h2 id="minimise">Launch minimised</h2>
   <p>Even though some software supports launching minimised or to tray after, it does not always work depending on the <abbr title="operating system">OS</abbr>/installer/<abbr title="desktop environment">DE</abbr>, etc. For instance building <cite>Notesnook</cite> or <cite>Beeper</cite> with Arch's <cite>yay</cite> uses <a href="https://en.wikipedia.org/wiki/Electron_(software_framework)">Electron</a> to run these programs, which handles differently compared to starting them from an <a href="https://en.wikipedia.org/wiki/AppImage">AppImage</a>. Not even <cite>KDE Plasma</cite>'s "Window Rules" works to force these Electron apps to start minimised. The solution is to run <cite>Notesnook</cite>/<cite>Beeper</cite> from the AppImage available on their website. For <cite>Beeper</cite> one has to additionally add <code>--hidden</code> as a startup argument.</p>
+
+  <h2 id="llm">LLM</h2>
+  <h3>Install DeepSeek locally on Arch Linux</h3>
+  <p>Based on <a href="https://itsfoss.com/install-deepseek-r1-locally-linux/">this <cite>Debian</cite>-oriented <cite>It's FOSS</cite> tutorial</a>, but adapted for <cite>Arch</cite>.</p>
+
+  <ol>
+    <li><code>pacman -S ollama</code></li>
+    <li><code>ollama run deepseek-r1:1.5b</code></li>
+  </ol>
+
+  <p>Now one can interact with DeepSeek within the terminal. To further <a href="https://aur.archlinux.org/packages/open-webui#comment-1007378">interact with the <abbr title="large language model">LLM</abbr> from a browser UI</a>:</p>
+
+  <ol>
+    <li><code>yay open-webui</code></li>
+    <li><code>systemctl start open-webui.service</code></li>
+    <li>Acces the <cite>Open WebUI</cite> server at <a href="http://localhost:8080">http://localhost:8080</a>.</li>
+  </ol>
+
 
   <h2 id="misc">Miscellaneous commands</h2>
   <ul>
