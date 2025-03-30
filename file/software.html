@@ -22,7 +22,7 @@
     <h1>Mostly excellent <a href="./take_my_money.html#:~:text=definitions%20of%20free%20software">“free”</a> software</h1>
     <p class="sub-title readability">A near-exhaustive list of software <em>I</em> use, not an exhaustive list of <em>the</em> best software. There could very well exist superior alternatives. Feel free to point them out.</p>
 
-    <p class="sub-title">Latest update: 2025-03-29, 19:16:52 CET.</p>
+    <p class="sub-title">Latest update: 2025-03-30, 13:05:11 CEST.</p>
 
     <p class="fleuron">❦</p>
 
@@ -53,6 +53,7 @@
           <li><a href="#search">Web search</a></li>
           <li><a href="#minimise">Launch minimised</a></li>
           <li><a href="#llm">LLM</a></li>
+          <li><a href="#ssh">SSH</a></li>
           <li><a href="#misc">Miscellaneous commands</a></li>
           <li><a href="#adb">Uninstall Android system app with ADB</a></li>
           <li><a href="#windoze">Windoze nonsense</a></li>
@@ -1072,7 +1073,7 @@ xdg-open "https://amazon.nl/s?k=$*"</pre></code>
   <h2 id="minimise">Launch minimised</h2>
   <p>Even though some software supports launching minimised or to tray after, it does not always work depending on the <abbr title="operating system">OS</abbr>/installer/<abbr title="desktop environment">DE</abbr>, etc. For instance building <cite>Notesnook</cite> or <cite>Beeper</cite> with Arch's <cite>yay</cite> uses <a href="https://en.wikipedia.org/wiki/Electron_(software_framework)">Electron</a> to run these programs, which handles differently compared to starting them from an <a href="https://en.wikipedia.org/wiki/AppImage">AppImage</a>. Not even <cite>KDE Plasma</cite>'s "Window Rules" works to force these Electron apps to start minimised. The solution is to run <cite>Notesnook</cite>/<cite>Beeper</cite> from the AppImage available on their website. For <cite>Beeper</cite> one has to additionally add <code>--hidden</code> as a startup argument.</p>
 
-  <h2 id="llm">LLM</h2>
+  <h2 id="llm"><abbr title="large language model">LLM</abbr></h2>
   <h3>Install DeepSeek locally on Arch Linux</h3>
   <p>Based on <a href="https://itsfoss.com/install-deepseek-r1-locally-linux/">this <cite>Debian</cite>-oriented <cite>It's FOSS</cite> tutorial</a>, but adapted for <cite>Arch</cite>.</p>
 
@@ -1089,6 +1090,17 @@ xdg-open "https://amazon.nl/s?k=$*"</pre></code>
     <li>Acces the <cite>Open WebUI</cite> server at <a href="http://localhost:8080">http://localhost:8080</a>.</li>
   </ol>
 
+  <h2 id="ssh">SSH</h2>
+  <h3>Create a drop-in file for sshd.service</h3>
+  <p>Creating a <a href="https://wiki.archlinux.org/title/Systemd#Drop-in_files">drop-in file</a> to configure the <abbr title="Secure Shell Protocol">SSH</abbr> service prevents having to edit the <code>/etc/ssh/sshd_config</code> config file that contains all the default values. Doing so is more orderly and less likely to result in accidental security issues.</p>
+
+  <p>In the directory <code>/etc/ssh/sshd_config.d/</code> add a <code>.conf</code> file with the settings one wants changed from the aforementioned config file. “All files with the suffix ".conf" from this directory will be <a href="https://www.freedesktop.org/software/systemd/man/latest/systemd.unit.html#:~:text=merged%20in%20the-,alphanumeric%20order,-and%20parsed%0A%20%20%20%20after">merged in the alphanumeric order</a> and parsed after the main unit file itself has been parsed.” For example, mine contains:</p>
+
+  <pre><code>PasswordAuthentication no
+AuthenticationMethods publickey
+X11Forwarding yes</code></pre>
+
+  <p>After doing so restart sshd: <code>systemctl restart sshd.service</code></p>
 
   <h2 id="misc">Miscellaneous commands</h2>
   <ul>
