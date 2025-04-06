@@ -22,7 +22,7 @@
     <h1>Mostly excellent <a href="./take_my_money.html#:~:text=definitions%20of%20free%20software">“free”</a> software</h1>
     <p class="sub-title readability">A near-exhaustive list of software <em>I</em> use, not an exhaustive list of <em>the</em> best software. There could very well exist superior alternatives. Feel free to point them out.</p>
 
-    <p class="sub-title">Latest update: 2025-03-30, 13:05:11 CEST.</p>
+    <p class="sub-title">Latest update: 2025-04-06, 21:56:45 CEST.</p>
 
     <p class="fleuron">❦</p>
 
@@ -124,8 +124,7 @@
         <li><strong>Ad blocking</strong>: <a href="https://github.com/hectorm/hblock">hBlock</a>, (<a href="https://github.com/koonix/sblock">sblock</a>)</li>
         <li>Browser: <a href="https://librewolf.net">LibreWolf</a> [for stability, privacy], <a href="https://zen-browser.app/">Zen</a> [for power users] <br>
           ↳&#xFE0E; <strong>Ad blocking</strong>/privacy: <a href="https://ublockorigin.com" title="by Raymond Hill">uBlock Origin</a>, <a href="https://www.localcdn.org/">LocalCDN</a>, <a href="https://github.com/Cookie-AutoDelete/Cookie-AutoDelete">Cookie AutoDelete</a>, <a href="https://github.com/cavi-au/Consent-O-Matic">Consent-O-Matic</a>, <a href="https://sponsor.ajay.app">SponsorBlock</a><br>
-          ↳&#xFE0E; Convenience: <a href="https://www.mrfdev.com/enhancer-for-youtube">Enhancer for YouTube</a>, <a href="https://readaloud.app">Read Aloud</a> (Voice: <a href="https://github.com/rhasspy/piper">Piper</a> jenny_dioco[medium]),
-          <a href="https://github.com/artemave/translate_onhover">TransOver</a>, <a href="https://github.com/web-scrobbler/web-scrobbler/">Web Scrobbler</a>, <a href="https://github.com/Robbendebiene/Gesturefy">Gesturefy</a>, <a href="https://addons.mozilla.org/en-GB/firefox/addon/yass-we">Yet Another Smooth Scrolling WE</a></li>
+          ↳&#xFE0E; Convenience: <a href="https://www.mrfdev.com/enhancer-for-youtube">Enhancer for YouTube</a>, <a href="https://readaloud.app">Read Aloud</a> (Voice: <a href="https://github.com/rhasspy/piper">Piper</a> jenny_dioco[medium]), <a href="https://github.com/web-scrobbler/web-scrobbler/">Web Scrobbler</a>, <a href="https://github.com/Robbendebiene/Gesturefy">Gesturefy</a>, <a href="https://addons.mozilla.org/en-GB/firefox/addon/yass-we">Yet Another Smooth Scrolling WE</a></li>
         <li>Calculator: <a href="https://www.symbolab.com">Symbolab</a>, <a href="https://www.wolframalpha.com">WolframAlpha</a>, <a href="https://www.geogebra.org/calculator">GeoGebra</a>, <a href="https://www.desmos.com">Desmos</a></li>
         <li>Chat: <br>
           ↳&#xFE0E; Matrix: <a href="https://element.io">Element</a></li>
@@ -138,6 +137,7 @@
         <li>Remote control/desktop: <a href="https://kdeconnect.kde.org">KDE Connect</a>, <a href="https://remmina.org">Remmina</a>, <a href="https://rustdesk.com">RustDesk</a></li>
         <!-- <li>RSS: <a href="https://github.com/martinrotter/rssguard">RSS Guard</a></li> -->
         <li>Search: <a href="https://www.duckduckgo.com">DuckDuckGo</a></li>
+        <li>Translate: <a href="https://pot-app.com/en/">Pot</a></li>
         <li>YouTube Music: <a href="https://th-ch.github.io/youtube-music/">Custom YouTube Music Desktop App</a>&nbsp;<sup>🚫&nbsp;ads</sup></li>
       </ul>
     </div>
@@ -236,13 +236,13 @@
     <p>I have certain set of software I install on every new machine. Here follows a list I copy-paste so I don't have to install everything individually each time.</p>
 
     <h3>Default:</h3>
-    <code><pre>pacman -Syu --needed btop tilda xscreensaver redshift grsync hblock gnome-disk-utility gparted hunspell hunspell-nl hunspell-en_GB hunspell-fr qalculate-qt smplayer okular fwupd libreoffice-still libreoffice-still-en-gb libreoffice-still-nl libreoffice-still-fr calibre npm transmission-qt xed keepassxc playerctl brightnessctl simple-scan</pre></code>
+    <code><pre>pacman -Syu --needed btop tilda xscreensaver redshift grsync hblock gnome-disk-utility gparted hunspell hunspell-nl hunspell-en_GB hunspell-fr qalculate-qt smplayer okular fwupd libreoffice-still libreoffice-still-en-gb libreoffice-still-nl libreoffice-still-fr calibre npm transmission-qt xed keepassxc playerctl brightnessctl simple-scan tesseract-data-nld tesseract-data-eng tesseract-data-fra tesseract-data-chi_sim</pre></code>
 
     <code><pre>yay autokey-qt input-remapper-git librewolf-bin zen-browser-bin youtube-music-bin simplescreenrecorder-bin lyx rustdesk-bin notesnook-bin betterbird-bin vscodium-bin brightness</pre></code>
 
     <code><pre>npm install -g live-server</pre></code>
 
-    <p>Direct download: <a href="https://mega.io/desktop#download">MEGA</a></p>
+    <p>Direct download: <a href="https://mega.io/desktop#download">MEGA</a>, <a href="https://pot-app.com/en/download.html">Pot</a></p>
 
     <h3>Number crunching</h3>
     <code><pre>boinc opencl-nvidia python-requests</pre></code>
@@ -1143,11 +1143,17 @@ X11Forwarding yes</code></pre>
   </ol>
 
   <h3>Bypass <cite>Windows 11</cite> <cite>Microsoft</cite> account prompt</h3>
-  <p>Unplug the Ethernet cable and disable Wi-Fi. When prompted to enter an email address press <code>Shift + F10</code>, and in cmd.exe type <code><abbr title="out of box experience">oobe</abbr>\BypassNRO</code> and press enter to reboot. Then click "I don't have internet" → "Continue with limited setup". When asked to enter your name type "Screw Microsoft". Unethical bastards.</p>
+  <p>When it asks for one's Microsoft account, press <code>Shift + F10</code>, and type <code>start ms-cxh:localonly</code>. This should prompt the <a href="https://infosec.exchange/@Stealthsploit/114284874142875526">window to create a local account instead</a>.</p>
+  <p></p>
+  <details>
+    <summary>Click to see the legacy BypassNRO method below that has been disabled by the sociopaths at Microsoft.</summary>
 
-  <p>If <code>Shift + F10</code> does not launch anything except for a split-second loading icon, then just use <code>no@thankyou.com</code> as the email address and enter any arbitrary password; "Screw Microsoft" remains an appropriate choice.</p>
+    <p>Unplug the Ethernet cable and disable Wi-Fi. When prompted to enter an email address press <code>Shift + F10</code>, and in cmd.exe type <code><abbr title="out of box experience">oobe</abbr>\BypassNRO</code> and press enter to reboot. Then click "I don't have internet" → "Continue with limited setup". When asked to enter your name type "Screw Microsoft". Unethical bastards.</p>
 
-  <p>Source: <a href="https://www.ghacks.net/2023/01/26/how-to-bypass-the-microsoft-account-requirement-during-windows-setup/">How to bypass the Microsoft Account requirement during Windows setup</a></p>
+    <p>If <code>Shift + F10</code> does not launch anything except for a split-second loading icon, then just use <code>no@thankyou.com</code> as the email address and enter any arbitrary password; "Screw Microsoft" remains an appropriate choice.</p>
+
+    <p>Source: <a href="https://www.ghacks.net/2023/01/26/how-to-bypass-the-microsoft-account-requirement-during-windows-setup/">How to bypass the Microsoft Account requirement during Windows setup</a></p>
+  </details>
 
   <h3>Disable trending/suggested/<cite>Bing</cite>/<cite>Edge</cite> searches from the <cite>Windows</cite> search box</h3>
 
