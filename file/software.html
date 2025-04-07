@@ -54,6 +54,7 @@
           <li><a href="#minimise">Launch minimised</a></li>
           <li><a href="#llm">LLM</a></li>
           <li><a href="#ssh">SSH</a></li>
+          <li><a href="#keepassxc">KeePassXC</a></li>
           <li><a href="#misc">Miscellaneous commands</a></li>
           <li><a href="#adb">Uninstall Android system app with ADB</a></li>
           <li><a href="#windoze">Windoze nonsense</a></li>
@@ -1102,6 +1103,19 @@ X11Forwarding yes</code></pre>
 
   <p>After doing so restart sshd: <code>systemctl restart sshd.service</code></p>
 
+  <h2 id="keepassxc">KeePassXC</h2>
+  <h3>KeePassXC Secret Service as keyring</h3>
+  <p>Instead of using <cite>GNOME Keyring</cite> or <cite>KDE Wallet</cite> one can use wallet manager KeePassXC's Secret Service integration [<a href="https://c3pb.de/blog/keepassxc-secrets-service.html">source</a>].</p>
+
+  <ol>
+    <li>Open KeePassXC → Tools → ⚙️ Settings → Secret Service Integration <br>
+      ☑ Enable <code>KeepassXC Freedesktop.org Secret Service integration and exit this settings window</code>.
+    </li>
+    <li>Create a new group in the vault that one wants to use the Secret Service with.</li>
+    <li>Click Database → Database Settings → Secret Service Integration <br>
+      Enable 🔘 <code>Expose entries under this group:</code> and select the new group made in step 2.</li>
+  </ol>
+  
   <h2 id="misc">Miscellaneous commands</h2>
   <ul>
     <li><a href="https://averagelinuxuser.com/clean-arch-linux/">Commands to clean Arch Linux</a>. Removes cache and orphaned packages: <code>sudo pacman -Sc && rm -rf ~/.cache/* && sudo pacman -Rns $(pacman -Qtdq)</code>, and for yay: <code>yay -Sc</code> </li>
