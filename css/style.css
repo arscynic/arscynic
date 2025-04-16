@@ -735,13 +735,8 @@ nav {
   text-align: right;
 }
 
-#software-page details {
+#software-page details:first-of-type {
   margin-top: .5rem;
-}
-
-#software-page details, #software-page details li {
-  text-align: center;
-  list-style-position: inside;
 }
 
 #author {
@@ -762,7 +757,8 @@ figure summary, figure details pre, #edit-list summary {
 #edit-list li {
   font-size: x-small;
   font-family: monospace;
-  text-align: left;
+  text-align: right;
+  list-style: none;
   padding-bottom: 0.125rem;
 }
 
