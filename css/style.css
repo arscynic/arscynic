@@ -735,6 +735,15 @@ nav {
   text-align: right;
 }
 
+#software-page details {
+  margin-top: .5rem;
+}
+
+#software-page details, #software-page details li {
+  text-align: center;
+  list-style-position: inside;
+}
+
 #author {
   margin-bottom: 0;
 }

@@ -22,7 +22,12 @@
     <h1>Mostly excellent <a href="./take_my_money.html#:~:text=definitions%20of%20free%20software">“free”</a> software</h1>
     <p class="sub-title readability">A near-exhaustive list of software <em>I</em> use, not an exhaustive list of <em>the</em> best software. There could very well exist superior alternatives. Feel free to point them out.</p>
 
-    <p class="sub-title">Latest update: 2025-04-06, 21:56:45 CEST.</p>
+    <details id="edit-list">
+      <summary>Latest update: 2025-04-16.</summary>
+      <ul>
+        <li>2025-04-16, 14:27:47 CEST: adds Compiz.</li>
+      </ul>
+    </details>
 
     <p class="fleuron">❦</p>
 
@@ -35,30 +40,30 @@
         <li>To configure: <br>
           <ol>
             <li><a href="#wallpaper">Wallpaper</a></li>
-            <li><a href="#desktop-environment">Desktop environment</a></li>
-          <li><a href="#shell">Shell</a></li>
-          <li><a href="#ubo">uBlock Origin</a></li>
-          <li><a href="#hosts">Hosts file</a></li>
-          <li><a href="#code">Code editors</a></li>
-          <li><a href="#lyx">LyX</a></li>
-          <li><a href="#browser">Browser</a></li>
-          <li><a href="#yt">Enhancer for YouTube</a></li>
-          <li><a href="#res">Reddit Enhancement Suite</a></li>
-          <li><a href="#remmina">Remmina</a></li>
-          <li><a href="#boinc">BOINC</a></li>
-          <li><a href="#gpuowl">GpuOwl</a></li>
-          <li><a href="#xscreensaver">XScreenSaver</a></li>
-          <li><a href="#remap">Input Remapper</a></li>
-          <li><a href="#tmux">Tmux</a></li>
-          <li><a href="#search">Web search</a></li>
-          <li><a href="#minimise">Launch minimised</a></li>
-          <li><a href="#llm">LLM</a></li>
-          <li><a href="#ssh">SSH</a></li>
-          <li><a href="#keepassxc">KeePassXC</a></li>
-          <li><a href="#misc">Miscellaneous commands</a></li>
-          <li><a href="#adb">Uninstall Android system app with ADB</a></li>
-          <li><a href="#windoze">Windoze nonsense</a></li>
-        </ol>
+            <li><a href="#desktop-environment">DE & WM</a></li>
+            <li><a href="#shell">Shell</a></li>
+            <li><a href="#ubo">uBlock Origin</a></li>
+            <li><a href="#hosts">Hosts file</a></li>
+            <li><a href="#code">Code editors</a></li>
+            <li><a href="#lyx">LyX</a></li>
+            <li><a href="#browser">Browser</a></li>
+            <li><a href="#yt">Enhancer for YouTube</a></li>
+            <li><a href="#res">Reddit Enhancement Suite</a></li>
+            <li><a href="#remmina">Remmina</a></li>
+            <li><a href="#boinc">BOINC</a></li>
+            <li><a href="#gpuowl">GpuOwl</a></li>
+            <li><a href="#xscreensaver">XScreenSaver</a></li>
+            <li><a href="#remap">Input Remapper</a></li>
+            <li><a href="#tmux">Tmux</a></li>
+            <li><a href="#search">Web search</a></li>
+            <li><a href="#minimise">Launch minimised</a></li>
+            <li><a href="#llm">LLM</a></li>
+            <li><a href="#ssh">SSH</a></li>
+            <li><a href="#keepassxc">KeePassXC</a></li>
+            <li><a href="#misc">Miscellaneous commands</a></li>
+            <li><a href="#adb">Uninstall Android system app with ADB</a></li>
+            <li><a href="#windoze">Windoze nonsense</a></li>
+          </ol>
         </li>
       </ul>
     </div>
@@ -239,7 +244,7 @@
     <h3>Default:</h3>
     <code><pre>pacman -Syu --needed btop tilda xscreensaver redshift grsync hblock gnome-disk-utility gparted hunspell hunspell-nl hunspell-en_GB hunspell-fr qalculate-qt smplayer okular fwupd libreoffice-still libreoffice-still-en-gb libreoffice-still-nl libreoffice-still-fr calibre npm transmission-qt xed keepassxc playerctl brightnessctl simple-scan tesseract-data-nld tesseract-data-eng tesseract-data-fra tesseract-data-chi_sim</pre></code>
 
-    <code><pre>yay autokey-qt input-remapper-git librewolf-bin zen-browser-bin youtube-music-bin simplescreenrecorder-bin lyx rustdesk-bin notesnook-bin betterbird-bin vscodium-bin brightness</pre></code>
+    <code><pre>yay autokey-qt input-remapper-git librewolf-bin zen-browser-bin youtube-music-bin simplescreenrecorder-bin lyx rustdesk-bin notesnook-bin betterbird-bin vscodium-bin brightness compiz</pre></code>
 
     <code><pre>npm install -g live-server</pre></code>
 
@@ -275,14 +280,17 @@
 
     <img src="./media/pencil-landscape25-1536×896.png" alt="Digital pencil art of mountain landscape"> -->
 
-    <h3 id="desktop-environment">Desktop environment</h3>
-
-    <p>Returned to <cite>Xfce</cite> because KDE gave me too many bugs.</p>
+    <h3 id="desktop-environment">Desktop environment & window manager</h3>
+    <p>Returned to <abbr title="desktop environment">DE</abbr> <cite>Xfce</cite> because KDE gave me too many small bugs. Using <abbr title="window manager">WM</abbr> <cite>Compiz</cite> over <cite>xfwm4</cite> for more features.</p>
 
     <h4>Xfce</h4>
 
     <h5>Whisker Menu</h5>
     <p>For some reason not all distributions have a shortcut to Whisker Menu, which is remarkably annoying. To add it: "Keyboard" → "Application Shortcuts" → "xfce4-popup-whiskermenu".</p>
+
+    <p>Using shortcut <code>Super + Space</code>* is advised when using <cite>Compiz</cite>, simply using <code>Super</code> will prevent <cite>Compiz</cite> shortcuts that use the <code>Super</code> button as well.</p>
+
+    <p>* The <code>Super</code> button is the Windows button with the ⊞ icon.</p>
 
     <h5>xfce4-screensaver</h5>
     
@@ -296,10 +304,21 @@ TryExec=/usr/lib/xscreensaver/glmatrix
 Categories=Screensaver;</code></pre>
 
     <h5>Window tiling</h5>
-    <p>To enable window tiling when nearing the edge of a screen, open "Window Manager Tweaks" and enable "☑ Automatically tile windows when moving towards the screen edge".</p>
+    <details>
+      <summary>Click to show window tiling settings in case <cite>xfwm4</cite> is used, not <cite>Compiz</cite>.</summary>
+      <p>To enable window tiling when nearing the edge of a screen, open "Window Manager Tweaks" and enable "☑ Automatically tile windows when moving towards the screen edge".</p>
 
     <p>However, this will sneakily deselect and thus disable within "Window Manager" → "Wrap workspaces when reaching the screen edge", the option "☐ With a dragged window". This means one cannot grab and move a window towards another workspace.</p>
+    </details>
 
+    <h4>Compiz</h4>
+    <p>CompizConfig Settings Manager:</p>
+    <ul>
+      <li>General Options → Desktop Size: 2 × 2.</li>
+      <li>☑: Expo, Desktop Cube, Rotate Cube, Viewport Switcher…</li>
+      <li>In case shortcut <code>Super + e</code> doesn't launch Expo mode, then make sure <code>xfce4-popup-whiskermenu</code> isn't assigned <code>Super</code> as shortcut in "Keyboard" → "Application Shortcuts"; this is a known bug in <cite>Xfce</cite>.</li>
+    </ul>
+    
     <h4>KDE Plasma</h4>
 
     <details>
