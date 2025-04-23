@@ -26,7 +26,7 @@
       <summary>Latest update: 2025-04-23.</summary>
       <ul>
         <li>+ Compiz | 2025-04-16, 14:27:47 CEST</li>
-        <li>+ Pear Launcher, TranslateYou, <span title="WebP preview in Thunar">webp-pixbuf-loader</span>. - Linguee | 2025-04-23, 18:03:42 CEST</li>
+        <li>+ Pear Launcher, TranslateYou, <span title="WebP preview in Thunar">webp-pixbuf-loader</span>, commands to identify <abbr title="desktop environment">DE</abbr>, <abbr title="display manager">DM</abbr>, <abbr title="window manager">WM</abbr>. - Linguee | 2025-04-23, 19:48:32 CEST</li>
       </ul>
     </details>
 
@@ -1159,6 +1159,9 @@ X11Forwarding yes</code></pre>
     <li>Automatically open transmission-qt when clicking magnet links: add <code>x-scheme-handler/magnet=transmission-qt.desktop</code> to <code>~/.config/mimeapps.list</code></li>
     <li>Lowest default brightness without the screen going black: <code>brightnessctl s 1</code></li>
     <li><a href="https://wiki.archlinux.org/title/PRIME#Configure_applications_to_render_using_GPU">Force <abbr title="graphics processing unit">GPU</abbr></a> / integrated graphics on <cite>Steam</cite> games in Linux by setting as "Launch options": <code>__NV_PRIME_RENDER_OFFLOAD=0 __GLX_VENDOR_LIBRARY_NAME=nvidia %command%</code></li>
+    <li>Which desktop environment? <code>echo $XDG_SESSION_DESKTOP</code> <br>
+    Which display manager? <code>systemctl status display-manager</code> <br>
+    Which window manager? <code>wmctrl -m</code></li>
   </ul>
 
   <h2 id="adb">Uninstall an <cite>Android</cite> system app with <abbr title="Android debug bridge"><cite>ADB</cite></abbr></h2>
