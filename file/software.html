@@ -23,10 +23,11 @@
     <p class="sub-title readability">A near-exhaustive list of software <em>I</em> use, not an exhaustive list of <em>the</em> best software. There could very well exist superior alternatives. Feel free to point them out.</p>
 
     <details class="readability" id="edit-list">
-      <summary>Latest update: 2025-04-23.</summary>
+      <summary>Latest update: 2025-05-01.</summary>
       <ul>
         <li>+ Compiz | 2025-04-16, 14:27:47 CEST</li>
         <li>+ Pear Launcher, TranslateYou, <span title="WebP preview in Thunar">webp-pixbuf-loader</span>, commands to identify <abbr title="desktop environment">DE</abbr>, <abbr title="display manager">DM</abbr>, <abbr title="window manager">WM</abbr>. - Linguee | 2025-04-23, 19:48:32 CEST</li>
+        <li>- Compiz [± unsupported] | 2025-05-01, 09:37:15 CEST</li>
       </ul>
     </details>
 
@@ -75,7 +76,7 @@
           Desktop environment: <a href="https://xfce.org/">Xfce</a> (<a href="https://en.wikipedia.org/wiki/X_Window_System">X11</a>)<br>
           <!-- ↳︎ Desktop environment: <a href="https://xfce.org">Xfce</a><br>
           ↳︎ Windows 95 theme: <a href="https://github.com/grassmunk/Chicago95">Chicago95</a> (install script: <a href="https://github.com/dominichayesferen/Chicagofier">Chicagofier</a>) -->
-          Window manager: <a href="https://wiki.archlinux.org/title/Compiz#0.9_series">Compiz</a>
+          Window manager: <a href="https://docs.xfce.org/xfce/xfwm4/start">xfwm4</a><!--<a href="https://wiki.archlinux.org/title/Compiz#0.9_series">Compiz</a>-->
         </li>
         <li>Backup: <a href="https://www.opbyte.it/grsync/">Grsync</a></li>
         <li>Batch/bulk edit images: <a href="https://converseen.fasterland.net/">Converseen</a></li>
@@ -246,7 +247,7 @@
     <h3>Default:</h3>
     <code><pre>pacman -Syu --needed btop tilda xscreensaver redshift grsync hblock gnome-disk-utility gparted hunspell hunspell-nl hunspell-en_GB hunspell-fr qalculate-qt smplayer okular fwupd libreoffice-still libreoffice-still-en-gb libreoffice-still-nl libreoffice-still-fr calibre npm transmission-qt xed keepassxc playerctl brightnessctl simple-scan tesseract-data-nld tesseract-data-eng tesseract-data-fra tesseract-data-chi_sim webp-pixbuf-loader</pre></code>
 
-    <code><pre>yay autokey-qt input-remapper-git librewolf-bin zen-browser-bin youtube-music-bin simplescreenrecorder-bin lyx rustdesk-bin notesnook-bin betterbird-bin vscodium-bin brightness compiz</pre></code>
+    <code><pre>yay autokey-qt input-remapper-git librewolf-bin zen-browser-bin youtube-music-bin simplescreenrecorder-bin lyx rustdesk-bin notesnook-bin betterbird-bin vscodium-bin brightness</pre></code>
 
     <code><pre>npm install -g live-server</pre></code>
 
@@ -260,7 +261,7 @@
       <summary>Click to see the optional/legacy packages.</summary>
 
       <code><pre>pacman -Syu --needed vivaldi vivaldi-ffmpeg-codecs element-desktop shotcut rssguard discord bluez bluez-utils texstudio sagemath sagemath-doc xsane seahorse noto-fonts-emoji playerctl xfce4-systemload-plugin xfce4-sensors-plugin gst-plugins-good geany-plugins android-tools catfish ffmpeg ffmpegthumbs ffmpegthumbnailer gufw bash-completion thunar gvfs gvfs-mtp tumbler thunar-media-tags-plugin thunar-volman xdotool qt5-imageformats xournalpp make automake base-devel texlive-latex texlive-latexextra remmina libvncserver x11vnc inotify-tools dnsutils baobab peek thunderbird birdtray clementine torbrowser-launcher audio-recorder zsh vscodium-bin libreoffice-fresh nheko ncdu xfce4-taskmanager kdeconnect tmux rsync</pre></code>
-      <code><pre>yay sblock-git rate-mirrors zen-browser-bin crow-translate</pre></code>
+      <code><pre>yay sblock-git rate-mirrors zen-browser-bin crow-translate compiz</pre></code>
     </details>
 
       <!-- <li><a href="https://github.com/wxMaxima-developers/docker-wxmaxima/releases">wxMaxima</a>: sudo chmod +x filename, double click to execute.</li> -->
@@ -283,7 +284,7 @@
     <img src="./media/pencil-landscape25-1536×896.png" alt="Digital pencil art of mountain landscape"> -->
 
     <h3 id="desktop-environment">Desktop environment & window manager</h3>
-    <p>Returned to <abbr title="desktop environment">DE</abbr> <cite>Xfce</cite> because KDE gave me too many small bugs. Using <abbr title="window manager">WM</abbr> <cite>Compiz</cite> over <cite>xfwm4</cite> for more features.</p>
+    <p>Returned to <abbr title="desktop environment">DE</abbr> <cite>Xfce</cite> because KDE gave me too many small bugs. <!--Using <abbr title="window manager">WM</abbr> <cite>Compiz</cite> over <cite>xfwm4</cite> for more features.--></p>
 
     <h4>Xfce</h4>
 
@@ -307,23 +308,26 @@ Categories=Screensaver;</code></pre>
 
     <h5>Window tiling</h5>
     <details>
-      <summary>Click to show window tiling settings in case <cite>xfwm4</cite> is used, not <cite>Compiz</cite>.</summary>
+      <summary>Click to show window tiling settings in case <cite>xfwm4</cite> is used.</summary>
       <p>To enable window tiling when nearing the edge of a screen, open "Window Manager Tweaks" and enable "☑ Automatically tile windows when moving towards the screen edge".</p>
 
     <p>However, this will sneakily deselect and thus disable within "Window Manager" → "Wrap workspaces when reaching the screen edge", the option "☐ With a dragged window". This means one cannot grab and move a window towards another workspace.</p>
     </details>
 
-    <h4>Compiz</h4>
-    <p><a href="https://wiki.archlinux.org/title/Compiz#Autostarting_Compiz_in_a_desktop_environment">To autostart <cite>Compiz</cite></a>, here in <cite>Xfce</cite>, execute:</p>
-    <pre><code>xfconf-query -c xfce4-session -p /sessions/Failsafe/Client0_Command -t string -sa xfsettingsd
+    <details>
+      <summary>Click to show window tiling settings in case <cite>Compiz</cite> is used.</summary>
+      <p>Stopped using <cite>Compiz</cite> because its latest update was three years ago.</p>
+      <p><a href="https://wiki.archlinux.org/title/Compiz#Autostarting_Compiz_in_a_desktop_environment">To autostart <cite>Compiz</cite></a>, here in <cite>Xfce</cite>, execute:</p>
+      <pre><code>xfconf-query -c xfce4-session -p /sessions/Failsafe/Client0_Command -t string -sa xfsettingsd
 xfconf-query -c xfce4-session -p /sessions/Failsafe/Client1_Command -t string -sa compiz</code></pre>
-    <p>CompizConfig Settings Manager:</p>
-    <ul>
-      <li>General Options → Desktop Size: 2 × 2.</li>
-      <li>☑: Expo, Desktop Cube, Rotate Cube, Viewport Switcher… <br>
-      Within "Viewport Switcher" → "Desktop-based Viewport Switching", disable "Initiate plugin action", or don't select "Button 2" for it not to interfere with middle mouse button functionality in other software.</li>
-      <li>In case shortcut <code>Super + e</code> doesn't launch Expo mode, then make sure <code>xfce4-popup-whiskermenu</code> isn't assigned <code>Super</code> as shortcut in "Keyboard" → "Application Shortcuts"; this is a known bug in <cite>Xfce</cite>.</li>
-    </ul>
+      <p>CompizConfig Settings Manager:</p>
+      <ul>
+        <li>General Options → Desktop Size: 2 × 2.</li>
+        <li>☑: Expo, Desktop Cube, Rotate Cube, Viewport Switcher… <br>
+        Within "Viewport Switcher" → "Desktop-based Viewport Switching", disable "Initiate plugin action", or don't select "Button 2" for it not to interfere with middle mouse button functionality in other software.</li>
+        <li>In case shortcut <code>Super + e</code> doesn't launch Expo mode, then make sure <code>xfce4-popup-whiskermenu</code> isn't assigned <code>Super</code> as shortcut in "Keyboard" → "Application Shortcuts"; this is a known bug in <cite>Xfce</cite>.</li>
+      </ul>
+    </details>
     
     <h4>KDE Plasma</h4>
 
