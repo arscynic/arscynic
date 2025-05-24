@@ -23,12 +23,13 @@
     <p class="sub-title readability">A near-exhaustive list of software <em>I</em> use, not an exhaustive list of <em>the</em> best software. There could very well exist superior alternatives. Feel free to point them out.</p>
 
     <details class="readability" id="edit-list">
-      <summary>Latest update: 2025-05-11.</summary>
+      <summary>Latest update: 2025-05-24.</summary>
       <ul>
         <li>+ Compiz | 2025-04-16, 14:27:47 CEST</li>
         <li>+ Pear Launcher, TranslateYou, <span title="WebP preview in Thunar">webp-pixbuf-loader</span>, commands to identify <abbr title="desktop environment">DE</abbr>, <abbr title="display manager">DM</abbr>, <abbr title="window manager">WM</abbr>. - Linguee | 2025-04-23, 19:48:32 CEST</li>
         <li>- Compiz [± unsupported] | 2025-05-01, 09:37:15 CEST</li>
         <li>+ Cortile | 2025-05-11, 12:20:17 CEST</li>
+        <li>+ Cinnamon, AutoKey for search, - Xfce, Cortile | 2025-05-24, 18:08:09 CEST</li>
       </ul>
     </details>
 
@@ -44,7 +45,6 @@
           <ol>
             <li><a href="#wallpaper">Wallpaper</a></li>
             <li><a href="#desktop-environment"><abbr title="desktop environment">DE</abbr> & <abbr title="window manager">WM</abbr></a></li>
-            <li><a href="#shell">Shell</a></li>
             <li><a href="#ubo">uBlock Origin</a></li>
             <li><a href="#hosts">Hosts file</a></li>
             <li><a href="#code">Code editors</a></li>
@@ -74,10 +74,10 @@
     <div><h2 id="software">Linux</h2>
       <ul>
         <li>Operating system (OS): <a href="https://endeavouros.com">EndeavourOS</a><br>
-          ↳ Desktop environment: <a href="https://xfce.org/">Xfce</a> (<a href="https://en.wikipedia.org/wiki/X_Window_System">X11</a>), 
+          ↳ Desktop environment: <a href="https://wiki.archlinux.org/title/Cinnamon">Cinnamon</a> (<a href="https://en.wikipedia.org/wiki/X_Window_System">X11</a>)
           <!-- ↳︎ Desktop environment: <a href="https://xfce.org">Xfce</a><br>
           ↳︎ Windows 95 theme: <a href="https://github.com/grassmunk/Chicago95">Chicago95</a> (install script: <a href="https://github.com/dominichayesferen/Chicagofier">Chicagofier</a>) -->
-          window manager: <a href="https://docs.xfce.org/xfce/xfwm4/start">xfwm4</a>, tiling manager: <a href="https://github.com/leukipp/cortile">Cortile</a><!--<a href="https://wiki.archlinux.org/title/Compiz#0.9_series">Compiz</a>-->
+          <!--window manager: <a href="https://docs.xfce.org/xfce/xfwm4/start">xfwm4</a>, tiling manager: <a href="https://github.com/leukipp/cortile">Cortile</a>--><!--<a href="https://wiki.archlinux.org/title/Compiz#0.9_series">Compiz</a>-->
         </li>
         <li>Backup: <a href="https://www.opbyte.it/grsync/">Grsync</a></li>
         <li>Batch/bulk edit images: <a href="https://converseen.fasterland.net/">Converseen</a></li>
@@ -285,20 +285,21 @@
     <img src="./media/pencil-landscape25-1536×896.png" alt="Digital pencil art of mountain landscape"> -->
 
     <h3 id="desktop-environment">Desktop environment & window manager</h3>
-    <p>Returned to <abbr title="desktop environment">DE</abbr> <cite>Xfce</cite> because KDE gave me too many small bugs. <!--Using <abbr title="window manager">WM</abbr> <cite>Compiz</cite> over <cite>xfwm4</cite> for more features.--></p>
+    <p>Now using <abbr title="desktop environment">DE</abbr> <cite>Cinnamon</cite> because I find it to be the perfect mixture between <cite>Xfce</cite>, <cite>KDE Plasma</cite>, <cite>Gnome</cite>, and <cite>Budgie</cite>. It's fast, user friendly for both ex <cite>Windows</cite>/<cite>Mac</cite> users, while still offering a wide variety of features without being overwhelming. It doesn't come with bloat software as well; nice and simple.</p>
 
-    <h4>Xfce</h4>
+    <details>
+      <summary>Click to see legacy DE configurations.</summary>
+      <h4>Xfce</h4>
+      <h5>Whisker Menu</h5>
+      <p>For some reason not all distributions have a shortcut to Whisker Menu, which is remarkably annoying. To add it: "Keyboard" → "Application Shortcuts" → "xfce4-popup-whiskermenu".</p>
 
-    <h5>Whisker Menu</h5>
-    <p>For some reason not all distributions have a shortcut to Whisker Menu, which is remarkably annoying. To add it: "Keyboard" → "Application Shortcuts" → "xfce4-popup-whiskermenu".</p>
+      <p>Using shortcut <code>Super + Space</code>* is advised when using <cite>Compiz</cite>, simply using <code>Super</code> will prevent <cite>Compiz</cite> shortcuts that use the <code>Super</code> button as well.</p>
 
-    <p>Using shortcut <code>Super + Space</code>* is advised when using <cite>Compiz</cite>, simply using <code>Super</code> will prevent <cite>Compiz</cite> shortcuts that use the <code>Super</code> button as well.</p>
+      <p>* The <code>Super</code> button is the Windows button with the ⊞ icon.</p>
 
-    <p>* The <code>Super</code> button is the Windows button with the ⊞ icon.</p>
-
-    <h5>xfce4-screensaver</h5>
-    
-    <p>"<a href="https://docs.xfce.org/apps/xfce4-screensaver/faq#where_are_all_the_screensavers">Where are all the screensavers?</a>" <cite>XScreenSaver</cite> is used by <code>xfce4-screensaver</code>, but doesn't add all of <cite>XScreenSaver</cite>'s screensavers by default. Annoying. To add one of its screensavers, place the file <code>xfce-glmatrix.desktop</code> containing the lines below in <code>/usr/share/applications/screensavers/</code>. All <cite>XScreenSaver</cite>'s screensavers and their options can be found in <code>/usr/share/xscreensaver/config/</code>.</p>
+      <h5>xfce4-screensaver</h5>
+      
+      <p>"<a href="https://docs.xfce.org/apps/xfce4-screensaver/faq#where_are_all_the_screensavers">Where are all the screensavers?</a>" <cite>XScreenSaver</cite> is used by <code>xfce4-screensaver</code>, but doesn't add all of <cite>XScreenSaver</cite>'s screensavers by default. Annoying. To add one of its screensavers, place the file <code>xfce-glmatrix.desktop</code> containing the lines below in <code>/usr/share/applications/screensavers/</code>. All <cite>XScreenSaver</cite>'s screensavers and their options can be found in <code>/usr/share/xscreensaver/config/</code>.</p>
 
     <pre><code>[Desktop Entry]
 Type=Application
@@ -307,20 +308,17 @@ Exec=/usr/lib/xscreensaver/glmatrix -root --no-rotate
 TryExec=/usr/lib/xscreensaver/glmatrix
 Categories=Screensaver;</code></pre>
 
-    <h5>Window tiling</h5>
-    <details>
-      <summary>Click to show window tiling settings in case <cite>xfwm4</cite> is used.</summary>
+      <h5>Window tiling</h5>
+      <h6>xfwm4</h6>
       <p>To enable window tiling when nearing the edge of a screen, open "Window Manager Tweaks" and enable "☑ Automatically tile windows when moving towards the screen edge".</p>
 
-    <p>However, this will sneakily deselect and thus disable within "Window Manager" → "Wrap workspaces when reaching the screen edge", the option "☐ With a dragged window". This means one cannot grab and move a window towards another workspace.</p>
-    </details>
+      <p>However, this will sneakily deselect and thus disable within "Window Manager" → "Wrap workspaces when reaching the screen edge", the option "☐ With a dragged window". This means one cannot grab and move a window towards another workspace.</p>
 
-    <details>
-      <summary>Click to show window tiling settings in case <cite>Compiz</cite> is used.</summary>
+      <h6>Compiz</h6>
       <p>Stopped using <cite>Compiz</cite> because its latest update was three years ago.</p>
       <p><a href="https://wiki.archlinux.org/title/Compiz#Autostarting_Compiz_in_a_desktop_environment">To autostart <cite>Compiz</cite></a>, here in <cite>Xfce</cite>, execute:</p>
       <pre><code>xfconf-query -c xfce4-session -p /sessions/Failsafe/Client0_Command -t string -sa xfsettingsd
-xfconf-query -c xfce4-session -p /sessions/Failsafe/Client1_Command -t string -sa compiz</code></pre>
+  xfconf-query -c xfce4-session -p /sessions/Failsafe/Client1_Command -t string -sa compiz</code></pre>
       <p>CompizConfig Settings Manager:</p>
       <ul>
         <li>General Options → Desktop Size: 2 × 2.</li>
@@ -328,40 +326,37 @@ xfconf-query -c xfce4-session -p /sessions/Failsafe/Client1_Command -t string -s
         Within "Viewport Switcher" → "Desktop-based Viewport Switching", disable "Initiate plugin action", or don't select "Button 2" for it not to interfere with middle mouse button functionality in other software.</li>
         <li>In case shortcut <code>Super + e</code> doesn't launch Expo mode, then make sure <code>xfce4-popup-whiskermenu</code> isn't assigned <code>Super</code> as shortcut in "Keyboard" → "Application Shortcuts"; this is a known bug in <cite>Xfce</cite>.</li>
       </ul>
-    </details>
+      
+      <h4>KDE Plasma</h4>
+
+        <h5>Custom KRunner/Plasma browser search query</h5>
+        <p>To configure <cite>Plasma search</cite> to open a browser with a query when entering "xyz example.com", e.g., "viv example.com" that opens example.com in <cite>Vivaldi</cite> browser:</p>
     
-    <h4>KDE Plasma</h4>
+        <blockquote>
+          <p>“<a href="https://kb.iu.edu/d/abbe">create a symlink</a> named "viv" in /usr/bin/ to the actual vivaldi binary” —<a href="https://matrix.to/#/!gYaaEyvNWxTzXssOmq:kde.org/$i-L0XYlJ_ElEdHPD7oKNGysslTil3w01IDM2Y6JCJTc?via=matrix.org&via=im.kde.org&via=kde.org">Jan R.</a>.</p>
+        </blockquote>
+    
+        <p>Either there likely already is a symlink named "vivaldi" within <code>/usr/bin/</code>, of which you can make another symlink with a more convenient shorter name: <code>sudo ln -s vivaldi viv</code></p>
+    
+        <p>Or go to the directory containing the vivaldi binary, in my case "/opt/vivaldi/", and in that directory run the command: <code>sudo ln -s vivaldi /usr/bin/viv</code></p>
+    
+        <h5>Web Search Keywords backup</h5>
+        <p>To back up all your custom websites added to the <cite>Web Search Keywords</cite> <cite>KRunner</cite> plugin, navigate to <code>~/.local/share/kf6/searchproviders/</code> and back up the containing files.</p>
+    
+        <h5>Revert to X11 from Wayland</h5>
+        <p>The upgrade from <cite>KDE Plasma 5</cite> to 6 enables <cite>Wayland</cite> by default despite using <cite>X11</cite> before, and it breaks tons of stuff, e.g., <cite>Vivaldi</cite> browser became unusable, <cite>XScreenSaver</cite> does not work, et cetera. To revert to <cite>X11</cite> open <abbr title="The Simple Desktop Display Manager"><cite>SDDM</cite></abbr> → Behaviour… → Automatically log in…with session <code>Plasma (X11)</code>.</p>
+    
+        <h5>How to reauthorise a Gmail account in KMail</h5>
+        <p>Open <cite>kdewallet</cite> with <cite>kdewalletmanager</cite> and delete "akonadi_imap_resource_…" in "Contents" > "imap" > "Passwords".</p>
+    
+        <h5>How to make a unified folder in KMail.</h5>
+        <p>Go to "Settings" > "Plugins" > "Akonadi Agents", and click the slider icon 🎚️ next to "Unified Mailbox Agent".</p>
 
-    <details>
-      <summary>Click to see KDE configs.</summary>
-      <h4>Custom KRunner/Plasma browser search query</h4>
-      <p>To configure <cite>Plasma search</cite> to open a browser with a query when entering "xyz example.com", e.g., "viv example.com" that opens example.com in <cite>Vivaldi</cite> browser:</p>
-  
-      <blockquote>
-        <p>“<a href="https://kb.iu.edu/d/abbe">create a symlink</a> named "viv" in /usr/bin/ to the actual vivaldi binary” —<a href="https://matrix.to/#/!gYaaEyvNWxTzXssOmq:kde.org/$i-L0XYlJ_ElEdHPD7oKNGysslTil3w01IDM2Y6JCJTc?via=matrix.org&via=im.kde.org&via=kde.org">Jan R.</a>.</p>
-      </blockquote>
-  
-      <p>Either there likely already is a symlink named "vivaldi" within <code>/usr/bin/</code>, of which you can make another symlink with a more convenient shorter name: <code>sudo ln -s vivaldi viv</code></p>
-  
-      <p>Or go to the directory containing the vivaldi binary, in my case "/opt/vivaldi/", and in that directory run the command: <code>sudo ln -s vivaldi /usr/bin/viv</code></p>
-  
-      <h4>Web Search Keywords backup</h4>
-      <p>To back up all your custom websites added to the <cite>Web Search Keywords</cite> <cite>KRunner</cite> plugin, navigate to <code>~/.local/share/kf6/searchproviders/</code> and back up the containing files.</p>
-  
-      <h4>Revert to X11 from Wayland</h4>
-      <p>The upgrade from <cite>KDE Plasma 5</cite> to 6 enables <cite>Wayland</cite> by default despite using <cite>X11</cite> before, and it breaks tons of stuff, e.g., <cite>Vivaldi</cite> browser became unusable, <cite>XScreenSaver</cite> does not work, et cetera. To revert to <cite>X11</cite> open <abbr title="The Simple Desktop Display Manager"><cite>SDDM</cite></abbr> → Behaviour… → Automatically log in…with session <code>Plasma (X11)</code>.</p>
-  
-      <h4>How to reauthorise a Gmail account in KMail</h4>
-      <p>Open <cite>kdewallet</cite> with <cite>kdewalletmanager</cite> and delete "akonadi_imap_resource_…" in "Contents" > "imap" > "Passwords".</p>
-  
-      <h4>How to make a unified folder in KMail.</h4>
-      <p>Go to "Settings" > "Plugins" > "Akonadi Agents", and click the slider icon 🎚️ next to "Unified Mailbox Agent".</p>
-
-      <h4>XScreenSaver in KDE Plasma</h4>
-      <a href="https://man.archlinux.org/man/xscreensaver.1#INSTALLING_XSCREENSAVER_ON_KDE">Enable XScreenSaver in KDE Plasma</a>.
+        <h5>XScreenSaver in KDE Plasma</h5>
+        <a href="https://man.archlinux.org/man/xscreensaver.1#INSTALLING_XSCREENSAVER_ON_KDE">Enable XScreenSaver in KDE Plasma</a>.
     </details>
 
-    <h3 id="shell">Shell</h3>
+<!--    <h3 id="shell">Shell</h3>
     <h4>Bash/Zsh aliases</h4>
     <code><pre>alias xyz="xdg-open path/to/file.ods"
 alias xyz="cd path/to/folder/"
@@ -394,7 +389,7 @@ sleep 1; xset dpms force off</pre></code>
   fi</pre></code>
   
   <p>If the font renders incorrectly after a <cite>KDE Plasma 6</cite> upgrade, then use the following font in your <cite>Konsole</cite> profile: <code>NotoSansM Nerd Font Mono</code></p>
-    </details>
+    </details>-->
 
 
 <!--     <h3>gvim</h3>
@@ -1100,6 +1095,16 @@ xdg-open "https://amazon.nl/s?k=$*"</pre></code>
 
   <p>To update bash execute: <code>. ~/.bashrc</code></p>
   <p>Now, within a terminal simply execute <code>am foo bar</code>, and it will open all websites searching for "foo bar".</p>
+
+  <h3>Use AutoKey and terminal to search on a website</h3>
+  <ol>
+    <li>Within AutoKey create a "Phrase" containing <code>exo-open --launch WebBrowser https://en.wikipedia.org/wiki/</code></li>
+    <li>"Paste using" to <code>Ctrl+Shift+V</code></li>
+    <li>"Set Abbreviations" → "Trigger on:"<br>
+    ☑ <code>Remove typed abbreviation</code><br>
+    ☑ <code>Trigger immediately (don't require a trigger character)</code></li>
+    <li>Type the chosen abbreviation in a terminal and it will automatically expand to the full aforementioned command. To search for a single word simply append with the word. To search for a phrase, use quotes if searching for multiple words fails.</li>
+  </ol>
 
   <h2 id="minimise">Launch minimised</h2>
   <p>Even though some software supports launching minimised or to tray after, it does not always work depending on the <abbr title="operating system">OS</abbr>/installer/<abbr title="desktop environment">DE</abbr>, etc. For instance building <cite>Notesnook</cite> or <cite>Beeper</cite> with Arch's <cite>yay</cite> uses <a href="https://en.wikipedia.org/wiki/Electron_(software_framework)">Electron</a> to run these programs, which handles differently compared to starting them from an <a href="https://en.wikipedia.org/wiki/AppImage">AppImage</a>. Not even <cite>KDE Plasma</cite>'s "Window Rules" works to force these Electron apps to start minimised. The solution is to run <cite>Notesnook</cite>/<cite>Beeper</cite> from the AppImage available on their website. For <cite>Beeper</cite> one has to additionally add <code>--hidden</code> as a startup argument.</p>

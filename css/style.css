@@ -152,6 +152,10 @@ h5 {
   font-size: medium;
 }
 
+h6 {
+  font-size: smaller;
+}
+
 hr {
   border: 0;
   border-bottom: 0.06rem solid grey;
