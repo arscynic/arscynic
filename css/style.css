@@ -747,8 +747,8 @@ nav {
   margin-bottom: 0;
 }
 
-figure summary, figure details pre, #edit-list summary {
-  font-size: small;
+figure summary, figure details pre, #edit-list summary, #edit-list li {
+  font-size: smaller;
 }
 
 #edit-list summary {
@@ -759,7 +759,6 @@ figure summary, figure details pre, #edit-list summary {
 }
 
 #edit-list li {
-  font-size: x-small;
   font-family: monospace;
   text-align: right;
   list-style: none;
