@@ -244,25 +244,27 @@
     <p class="fleuron">❦</p>
 
     <h2>Packages</h2>
-    <p>I have certain set of software I install on every new machine. Here follows a list I copy-paste so I don't have to install everything individually each time.</p>
+    <p>Software I usually install on every new machine.</p>
 
-    <h3>Default:</h3>
-    <p><code>pacman -Syu --needed btop tilda xscreensaver grsync hblock gnome-disk-utility gparted hunspell hunspell-nl hunspell-en_GB hunspell-fr qalculate-gtk smplayer okular fwupd libreoffice-still libreoffice-still-en-gb libreoffice-still-nl libreoffice-still-fr calibre npm transmission-gtk xed keepassxc playerctl brightnessctl simple-scan tesseract-data-nld tesseract-data-eng tesseract-data-fra tesseract-data-chi_sim webp-pixbuf-loader</code></p>
+    <p>Pacman: <code>pacman -Syu --needed btop tilda xscreensaver grsync hblock gnome-disk-utility gparted hunspell hunspell-nl hunspell-en_GB hunspell-fr qalculate-gtk smplayer okular fwupd libreoffice-still libreoffice-still-en-gb libreoffice-still-nl libreoffice-still-fr calibre npm transmission-gtk xed keepassxc playerctl simple-scan tesseract-data-nld tesseract-data-eng tesseract-data-fra tesseract-data-chi_sim webp-pixbuf-loader</code></p>
 
-    <p><code>yay autokey-gtk input-remapper-git librewolf-bin zen-browser-bin youtube-music-bin simplescreenrecorder-bin lyx rustdesk-bin notesnook-bin betterbird-bin</code></p>
+    <p>Yay: <code>yay autokey-gtk && yay input-remapper-git && yay librewolf-bin && yay zen-browser-bin && yay youtube-music-bin && yay simplescreenrecorder-bin && yay lyx && yay rustdesk-bin && yay notesnook-bin && yay betterbird-bin && pot-translation-git && yay nvitop</code></p>
 
-    <p><code>npm install -g live-server</code></p>
+    <p>npm: <code>npm install -g live-server</code></p>
 
-    <p>Direct download: <a href="https://mega.io/desktop#download">MEGA</a>, <a href="https://pot-app.com/en/download.html">Pot</a></p>
+    <p>Manual download: <a href="https://mega.io/desktop#download">MEGA</a>, <a href="https://phcode.io">Phoenix Code</a></p>
 
-    <h3>Number crunching</h3>
-    <code>boinc opencl-nvidia python-requests</code>
+    <h3>Prime number hunting</h3>
+    <ul>
+      <li><abbr title="Great Internet Mersenne Prime Search">GIMPS</abbr>: <a href="https://www.mersenne.org/download/">Prime95</a></li>
+      <li><abbr title="Berkeley Open Infrastructure for Network Computing">BOINC</abbr>: <code>pacman -Syu --needed boinc opencl-nvidia python-requests</code></li>
+    </ul>
 
     <h3>Optional/legacy packages</h3>
     <details>
       <summary>Click to see the optional/legacy packages.</summary>
 
-      <p><code>pacman -Syu --needed vivaldi vivaldi-ffmpeg-codecs element-desktop shotcut rssguard discord bluez bluez-utils texstudio sagemath sagemath-doc xsane seahorse noto-fonts-emoji playerctl xfce4-systemload-plugin xfce4-sensors-plugin gst-plugins-good geany-plugins android-tools catfish ffmpeg ffmpegthumbs ffmpegthumbnailer gufw bash-completion thunar gvfs gvfs-mtp tumbler thunar-media-tags-plugin thunar-volman xdotool qt5-imageformats xournalpp make automake base-devel texlive-latex texlive-latexextra remmina libvncserver x11vnc inotify-tools dnsutils baobab peek thunderbird birdtray clementine torbrowser-launcher audio-recorder zsh vscodium-bin libreoffice-fresh nheko ncdu xfce4-taskmanager kdeconnect tmux rsync redshift</code></p>
+      <p><code>pacman -Syu --needed vivaldi vivaldi-ffmpeg-codecs element-desktop shotcut rssguard discord bluez bluez-utils texstudio sagemath sagemath-doc xsane seahorse noto-fonts-emoji playerctl xfce4-systemload-plugin xfce4-sensors-plugin gst-plugins-good geany-plugins android-tools catfish ffmpeg ffmpegthumbs ffmpegthumbnailer gufw bash-completion thunar gvfs gvfs-mtp tumbler thunar-media-tags-plugin thunar-volman xdotool qt5-imageformats xournalpp make automake base-devel texlive-latex texlive-latexextra remmina libvncserver x11vnc inotify-tools dnsutils baobab peek thunderbird birdtray clementine torbrowser-launcher audio-recorder zsh vscodium-bin libreoffice-fresh nheko ncdu xfce4-taskmanager kdeconnect tmux rsync redshift brightnessctl</code></p>
       
       <p><code>yay sblock-git rate-mirrors zen-browser-bin crow-translate compiz brightness cortile vscodium-bin</code></p>
     </details>
@@ -541,29 +543,33 @@ keyboard.send_keys("&lt;ctrl&gt;+v")</code>
     </details>
 
     <h3 id="lyx">LyX</h3>
-    <p>To build <cite>LyX</cite> one needs packages <code>make automake autoconf</code>, otherwise it throws the following error: </p>
+    <details>
+      <summary>Click to expand.</summary>
+      <p>To build <cite>LyX</cite> one needs packages <code>make automake autoconf</code>, otherwise it throws the following error: </p>
 
-    <blockquote>
-      <p>configure: error: cannot compile a simple Qt executable. Check you have the right $QTDIR</p>
-    </blockquote>
+      <blockquote>
+        <p>configure: error: cannot compile a simple Qt executable. Check you have the right $QTDIR</p>
+      </blockquote>
+
+      <p>Install <code>texlive-latex texlive-latexextra texlive-fontsrecommended</code> to avoid/fix the error messages below, of which the latter appears only on some documents when using <cite>pdflatex</cite>.</p>
+
+      <blockquote>
+        <pre>The selected document class
+  Article (Standard Class)
+    requires external files that are not available.
+    The document class can still be used, but the
+    document cannot be compiled until the following
+    prerequisites are installed:
+  article.cls
+    See section 3.1.2.2 (Class Availability) of the
+    User's Guide for more information.</pre>
+      </blockquote>
+
+      <blockquote>
+        <p>LaTeX Error: File `setspace.sty' not found.</p>
+      </blockquote>
+    </details>
     
-    <p>Install <code>texlive-latex texlive-latexextra texlive-fontsrecommended</code> to avoid/fix the error messages below, of which the latter appears only on some documents when using <cite>pdflatex</cite>.</p>
-    
-    <blockquote>
-      <pre>The selected document class
-Article (Standard Class)
-  requires external files that are not available.
-  The document class can still be used, but the
-  document cannot be compiled until the following
-  prerequisites are installed:
-article.cls
-  See section 3.1.2.2 (Class Availability) of the
-  User's Guide for more information.</pre>
-    </blockquote>
-    
-    <blockquote>
-      <p>LaTeX Error: File `setspace.sty' not found.</p>
-    </blockquote>
     <!-- <h3 id="vivaldi">Vivaldi</h3>
     <p>To remove <cite>Vivaldi</cite>'s header / title bar, first enable "☑ Allow CSS modifications" at <a href="vivaldi://experiments/">vivaldi://experiments/</a>, then open <cite>Vivaldi</cite>'s settings → Appearance → CUSTOM UI MODIFICATIONS → select the folder with a <i>.css</i> file containing: <code> #header {
       display: none;
@@ -609,53 +615,57 @@ article.cls
     <p class="footnote">– – – – –</p>
     <p class="footnote">* <a href="https://chatgpt.com/share/b74ef416-3a60-4fc7-a56a-d43fb976838e">I used ChatGPT for this</a>, sorry.</p>
 
-    <h4>Bottom bookmarks and navigation bar</h4>
-    <p>To move the bookmarks and navigation bar to the bottom of the window in LibreWolf, save in the aforementioned <i>userChrome.css</i> file the following:</p>
-<pre><code>/* Move the bookmarks bar and navigation bar to the bottom of the window */
-  @-moz-document url(chrome://browser/content/browser.xhtml) {
-    :root:not([inFullscreen]) {
-      --uc-nav-bar-height: 36px; /* Adjust this value based on your navigation bar height */
-      --uc-bookmarks-bar-height: 30px; /* Adjust this value based on your bookmarks bar height */
-    }
-
-    /* Adjust the main browser layout to create space at the bottom */
-    #browser, #customization-container {
-      margin-bottom: calc(var(--uc-nav-bar-height) + var(--uc-bookmarks-bar-height));
-    }
-
-    /* Move the navigation bar to the bottom */
-    #nav-bar {
-      position: fixed !important;
-      left: 0;
-      bottom: 0 !important;
-      width: 100%;
-      z-index: 2;
-      background-color: #2e2e2e !important;
-      opacity: 1 !important;
-    }
-
-    /* Move the bookmarks bar above the navigation bar */
-    #PersonalToolbar {
-      position: fixed !important;
-      left: 0;
-      bottom: var(--uc-nav-bar-height) !important;
-      width: 100%;
-      z-index: 1;
-      background-color: #2e2e2e !important;
-      opacity: 1 !important;
-    }
-
-    /* Ensure each toolbar element grows appropriately */
-    #personal-bookmarks, #nav-bar {
-      display: flex;
-      flex-grow: 1;
-    }
-  }</code></pre>
-
-    <h4><a href="https://support.mozilla.org/en-US/questions/1284841">Autohide every UI when not hovered over browser</a></h4>
+   <h4>Bottom bookmarks and navigation bar</h4>
     <details>
-      <summary>Click to expand the code.</summary>
-<pre><code>#navigator-toolbox {
+      <summary>Click to expand.</summary>
+      <p>To move the bookmarks and navigation bar to the bottom of the window in <cite>LibreWolf</cite>, save in the aforementioned <i>userChrome.css</i> file the following:</p>
+<pre><code>/* Move the bookmarks bar and navigation bar to the bottom of the window */
+@-moz-document url(chrome://browser/content/browser.xhtml) {
+  :root:not([inFullscreen]) {
+    --uc-nav-bar-height: 36px; /* Adjust this value based on your navigation bar height */
+    --uc-bookmarks-bar-height: 30px; /* Adjust this value based on your bookmarks bar height */
+  }
+
+  /* Adjust the main browser layout to create space at the bottom */
+  #browser, #customization-container {
+    margin-bottom: calc(var(--uc-nav-bar-height) + var(--uc-bookmarks-bar-height));
+  }
+
+  /* Move the navigation bar to the bottom */
+  #nav-bar {
+    position: fixed !important;
+    left: 0;
+    bottom: 0 !important;
+    width: 100%;
+    z-index: 2;
+    background-color: #2e2e2e !important;
+    opacity: 1 !important;
+  }
+
+  /* Move the bookmarks bar above the navigation bar */
+  #PersonalToolbar {
+    position: fixed !important;
+    left: 0;
+    bottom: var(--uc-nav-bar-height) !important;
+    width: 100%;
+    z-index: 1;
+    background-color: #2e2e2e !important;
+    opacity: 1 !important;
+  }
+
+  /* Ensure each toolbar element grows appropriately */
+  #personal-bookmarks, #nav-bar {
+    display: flex;
+    flex-grow: 1;
+  }
+}</code></pre>
+    </details>
+    
+    <h4>Autohide every UI when not hovered over browser</h4>
+    <details>
+      <summary>Click to expand.</summary>
+      <p>Source: <a href="https://support.mozilla.org/en-US/questions/1284841">Mozilla</a>.</p>
+      <pre><code>#navigator-toolbox {
   max-height: 0;
   overflow: hidden;
   transition: ease all 5s;
@@ -673,6 +683,7 @@ article.cls
   to {overflow: unset}
 }</code></pre>
     </details>
+
 
     <h4>KeePassXC in LibreWolf</h4>
     <p>To <a href="https://github.com/keepassxreboot/keepassxc/issues/6907">enable <cite>KeePassXC</cite> browser integration in <cite>LibreWolf</cite></a>:</p>
