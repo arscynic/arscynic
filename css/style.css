@@ -175,6 +175,10 @@ pre { /* Source: https://css-tricks.com/snippets/css/make-pre-text-wrap/ */
   white-space: -pre-wrap;      /* Opera 4-6 */
   white-space: -o-pre-wrap;    /* Opera 7 */
   word-wrap: break-word;       /* Internet Explorer 5.5+ */
+  /*
+  margin: 0.25rem 0 0.25rem 0rem;
+  padding: 0 .25rem 0 .25rem;
+  */
 }
 
 figcaption, .audio-caption {
@@ -192,7 +196,7 @@ body {
   padding-bottom: 1rem; /* Ensures the bottom nav doesn't display over content. */
 }
 
-code, pre code {
+code {
   font-family: monospace;
   font-size: medium;
   background-color: var(--code-color_bg);
@@ -200,10 +204,12 @@ code, pre code {
   border-radius: .25rem;
 }
 
+/*
 pre code {
   margin: 0.25rem 0 0.25rem 0rem;
   padding: 0 .25rem 0 .25rem;
 }
+*/
 
 code:hover {
   user-select: all;

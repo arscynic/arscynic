@@ -1046,10 +1046,10 @@ DPI down: page down | end
   <p>Insert in the <code>.bashrc</code> file: <code>alias am="cd /path/to/scripts/ && ./search-amazon.sh"</code></p>
   <p>Insert in a script, here <i>search-amazon.sh</i>:</p>
 
-  <code><!-- search_query="$*" -->xdg-open "https://amazon.fr/s?k=$*"
+  <pre><code><!-- search_query="$*" -->xdg-open "https://amazon.fr/s?k=$*"
 xdg-open "https://amazon.de/s?k=$*"
 xdg-open "https://amazon.com.be/s?k=$*"
-xdg-open "https://amazon.nl/s?k=$*"</code>
+xdg-open "https://amazon.nl/s?k=$*"</code></pre>
 
   <p>To update bash execute: <code>. ~/.bashrc</code></p>
   <p>Now, within a terminal simply execute <code>am foo bar</code>, and it will open all websites searching for "foo bar".</p>
