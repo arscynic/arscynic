@@ -192,7 +192,7 @@ body {
   padding-bottom: 1rem; /* Ensures the bottom nav doesn't display over content. */
 }
 
-code, code pre {
+code, pre code {
   font-family: monospace;
   font-size: medium;
   background-color: var(--code-color_bg);
@@ -200,7 +200,7 @@ code, code pre {
   border-radius: .25rem;
 }
 
-code pre {
+pre code {
   margin: 0.25rem 0 0.25rem 0rem;
   padding: 0 .25rem 0 .25rem;
 }

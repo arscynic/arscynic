@@ -247,23 +247,24 @@
     <p>I have certain set of software I install on every new machine. Here follows a list I copy-paste so I don't have to install everything individually each time.</p>
 
     <h3>Default:</h3>
-    <code><pre>pacman -Syu --needed btop tilda xscreensaver grsync hblock gnome-disk-utility gparted hunspell hunspell-nl hunspell-en_GB hunspell-fr qalculate-gtk smplayer okular fwupd libreoffice-still libreoffice-still-en-gb libreoffice-still-nl libreoffice-still-fr calibre npm transmission-gtk xed keepassxc playerctl brightnessctl simple-scan tesseract-data-nld tesseract-data-eng tesseract-data-fra tesseract-data-chi_sim webp-pixbuf-loader</pre></code>
+    <p><code>pacman -Syu --needed btop tilda xscreensaver grsync hblock gnome-disk-utility gparted hunspell hunspell-nl hunspell-en_GB hunspell-fr qalculate-gtk smplayer okular fwupd libreoffice-still libreoffice-still-en-gb libreoffice-still-nl libreoffice-still-fr calibre npm transmission-gtk xed keepassxc playerctl brightnessctl simple-scan tesseract-data-nld tesseract-data-eng tesseract-data-fra tesseract-data-chi_sim webp-pixbuf-loader</code></p>
 
-    <code><pre>yay autokey-gtk input-remapper-git librewolf-bin zen-browser-bin youtube-music-bin simplescreenrecorder-bin lyx rustdesk-bin notesnook-bin betterbird-bin vscodium-bin</pre></code>
+    <p><code>yay autokey-gtk input-remapper-git librewolf-bin zen-browser-bin youtube-music-bin simplescreenrecorder-bin lyx rustdesk-bin notesnook-bin betterbird-bin</code></p>
 
-    <code><pre>npm install -g live-server</pre></code>
+    <p><code>npm install -g live-server</code></p>
 
     <p>Direct download: <a href="https://mega.io/desktop#download">MEGA</a>, <a href="https://pot-app.com/en/download.html">Pot</a></p>
 
     <h3>Number crunching</h3>
-    <code><pre>boinc opencl-nvidia python-requests</pre></code>
+    <code>boinc opencl-nvidia python-requests</code>
 
     <h3>Optional/legacy packages</h3>
     <details>
       <summary>Click to see the optional/legacy packages.</summary>
 
-      <code><pre>pacman -Syu --needed vivaldi vivaldi-ffmpeg-codecs element-desktop shotcut rssguard discord bluez bluez-utils texstudio sagemath sagemath-doc xsane seahorse noto-fonts-emoji playerctl xfce4-systemload-plugin xfce4-sensors-plugin gst-plugins-good geany-plugins android-tools catfish ffmpeg ffmpegthumbs ffmpegthumbnailer gufw bash-completion thunar gvfs gvfs-mtp tumbler thunar-media-tags-plugin thunar-volman xdotool qt5-imageformats xournalpp make automake base-devel texlive-latex texlive-latexextra remmina libvncserver x11vnc inotify-tools dnsutils baobab peek thunderbird birdtray clementine torbrowser-launcher audio-recorder zsh vscodium-bin libreoffice-fresh nheko ncdu xfce4-taskmanager kdeconnect tmux rsync redshift</pre></code>
-      <code><pre>yay sblock-git rate-mirrors zen-browser-bin crow-translate compiz brightness cortile</pre></code>
+      <p><code>pacman -Syu --needed vivaldi vivaldi-ffmpeg-codecs element-desktop shotcut rssguard discord bluez bluez-utils texstudio sagemath sagemath-doc xsane seahorse noto-fonts-emoji playerctl xfce4-systemload-plugin xfce4-sensors-plugin gst-plugins-good geany-plugins android-tools catfish ffmpeg ffmpegthumbs ffmpegthumbnailer gufw bash-completion thunar gvfs gvfs-mtp tumbler thunar-media-tags-plugin thunar-volman xdotool qt5-imageformats xournalpp make automake base-devel texlive-latex texlive-latexextra remmina libvncserver x11vnc inotify-tools dnsutils baobab peek thunderbird birdtray clementine torbrowser-launcher audio-recorder zsh vscodium-bin libreoffice-fresh nheko ncdu xfce4-taskmanager kdeconnect tmux rsync redshift</code></p>
+      
+      <p><code>yay sblock-git rate-mirrors zen-browser-bin crow-translate compiz brightness cortile vscodium-bin</code></p>
     </details>
 
       <!-- <li><a href="https://github.com/wxMaxima-developers/docker-wxmaxima/releases">wxMaxima</a>: sudo chmod +x filename, double click to execute.</li> -->
@@ -355,10 +356,10 @@ Categories=Screensaver;</code></pre>
         <p>The upgrade from <cite>KDE Plasma 5</cite> to 6 enables <cite>Wayland</cite> by default despite using <cite>X11</cite> before, and it breaks tons of stuff, e.g., <cite>Vivaldi</cite> browser became unusable, <cite>XScreenSaver</cite> does not work, et cetera. To revert to <cite>X11</cite> open <abbr title="The Simple Desktop Display Manager"><cite>SDDM</cite></abbr> → Behaviour… → Automatically log in…with session <code>Plasma (X11)</code>.</p>
     
         <h5>How to reauthorise a Gmail account in KMail</h5>
-        <p>Open <cite>kdewallet</cite> with <cite>kdewalletmanager</cite> and delete "akonadi_imap_resource_…" in "Contents" > "imap" > "Passwords".</p>
+        <p>Open <cite>kdewallet</cite> with <cite>kdewalletmanager</cite> and delete "akonadi_imap_resource_…" in "Contents" → "imap" → "Passwords".</p>
     
         <h5>How to make a unified folder in KMail.</h5>
-        <p>Go to "Settings" > "Plugins" > "Akonadi Agents", and click the slider icon 🎚️ next to "Unified Mailbox Agent".</p>
+        <p>Go to "Settings" → "Plugins" → "Akonadi Agents", and click the slider icon 🎚️ next to "Unified Mailbox Agent".</p>
 
         <h5>XScreenSaver in KDE Plasma</h5>
         <a href="https://man.archlinux.org/man/xscreensaver.1#INSTALLING_XSCREENSAVER_ON_KDE">Enable XScreenSaver in KDE Plasma</a>.
@@ -366,7 +367,7 @@ Categories=Screensaver;</code></pre>
 
 <!--    <h3 id="shell">Shell</h3>
     <h4>Bash/Zsh aliases</h4>
-    <code><pre>alias xyz="xdg-open path/to/file.ods"
+    <code>alias xyz="xdg-open path/to/file.ods"
 alias xyz="cd path/to/folder/"
 alias xyz="cd /path/to/scripts/ && ./script-name.sh $1"
 alias upd="yes | sudo pacman -Syu"
@@ -374,14 +375,14 @@ alias gimps="cd .GIMPS/p95v308b17.linux64/ && ./mprime -m"
 alias cync="cd /home/…/public/ && git pull && xdotool key ctrl+shift+t && live-server"
 alias clean="sudo pacman -Sc && rm -rf ~/.cache/* && sudo pacman -Rns $(pacman -Qtdq)"
 alias gitp="git push -u origin main"
-sleep 1; xset dpms force off</pre></code>
+sleep 1; xset dpms force off</code>
 
     <h4>Zsh</h4>
     <p>Not using <cite>Zsh</cite> anymore. Simply because the config below stopped working and I guess the added benefits weren't that great to justify troubleshooting for me.</p>
     <details>
       <summary>Click to see Zsh config.</summary>
       <p>To install <cite>Linux</cite> <a href="https://github.com/Chrysostomus/manjaro-zsh-config">Manjaro's zsh config</a>: <code>yay manjaro-zsh-config</code>, copy-paste the text below into the <i>.zshrc</i> file in the home directory, within the terminal settings change <code>/bin/bash</code> to <code>/bin/zsh</code>, close and re-open the terminal.</p>
-      <code><pre># Use powerline
+      <code># Use powerline
   USE_POWERLINE="true"
   # Has weird character width
   # Example:
@@ -394,7 +395,7 @@ sleep 1; xset dpms force off</pre></code>
   # Use manjaro zsh prompt
   if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
     source /usr/share/zsh/manjaro-zsh-prompt
-  fi</pre></code>
+  fi</code>
   
   <p>If the font renders incorrectly after a <cite>KDE Plasma 6</cite> upgrade, then use the following font in your <cite>Konsole</cite> profile: <code>NotoSansM Nerd Font Mono</code></p>
     </details>-->
@@ -420,25 +421,23 @@ sleep 1; xset dpms force off</pre></code>
     </ul>
 
     <p>Globally block 3rd-party scripts and 3rd-party frames.</p>
-    <code><pre>* * 3p-frame block
-* * 3p-script block</pre></code>
+    <pre><code>* * 3p-frame block
+* * 3p-script block</code>
+    </pre>
 
     <h3 id="hosts">Hosts file</h3>
     <h4>sBlock</h4>
-    <code><pre>mkdir /etc/sblock/ && sudo echo -e 'http://sbc.io/hosts/hosts\nhttp://sbc.io/hosts/alternates/porn-only/hosts' > /etc/sblock/sources.list
-sblock</pre>
-    </code>
+    <pre><code>mkdir /etc/sblock/ && sudo echo -e 'http://sbc.io/hosts/hosts\nhttp://sbc.io/hosts/alternates/porn-only/hosts' &gt; /etc/sblock/sources.list
+sblock</code></pre>
 
     <p>To whitelist a domain, add arscyni.cc and www.arscyni.cc to <code>/etc/sblock/allow.list</code> and run <code>sblock</code> again.</p>
 
     <h3 id="code">Code editor</h3>
-    
-    <h4>VSCodium</h4>
-    <p>To change the minimap colors, etc. [source <a href="https://stackoverflow.com/a/60657698/13963944">1</a>, <a href="https://stackoverflow.com/a/43605752/13963944">2</a>, <a href="https://stackoverflow.com/a/46946515/13963944">3</a>, <a href="https://stackoverflow.com/a/29961309/13963944">4</a>],  go to File → Preferences → Settings → in the search box, type: <code>workbench.colorCustomizations</code> → click "Edit in settings.json"</p>
 
     <details>
-      <summary>Click to show the VSCodium config.</summary>
-      <code><pre>{
+      <summary>Click to show the <cite>VSCodium</cite> config. Not using it anymore because Microsoft…</summary>
+      <p>To change the minimap colors, etc. [source <a href="https://stackoverflow.com/a/60657698/13963944">1</a>, <a href="https://stackoverflow.com/a/43605752/13963944">2</a>, <a href="https://stackoverflow.com/a/46946515/13963944">3</a>, <a href="https://stackoverflow.com/a/29961309/13963944">4</a>],  go to File → Preferences → Settings → in the search box, type: <code>workbench.colorCustomizations</code> → click "Edit in settings.json"</p>
+      <pre><code>{
     "editor.tabSize": 2,
     "editor.wordWrap": "on",
     "cSpell.language": "en-GB",
@@ -459,10 +458,7 @@ sblock</pre>
     "editor.fontSize": 16,
     "editor.hover.above": false,
     "editor.hover.delay": 700,
-      }</pre></code>
-    </details>
-
-
+}</code></pre>
     <p>Frequently used shortcuts:</p>
     <ul>
       <li>To select multiple instances of the <em>same character combination</em>, select the combination (word, sentence, etc.) and press: <code>control + shift + L</code></li>
@@ -480,67 +476,68 @@ sblock</pre>
       <li><code>sudo pacman -S inotify-tools
       </code></li>
       <li>Create a shell script e.g., "auto_execute.sh" containing the code below:<br>
-        <code><pre>#!/bin/bash
+        <pre><code>#!/bin/bash
 while inotifywait -e modify,move_self -qq your_python_script.py; do
   python3 your_python_script.py
-done</pre></code>
+done</code></pre>
         Make sure the shell script is executable by right clicking it → "Properties" → "Permissions" → "Program: ☑ Allow this file to run as a program", or by running the following command: <code>chmod +x auto_execute.sh</code></li>
       <li>Open the terminal in <cite>VSCodium</cite> and run <code>auto_execute.sh</code></li>
     </ol>
 
-    <p>Now, whenever you save "your_python_script.py", it will instantly throw the output in the <cite>VSCodium</cite> terminal, or whatever terminal you executed the shell script in. Source: <cite>ChatGPT</cite>.</p><h4>Zed</h4>
-    <p>Not using <cite>Zed</cite> anymore due to too many bugs.</p>
+    <p>Now, whenever you save "your_python_script.py", it will instantly throw the output in the <cite>VSCodium</cite> terminal, or whatever terminal you executed the shell script in. Source: <cite>ChatGPT</cite>.</p>
+    </details>
+
     <details>
-      <summary>Click to see Zed config.</summary>
+      <summary>Click to see <cite>Zed</cite> config. Not using <cite>Zed</cite> anymore due to bugs.</summary>
       <p>Extensions: HTML, Emmet, LTeX, SCSS</p>
       <p>~/.config/zed/settings.json:</p>
-      <code><pre>{
-    "features": {
-      "inline_completion_provider": "none"
-    },
-    "ui_font_size": 16,
-    "buffer_font_size": 16,
-    "theme": {
-      "mode": "system",
-      "light": "Atelier Cave Dark",
-      "dark": "One Dark"
-    },
-    "soft_wrap": "editor_width",
-    "tab_size": 2,
-    "lsp": {
-      "ltex": {
-        "settings": {
-          "ltex": {
-            "language": "en-GB"
-          }
+      <pre><code>{
+  "features": {
+    "inline_completion_provider": "none"
+  },
+  "ui_font_size": 16,
+  "buffer_font_size": 16,
+  "theme": {
+    "mode": "system",
+    "light": "Atelier Cave Dark",
+    "dark": "One Dark"
+  },
+  "soft_wrap": "editor_width",
+  "tab_size": 2,
+  "lsp": {
+    "ltex": {
+      "settings": {
+        "ltex": {
+          "language": "en-GB"
         }
       }
     }
-  }</pre></code>
+  }
+}</code></pre>
       <p>~/.config/zed/keymap.json:</p>
-      <code><pre>[
-    {
-      "context": "Workspace",
-      "bindings": {
-        // "shift shift": "file_finder::Toggle"
-      }
-    },
-    {
-      "context": "Editor",
-      "bindings": {
-        // "j k": ["workspace::SendKeystrokes", "escape"]
-        "ctrl-s": "workspace::SaveWithoutFormat",
-        "ctrl-k": "editor::Format"
-      }
+      <pre><code>[
+  {
+    "context": "Workspace",
+    "bindings": {
+      // "shift shift": "file_finder::Toggle"
     }
-  ]</pre></code>
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      // "j k": ["workspace::SendKeystrokes", "escape"]
+      "ctrl-s": "workspace::SaveWithoutFormat",
+      "ctrl-k": "editor::Format"
+    }
+  }
+]</code></pre>
       
       <p>By default <cite>Zed</cite> uses the <cite>VSCode</cite>/<cite>VSCodium</cite> keymappings, and it supports <cite>Emmet</cite>. However, for some reason, <a href="https://github.com/zed-industries/zed/issues/15588">"Emmet: wrap with abbreviation" is not supported yet</a>, which I frequently use to wrap HTML tags around words with. In the meantime one can use <cite>AutoKey</cite> by assigning the following script to a hotkey:</p>
-      <code><pre>text_selected = clipboard.get_selection()
-  text_input = dialog.input_dialog(title="Wrap with a tag.", message="E.g., type <strong>cite</strong> to get &lt;cite&gt;.", default="")
-  keyboard.send_key("<delete>")
-  clipboard.fill_clipboard(f"<{text_input[1]}>{text_selected}</{text_input[1]}>")
-  keyboard.send_keys("<ctrl>+v")</pre></code>
+      <code>text_selected = clipboard.get_selection()
+text_input = dialog.input_dialog(title="Wrap with a tag.", message="E.g., type cite to get <cite>x</cite>.", default="")
+keyboard.send_key("&lt;delete&gt;")
+clipboard.fill_clipboard(f"&lt;{text_input[1]}&gt;{text_selected}&lt;/{text_input[1]}&gt;")
+keyboard.send_keys("&lt;ctrl&gt;+v")</code>
     </details>
 
     <h3 id="lyx">LyX</h3>
@@ -589,7 +586,7 @@ article.cls
     <p>To hide the names of individual bookmarks and keep the names of folders while removing the folder icons in <cite>FireFox</cite> or derivatives such as <cite>LibreWolf</cite>, <cite>Zen Browser</cite>, or <cite>Waterfox</cite>:</p>
     <ol>
       <li>Save the following code* within the aforementioned userChrome.css file:
-<code><pre>/* Hide the names of individual bookmarks */
+<pre><code>/* Hide the names of individual bookmarks */
 #personal-bookmarks .bookmark-item:not([type="menu"]) .toolbarbutton-text {
     display: none !important;
 }
@@ -602,7 +599,7 @@ article.cls
 /* Remove the folder icon of bookmark folders */
 #personal-bookmarks .bookmark-item[type="menu"] .toolbarbutton-icon {
     display: none !important;
-}</pre></code>
+}</code></pre>
       </li>
       <li>Restart the browser.</li>
     </ol>
@@ -614,7 +611,7 @@ article.cls
 
     <h4>Bottom bookmarks and navigation bar</h4>
     <p>To move the bookmarks and navigation bar to the bottom of the window in LibreWolf, save in the aforementioned <i>userChrome.css</i> file the following:</p>
-<code><pre>/* Move the bookmarks bar and navigation bar to the bottom of the window */
+<pre><code>/* Move the bookmarks bar and navigation bar to the bottom of the window */
   @-moz-document url(chrome://browser/content/browser.xhtml) {
     :root:not([inFullscreen]) {
       --uc-nav-bar-height: 36px; /* Adjust this value based on your navigation bar height */
@@ -653,8 +650,7 @@ article.cls
       display: flex;
       flex-grow: 1;
     }
-  }
-  </pre></code>
+  }</code></pre>
 
     <h4><a href="https://support.mozilla.org/en-US/questions/1284841">Autohide every UI when not hovered over browser</a></h4>
     <details>
@@ -717,11 +713,11 @@ article.cls
     <p>Double-check if <a href="https://wiki.archlinux.org/index.php?title=BOINC&oldid=794657#Log_spam."><i>boinc</i> causes log spam</a>: <code>journalctl --grep='Authorization required, but no authorization protocol specified'</code></p>
 
     <p>If this log spam is present, create a “drop-in file” for boinc-client.service:</p>
-    <code>mkdir /etc/systemd/system/boinc-client.service.d/ && sudo echo -e '[Service]\nLogFilterPatterns=~no authorization protocol specified' > /etc/systemd/system/boinc-client.service.d/wayland-syslog-spam.conf</code>
+    <code>mkdir /etc/systemd/system/boinc-client.service.d/ && sudo echo -e '[Service]\nLogFilterPatterns=~no authorization protocol specified' &gt; /etc/systemd/system/boinc-client.service.d/wayland-syslog-spam.conf</code>
 
     <p>To <a href="https://wiki.archlinux.org/title/BOINC#Using_BOINC">use BOINC via the GUI</a>, click the previous link. When creating the <i>gui_rpc_auth.cfg</i> file and launching <cite>boincmgr</cite> via commandline it will probably work, but when launching <cite>BOINC Manager</cite> via an application launcher I recall it throwing an "gui_rpc_auth.cfg exists but can't be read. Check the File permissions." error message. <a href="https://boinc.berkeley.edu/forum_thread.php?id=14013&postid=101192">Changing the file's permissions fixed this</a>: <code>chmod 640 ~/gui_rpc_auth.cfg</code>.</p>
 
-    <p>To make sure the <a href="https://wiki.archlinux.org/title/BOINC#Using_BOINC:~:text=autostart%20that%20on%20Xorg%20startup">mouse input suspends the tasks</a> too—after startup/boot/login—and not only keyboard inputs: install "xorg-xhost" and run <code>echo 'xhost si:localuser:boinc' > ~/.xprofile</code>. Or just run <code>xhost si:localuser:boinc</code> in a terminal to not make it persistent.</p>
+    <p>To make sure the <a href="https://wiki.archlinux.org/title/BOINC#Using_BOINC:~:text=autostart%20that%20on%20Xorg%20startup">mouse input suspends the tasks</a> too—after startup/boot/login—and not only keyboard inputs: install "xorg-xhost" and run <code>echo 'xhost si:localuser:boinc' &gt; ~/.xprofile</code>. Or just run <code>xhost si:localuser:boinc</code> in a terminal to not make it persistent.</p>
 
     <h3 id="gpuowl">GpuOwl</h3>
     <p>It's possible to run <a href="https://www.mersenne.org">GIMPS</a> on the <abbr title="central processing unit">CPU</abbr> (<cite>mprime</cite>) and <abbr title="graphics processing unit">GPU</abbr> (<cite>GpuOwl</cite>) simultaneously. [<a href="https://www.mersenneforum.org/showthread.php?p=652812#post652812:~:text=multiple%20GIMPS%20apps%20on%20the%20same%20machine%20simultaneously">Thanks to kriesel for the tip</a>.]</p>
@@ -740,8 +736,7 @@ article.cls
 
     <details>
   <summary>Click to expand my .xscreensaver configuration file content.</summary>
-  <code>
-<pre>programs:								      \
+  <pre><code>programs:								      \
 -				maze --root				    \n\
 - GL: 				superquadrics --root			    \n\
 -				attraction --root			    \n\
@@ -997,8 +992,7 @@ article.cls
 - GL: 				skulloop --root				    \n\
 - GL: 				highvoltage --root			    \n\
 - GL: 				kallisti --root				    \n\
-</pre>
-    </code>
+</code></pre>
     </details>
 
     <!-- <h3>LanguageTool</h3>
@@ -1052,10 +1046,10 @@ DPI down: page down | end
   <p>Insert in the <code>.bashrc</code> file: <code>alias am="cd /path/to/scripts/ && ./search-amazon.sh"</code></p>
   <p>Insert in a script, here <i>search-amazon.sh</i>:</p>
 
-  <code><pre><!-- search_query="$*" -->xdg-open "https://amazon.fr/s?k=$*"
+  <code><!-- search_query="$*" -->xdg-open "https://amazon.fr/s?k=$*"
 xdg-open "https://amazon.de/s?k=$*"
 xdg-open "https://amazon.com.be/s?k=$*"
-xdg-open "https://amazon.nl/s?k=$*"</pre></code>
+xdg-open "https://amazon.nl/s?k=$*"</code>
 
   <p>To update bash execute: <code>. ~/.bashrc</code></p>
   <p>Now, within a terminal simply execute <code>am foo bar</code>, and it will open all websites searching for "foo bar".</p>
@@ -1204,7 +1198,7 @@ X11Forwarding yes</code></pre>
 
     <div id="mastodon-comments">
       <p>Search for <a id="mastodon-url" href="https://fosstodon.org/@stardust/111603722034691744">https://fosstodon.org/@stardust/111603722034691744</a> (<a id="fosstodon-invite" href="https://fosstodon.org/invite/vPxAFrYb">fosstodon invite</a>) on one's preferred <cite>Mastodon</cite> server while logged in, comments appear below.</p>
-      <p id="mastodon-comments-list"><button id="load-comment">> load comments</button></p>
+      <p id="mastodon-comments-list"><button id="load-comment">&gt; load comments</button></p>
       <noscript><p>Enable JavaScript to view the comments.</p></noscript>
       <script src="../js/purify.min.js"></script>
       <script src="../js/mastodon-comments.js"></script> <!-- Credits to Carl Schwan: https://carlschwan.eu/2020/12/29/adding-comments-to-your-static-blog-with-mastodon/, and Veronica Berglyd Olsen: https://berglyd.net/blog/2023/03/mastodon-comments/ -->
