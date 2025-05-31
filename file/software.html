@@ -23,7 +23,7 @@
     <p class="sub-title readability">A near-exhaustive list of software <em>I</em> use, not an exhaustive list of <em>the</em> best software. There could very well exist superior alternatives. Feel free to point them out.</p>
 
     <details class="readability" id="edit-list">
-      <summary>Latest update: 2025-05-30.</summary>
+      <summary>Latest update: 2025-05-31.</summary>
       <ul>
         <li>+ <cite>Compiz</cite> | 2025-04-16, 14:27:47 CEST</li>
         <li>+ <cite>Pear Launcher</cite>, <cite>TranslateYou</cite>, <span title="WebP preview in Thunar">webp-pixbuf-loader</span>, commands to identify <abbr title="desktop environment">DE</abbr>, <abbr title="display manager">DM</abbr>, <abbr title="window manager">WM</abbr>. - Linguee | 2025-04-23, 19:48:32 CEST</li>
@@ -33,6 +33,7 @@
         <li>+ <cite>Element X/Pro</cite>, + <cite>QRedshift</cite>, additional wallpaper, - <cite>FluffyChat</cite>, - <cite>Redshift</cite> | 2025-05-25, 08:54:42 CEST</li>
         <li>+ <cite>Phoenix Code</cite>, - <cite>VSCodium</cite> | 2025-05-27, 23:07:34 CEST</li>
         <li>+ <cite>GIMP</cite> | 2025-05-30, 08:02:29 CEST</li>
+        <li>+ <code>lightdm-settings</code>, Freddie Mercury background 🕺 | 2025-05-31, 11:25:48 CEST</li>
       </ul>
     </details>
 
@@ -247,9 +248,9 @@
     <h2>Packages</h2>
     <p>Software I usually install on every new machine.</p>
 
-    <p>Pacman: <code>pacman -Syu --needed btop tilda xscreensaver grsync hblock gnome-disk-utility gparted hunspell hunspell-nl hunspell-en_GB hunspell-fr qalculate-gtk smplayer okular fwupd libreoffice-still libreoffice-still-en-gb libreoffice-still-nl libreoffice-still-fr calibre npm transmission-gtk xed keepassxc playerctl simple-scan tesseract-data-nld tesseract-data-eng tesseract-data-fra tesseract-data-chi_sim webp-pixbuf-loader</code></p>
+    <p>Pacman: <code>pacman -Syu --needed btop tilda xscreensaver grsync hblock gnome-disk-utility gparted hunspell hunspell-nl hunspell-en_GB hunspell-fr qalculate-gtk smplayer okular fwupd libreoffice-still libreoffice-still-en-gb libreoffice-still-nl libreoffice-still-fr calibre npm transmission-gtk xed keepassxc playerctl simple-scan tesseract-data-nld tesseract-data-eng tesseract-data-fra tesseract-data-chi_sim webp-pixbuf-loader numlockx</code></p>
 
-    <p>Yay: <code>yay autokey-qt && yay input-remapper-git && yay librewolf-bin && yay zen-browser-bin && yay youtube-music-bin && yay simplescreenrecorder-bin && yay lyx && yay rustdesk-bin && yay notesnook-bin && yay betterbird-bin && pot-translation-git && yay nvitop && yay mintlocale</code></p>
+    <p>Yay: <code>yay autokey-qt && yay input-remapper-git && yay librewolf-bin && yay zen-browser-bin && yay youtube-music-bin && yay simplescreenrecorder-bin && yay lyx && yay rustdesk-bin && yay notesnook-bin && yay betterbird-bin && pot-translation-git && yay nvitop && yay mintlocale && yay lightdm-settings</code></p>
 
     <p>npm: <code>npm install -g live-server</code></p>
 
@@ -290,6 +291,14 @@ The sky is perfectly clear and sunset has slowly commenced so the golden hour is
 
     <p><a href="https://wallpapercave.com/wp/wp1932398.jpg">El Capitan</a> by unknown.</p>
     <img src="/file/media/el_capitan.jpg" alt="El Capitan">
+    
+    <h4>Changing LightDM login background</h4>
+    <p>The current <cite>EndeavourOS</cite> version is called Mercury, so obviously I've set my login background to:</p>
+    <img src="/file/media/Freddie_Mercury-Queen-Wembley_Stadium-Denis_Regan.avif" alt="Freddie Mercury on stage with his right fist raised. He's wearing a crown and king's cape looking powerfully to his right.">
+    
+    <p>To do so, use <code>lightdm-settings</code>, or manually place the background file in <code>/usr/share/endeavouros/backgrounds/</code> and edit <code>/etc/lightdm/slick-greeter.conf</code>.</p>
+    
+    <p>One might need to convert the <abbr title="AV1 Image File Format">AVIF</abbr> file above to <abbr title="Portable Network Graphics">PNG</abbr> or <abbr title="Joint Photographic Experts Group">JPEG</abbr> for it to show on the login screen. For some unknown reason the AVIF image renders on my desktop PC, but not on my laptop, the only difference seemingly being the latter having no GPU.</p>
     
 
     <!-- <p>Made by <a href="https://store.kde.org/p/2135526">RIINII</a> or likely by their use of a <a href="https://en.wikipedia.org/wiki/Text-to-image_model">text-to-image model</a>.</p>
