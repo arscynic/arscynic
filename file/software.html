@@ -1148,7 +1148,8 @@ X11Forwarding yes</code></pre>
     <li>Automatically open transmission-qt when clicking magnet links: add <code>x-scheme-handler/magnet=transmission-qt.desktop</code> to <code>~/.config/mimeapps.list</code></li>
     <li>Lowest default brightness without the screen going black: <code>brightnessctl s 1</code></li>
     <li><a href="https://wiki.archlinux.org/title/PRIME#Configure_applications_to_render_using_GPU">Force <abbr title="graphics processing unit">GPU</abbr></a> / integrated graphics on <cite>Steam</cite> games in Linux by setting as "Launch options": <code>__NV_PRIME_RENDER_OFFLOAD=0 __GLX_VENDOR_LIBRARY_NAME=nvidia %command%</code></li>
-    <li>Which desktop environment? <code>echo $XDG_SESSION_DESKTOP</code> <br>
+    <li>Which Linux version? <code>less /etc/os-release</code> <br>
+    Which desktop environment? <code>echo $XDG_SESSION_DESKTOP</code> <br>
     Which display manager? <code>systemctl status display-manager</code> <br>
     Which window manager? <code>wmctrl -m</code></li>
   </ul>
