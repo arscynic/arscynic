@@ -259,7 +259,7 @@ figure {
   box-shadow: 0 0 0.25rem 0 rgba(0, 0, 0, 0.075);
 }
 
-#toggle-dark_mode {
+.toggle-dark_mode {
   cursor: pointer;
   /* color: var(--url-color); */ /* This only affects the ☯ on index.html because the selectors below are more specific and thus take precedence. */
 }
