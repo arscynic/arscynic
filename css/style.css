@@ -766,8 +766,8 @@ figure summary, figure details pre, #edit-list summary, #edit-list li {
 
 #edit-list li {
   font-family: monospace;
-  text-align: right;
-  list-style: none;
+  text-align: left;
+  list-style: decimal;
   padding-bottom: 0.125rem;
 }
 
