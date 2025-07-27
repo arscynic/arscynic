@@ -161,7 +161,7 @@ hr {
   border-bottom: 0.06rem solid grey;
 }
 
-p, ol, ul, nav, blockquote, details, code, #author {
+p, ol, ul, nav, blockquote, details, code, #author, .author {
   font-size: large;
 }
 
@@ -741,7 +741,7 @@ nav {
   width: 21rem;
 }
 
-#author, #edit-list, .margin-comment {
+#author, .author, #edit-list, .margin-comment {
   text-align: right;
 }
 
@@ -749,7 +749,7 @@ nav {
   margin-top: .5rem;
 }
 
-#author {
+#author, .author {
   margin-bottom: 0;
 }
 

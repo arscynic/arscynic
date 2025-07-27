@@ -38,9 +38,11 @@ hr {
   display: none;
 }
 
+/*
 #sort-hint h2 {
   display: inline-block;
 }
+*/
 
 .atom-symbol {
   display: inline-block;
