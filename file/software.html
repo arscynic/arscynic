@@ -1143,7 +1143,8 @@ X11Forwarding yes</code></pre>
     <li><a href="https://unix.stackexchange.com/a/48245">Command to monitor read/write operation of a USB drive</a>: <code>watch -d grep -e Dirty: -e Writeback: /proc/meminfo</code></li>
     <li><a href="https://unix.stackexchange.com/a/732020/378857">Command to toggle keyboard backlight</a>: <code>xset q | grep -q 'Scroll Lock: off' && xset led named 'Scroll Lock' || xset -led named 'Scroll Lock'
     </code></li>
-    <li><a href="https://www.phys.uconn.edu/~rozman/Courses/P2200_15F/downloads/github-caching_password_in_git.pdf">Command to cache the <i>git</i> password</a>, for one hour: <code>git config --global credential.helper 'cache --timeout=3600'</code></li>
+    <li><a href="https://www.phys.uconn.edu/~rozman/Courses/P2200_15F/downloads/github-caching_password_in_git.pdf">Command to cache the <i>git</i> password</a> for one hour: <code>git config --global credential.helper 'cache --timeout=3600'</code><br>
+    <a href="https://stackoverflow.com/a/46764829/13963944">To clear this git credential cache</a>: <code>git config --global --unset credential.helper</code></li>
     <li><a href="https://wiki.archlinux.org/title/Xdg-utils#xdg-settings">Command to change the default browser</a> for <a href="https://github.com/telegramdesktop/tdesktop/issues/262#issuecomment-721790595"><cite>Telegram</cite></a>, <cite>Betterbird</cite>, etc. Even when choosing <cite>Vivaldi</cite> browser as the default in "Settings" → "Default Applications" (xfce4-mime-settings), for some reasons some programs (<cite>Telegram</cite>) still use <cite>Firefox</cite>/<cite>Chromium</cite>: <code>xdg-mime default vivaldi-stable.desktop x-scheme-handler/https x-scheme-handler/http</code></li>
     <li>Control media players: <code>playerctl play-pause</code> (next, previous), or <code>xdotool key XF86AudioPlay</code></li>
     <li>Control volume: <code>amixer set Master n%+/n%-</code></li>
